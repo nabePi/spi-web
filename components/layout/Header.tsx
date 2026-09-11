@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image, { type StaticImageData } from "next/image";
 import { siteConfig } from "@/lib/siteConfig";
 import logoDefault from "@/public/assets/imgs/logo/logo.svg";
-import logoWhite from "@/public/assets/imgs/logo/logo-white.svg";
+import logoWhite from "@/public/assets/imgs/logo/logo-spi-white.png";
 import logoBlue from "@/public/assets/imgs/logo/logo-blue.svg";
 import logoBlue2 from "@/public/assets/imgs/logo/logo-blue2.svg";
 import logoGreen from "@/public/assets/imgs/logo/logo-green.svg";
