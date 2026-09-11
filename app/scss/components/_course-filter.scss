@@ -1,0 +1,189 @@
+.course-filter {
+    margin-bottom: 60px;
+
+    @media #{$md} {
+        margin-bottom: 30px;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+
+        @media #{$md} {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__results {
+        font-family: var(--font_mona);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 120%;
+        letter-spacing: 0%;
+        text-transform: capitalize;
+        color: var(--primary);
+
+        span {
+            color: var(--secondary);
+        }
+    }
+
+    &__tools {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+
+        @media #{$sm} {
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+
+    &__views {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            li {}
+        }
+    }
+
+    &__view-btn {
+        width: 34px;
+        height: 34px;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary);
+        transition: all 0.3s ease;
+        background: transparent;
+
+
+
+        svg {
+            width: 18px;
+            height: 18px;
+            color: var(--text2);
+        }
+
+        &.active {
+            border-color: var(--primary);
+
+            svg {
+                color: var(--primary);
+            }
+        }
+    }
+
+    &__search {
+        position: relative;
+        width: 300px;
+
+        @media #{$sm} {
+            flex-grow: 1;
+        }
+
+        input {
+            width: 100%;
+            background: transparent;
+            color: var(--white);
+            font-size: 16px;
+            padding: 12px 45px 12px 15px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-family: var(--font_mona);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 160%;
+            letter-spacing: 0%;
+            color: var(--primary);
+            outline: none;
+            transition: all 0.3s ease;
+
+            &::placeholder {
+                font-family: var(--font_mona);
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 160%;
+                letter-spacing: 0%;
+                color: var(--primary);
+            }
+
+        }
+
+        button {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            color: var(--primary);
+            font-size: 16px;
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: var(--secondary);
+            }
+        }
+    }
+
+    &__sort {
+        .nice-select {
+            height: 34px;
+            line-height: 32px;
+            border: none;
+            font-family: var(--font_mona);
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0%;
+            text-transform: capitalize;
+            color: var(--primary);
+            background: transparent;
+            float: none;
+            padding-left: 0;
+
+            &::after {
+                border-bottom: 2px solid var(--primary);
+                border-right: 2px solid var(--primary);
+                width: 6px;
+                height: 6px;
+                right: 15px;
+                margin-top: -5px;
+            }
+
+            .list {
+                width: 100%;
+                border-radius: 6px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+                border: 1px solid var(--border);
+                margin-top: 5px;
+            }
+
+            .option {
+                font-family: var(--font_mona);
+                font-size: 14px;
+                padding-left: 15px;
+                padding-right: 15px;
+                line-height: 34px;
+                min-height: 34px;
+
+                &:hover,
+                &.focus,
+                &.selected.focus {
+                    background-color: var(--bg);
+                    color: var(--secondary);
+                }
+            }
+        }
+    }
+}

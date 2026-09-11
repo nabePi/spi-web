@@ -1,0 +1,176 @@
+.course-sidebar {
+    &__widget {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 25px 30px 25px;
+        margin-bottom: 20px;
+
+        &-title {
+            font-family: var(--font_mona);
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 120%;
+            letter-spacing: -3%;
+            color: var(--primary);
+            margin-bottom: 19px;
+            text-transform: capitalize;
+        }
+    }
+
+    &__search {
+        position: relative;
+        margin-bottom: 20px;
+
+        input {
+            width: 100%;
+            height: 50px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 0 45px 0 20px;
+            font-family: var(--font_mona);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 160%;
+            letter-spacing: 0%;
+            color: var(--primary);
+            outline: none;
+            transition: all 0.3s ease;
+
+            &::placeholder {
+                font-family: var(--font_mona);
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 160%;
+                letter-spacing: 0%;
+                color: var(--primary);
+            }
+
+        }
+
+        button {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            background: transparent;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+
+            svg {
+                width: 18px;
+                height: 18px;
+                fill: currentColor;
+            }
+        }
+    }
+
+    &__list {
+        list-style-type: none;
+
+        li {
+            &:not(:last-child) {
+                margin-bottom: 6px;
+            }
+        }
+    }
+
+    &__checkbox {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        cursor: pointer;
+        position: relative;
+        user-select: none;
+
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        .checkmark {
+            width: 14px;
+            height: 14px;
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            background-color: transparent;
+            display: inline-block;
+            position: relative;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+
+            &::after {
+                content: "";
+                position: absolute;
+                display: none;
+                left: 4px;
+                top: 0px;
+                width: 5px;
+                height: 10px;
+                border: solid var(--secondary);
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+            }
+        }
+
+        input:checked~.checkmark {
+            border-color: var(--secondary);
+        }
+
+        input:checked~.checkmark:after {
+            display: block;
+        }
+
+        .text {
+            font-family: var(--font_mona);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 160%;
+            letter-spacing: 0%;
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        &:hover .text {
+            color: var(--secondary);
+        }
+    }
+
+    &__clear-btn {
+        width: 100%;
+        height: 40px;
+        background: transparent;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-family: var(--font_mona);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-transform: capitalize;
+        color: var(--primary);
+        transition: all 0.3s ease;
+
+        svg {
+            width: 16px;
+            height: 16px;
+            stroke: currentColor;
+        }
+
+        &:hover {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+    }
+}

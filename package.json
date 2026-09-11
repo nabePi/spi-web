@@ -1,0 +1,50 @@
+{
+  "name": "spi-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website Sekolah Pemikiran Islam (SPI)",
+  "author": "Sekolah Pemikiran Islam",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@types/jquery": "^4.0.1",
+    "animate.css": "^4.1.1",
+    "bootstrap": "^5.3.8",
+    "counterup2": "^2.0.2",
+    "gsap": "^3.15.0",
+    "jquery": "^4.0.0",
+    "jquery-nice-select": "^1.1.0",
+    "magnific-popup": "^1.2.0",
+    "next": "^16.2.10",
+    "odometer": "^0.4.8",
+    "react": "^19.2.7",
+    "react-bootstrap": "^2.10.10",
+    "react-dom": "^19.2.7",
+    "react-hot-toast": "^2.6.0",
+    "swiper": "^14.0.5",
+    "szmigiel-meanmenu": "^1.0.2",
+    "vanilla-tilt": "^1.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "26.4.0",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.2.10",
+    "sass": "^1.101.0",
+    "typescript": "5.9.3"
+  },
+  "overrides": {
+    "jquery": "$jquery"
+  },
+  "allowScripts": {
+    "@parcel/watcher": true,
+    "sharp": true,
+    "unrs-resolver": true
+  }
+}

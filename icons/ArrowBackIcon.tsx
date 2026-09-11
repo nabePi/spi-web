@@ -1,0 +1,12 @@
+import type { SVGProps } from "react";
+
+const ArrowBackIcon = ({ fill = "#1A453B", ...props }: SVGProps<SVGSVGElement>) => (
+  <svg width="11" height="11" viewBox="0 0 11 11" fill="none" {...props}>
+                    <path
+                      d="M2.54996 6H10.6666V4.66667H2.54996L6.28329 0.933333L5.33329 0L-4.1008e-05 5.33333L5.33329 10.6667L6.28329 9.73333L2.54996 6Z"
+                      fill={fill}
+                    />
+                  </svg>
+);
+
+export default ArrowBackIcon;

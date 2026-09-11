@@ -1,0 +1,103 @@
+/*-----------------------------------------------------------------------------------
+
+  Theme Name: InstituteFlow - Education & Online Course NextJS Template
+  Author: Pixavation 
+  Developer: Sakebul Islam
+  Support: 
+  Description: InstituteFlow - Education & Online Course NextJS Template
+  Version: 1.0
+
+-----------------------------------------------------------------------------------
+
+/************ TABLE OF CONTENTS ***************
+/* 
+/* 1. UTILITIES  
+/* - _variables.scss  
+/* - _typography.scss 
+/* - _mixin.scss 
+/* - _animation.scss 
+/* - _global.scss 
+/* - _theme.scss 
+/* 
+/* 2. COMPONENTS 
+/* - _button.scss 
+/* - _button-animation.scss 
+/* - _cursor.scss 
+/* - _header-top.scss 
+/* - _menu.scss 
+/* - _modal.scss 
+/* - _preloader.scss 
+/* - _scroll.scss 
+/* - _section-top.scss 
+/* 
+/* 3. HOME 1 SECTIONS 
+/* - Section 01: Hero Area 
+/* - Section 02: Marquee Track 
+/* - Section 03: Category Area 
+/* - Section 04: Find Course Area 
+/* - Section 05: About Section 
+/* - Section 06: Team Section 
+/* - Section 07: Testimonial Section 
+/* - Section 08: Client Section 
+/* - Section 09: Blog Section 
+/* - Section 10: FAQ Area 
+/* - Section 11: Courses Area 
+/* - Section 12: WCU Area 
+/* - Section 13: CTA Area 
+/* - Section 14: Footer 
+/*
+/* 4. FOOTER SYSTEM
+/* - Main Footer 
+
+
+
+/*----------------------------------------*/
+/* variable css */
+/*----------------------------------------*/
+
+// Colors
+:root {
+  --primary: #1a453b;
+  --secondary: #d87827;
+  --border: #1a453b24;
+  --border2: #ffffff24;
+  --bg: rgba(248, 245, 242, 1);
+  --bg2: #f8f5f2;
+  --yellow: #ffdc30;
+  --purple: #971f97;
+  --orange: #d87827;
+  --light-orange: #f5824a;
+  --indigo: #9965e9;
+  --red: #ff383c;
+  --blue: #7a4eff;
+  --blue-rgb: 122, 78, 255;
+  --green: #07875a;
+  --tan: #c08552;
+
+  --black: #0e0f11;
+  --black2: #525355;
+  --black3: #0c081f;
+  --white: #ffffff;
+  --text: rgba(85, 85, 85, 1);
+  --text2: #555555;
+}
+
+// Responsive Variable
+$xxxl: "only screen and (min-width: 1920px)";
+$xxl: "only screen and (max-width: 1919px)";
+$xl: "only screen and (max-width: 1399px)";
+$lg: "only screen and (max-width: 1199px)";
+$md: "only screen and (max-width: 991px)";
+$sm: "only screen and (max-width: 767px)";
+$xs: "(max-width: 575px)";
+
+// For Box Layout
+$bl: "only screen and (min-width: 1600px)";
+
+// Responsive Variable for container
+$cxxl: "(width > 1919px)";
+$cxl: "(width > 1399px)";
+$clg: "(width > 1199px)";
+$cmd: "(width > 991px)";
+$csm: "(width > 767px)";
+$cxs: "(width > 575px)";

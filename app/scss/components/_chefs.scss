@@ -1,0 +1,58 @@
+.chefs {
+  &.section {
+  }
+  &__thumb {
+    height: 100%;
+    width: 100%;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__content {
+    max-width: 560px;
+    margin-left: auto;
+    text-align: center;
+    @media #{$md} {
+      margin-inline: auto;
+    }
+    .arrow-sign {
+      display: inline-block;
+      position: relative;
+      width: 1px;
+      height: 80px;
+      background-color: var(--primary);
+      margin-block: 30px 70px;
+
+      @media #{$md} {
+        margin-block: 20px 40px;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 5px;
+        height: 5px;
+        background-color: var(--primary);
+        border-radius: 100%;
+      }
+    }
+    .section-header-nine {
+      margin-bottom: 50px;
+      @media #{$md} {
+        margin-bottom: 30px;
+      }
+      p {
+        margin-top: 30px;
+        @media #{$md} {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
