@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="700" viewBox="0 0 1300 700" role="img" aria-label="Placeholder 1300x700">
+  <rect width="1300" height="700" fill="#e6e6e6"/>
+  <rect x="0.5" y="0.5" width="1299" height="699" fill="none" stroke="#bdbdbd"/>
+  <path d="M0 0 L1300 700 M1300 0 L0 700" stroke="#d4d4d4" stroke-width="1"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+        font-family="system-ui, sans-serif" font-size="87" fill="#8a8a8a">1300 &#215; 700</text>
+</svg>

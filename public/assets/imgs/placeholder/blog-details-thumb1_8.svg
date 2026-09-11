@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="522" height="360" viewBox="0 0 522 360" role="img" aria-label="Placeholder 522x360">
+  <rect width="522" height="360" fill="#e6e6e6"/>
+  <rect x="0.5" y="0.5" width="521" height="359" fill="none" stroke="#bdbdbd"/>
+  <path d="M0 0 L522 360 M522 0 L0 360" stroke="#d4d4d4" stroke-width="1"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+        font-family="system-ui, sans-serif" font-size="45" fill="#8a8a8a">522 &#215; 360</text>
+</svg>

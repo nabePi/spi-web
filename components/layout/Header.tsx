@@ -36,8 +36,8 @@ const mainMenu: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "#" },
   { label: "Program", href: "#" },
-  { label: "Blog", href: "#" },
-  { label: "Contact", href: "#" },
+  { label: "Blog", href: "/blog-standard" },
+  { label: "Contact", href: "/contact" },
 ];
 
 function badgeClass(badge?: NavBadge): string {

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180" role="img" aria-label="Placeholder 180x180">
+  <rect width="180" height="180" fill="#e6e6e6"/>
+  <rect x="0.5" y="0.5" width="179" height="179" fill="none" stroke="#bdbdbd"/>
+  <path d="M0 0 L180 180 M180 0 L0 180" stroke="#d4d4d4" stroke-width="1"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+        font-family="system-ui, sans-serif" font-size="22" fill="#8a8a8a">180 &#215; 180</text>
+</svg>
