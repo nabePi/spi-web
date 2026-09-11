@@ -33,10 +33,10 @@ import home2wpwpThumb11 from "@/public/assets/imgs/placeholder/wp-thumb1_1.svg";
 import home2wpwpThumb12 from "@/public/assets/imgs/placeholder/wp-thumb1_2.svg";
 import home2wpwpThumb13 from "@/public/assets/imgs/placeholder/wp-thumb1_3.svg";
 import home2wpwpThumb14 from "@/public/assets/imgs/placeholder/wp-thumb1_4.svg";
-import home2teamteamThumb21 from "@/public/assets/imgs/placeholder/team-thumb2_1.svg";
-import home2teamteamThumb22 from "@/public/assets/imgs/placeholder/team-thumb2_2.svg";
-import home2teamteamThumb23 from "@/public/assets/imgs/placeholder/team-thumb2_3.svg";
-import home2teamteamThumb24 from "@/public/assets/imgs/placeholder/team-thumb2_4.svg";
+import home2teamteamThumb21 from "@/public/assets/imgs/home/spi-cabang-jakarta.webp";
+import home2teamteamThumb22 from "@/public/assets/imgs/home/spi-cabang-bandung.webp";
+import home2teamteamThumb23 from "@/public/assets/imgs/home/spi-cabang-yogyakarta.webp";
+import home2teamteamThumb24 from "@/public/assets/imgs/home/spi-cabang-bogor.webp";
 import home2testimonialtestimonialThumb21 from "@/public/assets/imgs/placeholder/testimonial-thumb2_1.svg";
 import home2testimonialtestimonialThumbUser21 from "@/public/assets/imgs/placeholder/testimonial-thumb-user2_1.svg";
 import home2testimonialtestimonialThumbUser22 from "@/public/assets/imgs/placeholder/testimonial-thumb-user2_2.svg";
@@ -299,7 +299,7 @@ export const eLearningTeamContent: ELearningTeamContent = {
   members: [
     {
       href: "/instructor-details",
-      thumb: { src: home2teamteamThumb21, alt: "placeholder" },
+      thumb: { src: home2teamteamThumb21, alt: "Gedung SPI Fatahillah di kawasan Kalibata, Jakarta Selatan" },
       name: "SPI Fatahillah",
       role: "INSISTS, Kalibata, Jakarta Selatan",
       rating: "4.5",
@@ -307,7 +307,7 @@ export const eLearningTeamContent: ELearningTeamContent = {
     },
     {
       href: "/instructor-details",
-      thumb: { src: home2teamteamThumb22, alt: "placeholder" },
+      thumb: { src: home2teamteamThumb22, alt: "Halaman masjid dengan paviliun berkubah di Bandung" },
       name: "SPI Moh. Natsir",
       role: "Masjid Istiqamah, Bandung",
       rating: "4.5",
@@ -315,7 +315,7 @@ export const eLearningTeamContent: ELearningTeamContent = {
     },
     {
       href: "/instructor-details",
-      thumb: { src: home2teamteamThumb23, alt: "placeholder" },
+      thumb: { src: home2teamteamThumb23, alt: "Gedung kampus bergaya Jawa di Yogyakarta" },
       name: "SPI UII",
       role: "Universitas Islam Indonesia, Yogyakarta",
       rating: "4.5",
@@ -323,7 +323,7 @@ export const eLearningTeamContent: ELearningTeamContent = {
     },
     {
       href: "/instructor-details",
-      thumb: { src: home2teamteamThumb24, alt: "placeholder" },
+      thumb: { src: home2teamteamThumb24, alt: "Serambi SPI Bogor MARJAN saat hujan" },
       name: "SPI Bogor — MARJAN",
       role: "Majelis Pemikiran di Kota Hujan",
       rating: "4.5",
