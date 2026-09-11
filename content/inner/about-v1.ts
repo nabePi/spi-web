@@ -7,9 +7,9 @@ import type {
   AboutV1WcuContent,
 } from "@/types/inner/about-v1";
 import innerbreadcumbbreadcumbBgPattern2 from "@/public/assets/imgs/inner/breadcumb/breadcumb-bg-pattern2.png";
-import inneraboutinnerThumb1 from "@/public/assets/imgs/placeholder/inner-thumb-1.svg";
-import inneraboutinnerThumb2 from "@/public/assets/imgs/placeholder/inner-thumb-2.svg";
-import inneraboutinnerThumb3 from "@/public/assets/imgs/placeholder/inner-thumb-3.svg";
+import inneraboutinnerThumb1 from "@/public/assets/imgs/inner/about/spi-ruang-kajian.webp";
+import inneraboutinnerThumb2 from "@/public/assets/imgs/inner/about/spi-manuskrip.webp";
+import inneraboutinnerThumb3 from "@/public/assets/imgs/inner/about/spi-ornamen-ukiran.webp";
 import home1wcuwcuPatternbg11 from "@/public/assets/imgs/home1/wcu/wcu-patternbg1_1.webp";
 import home1wcuwcuThumb11 from "@/public/assets/imgs/placeholder/wcu-thumb1_1.svg";
 import home1wcuwcuPatternbg12 from "@/public/assets/imgs/home1/wcu/wcu-patternbg1_2.webp";
@@ -22,7 +22,7 @@ import home1teamteamThumb14 from "@/public/assets/imgs/placeholder/team-thumb1_4
 import home1testimonialtestimonailUser11 from "@/public/assets/imgs/placeholder/testimonail-user1_1.svg";
 import home1testimonialtestimonailUser12 from "@/public/assets/imgs/placeholder/testimonail-user1_2.svg";
 import home1testimonialtestimonialThumb11 from "@/public/assets/imgs/placeholder/testimonial-thumb1_1.svg";
-import home1testimonialtestimonialThumb12 from "@/public/assets/imgs/placeholder/testimonial-thumb1_2.svg";
+import home1testimonialtestimonialThumb12 from "@/public/assets/imgs/inner/about/spi-serambi-hujan.webp";
 import home1testimonialtestimonailUser13 from "@/public/assets/imgs/placeholder/testimonail-user1_3.svg";
 import home1testimonialtestimonailUser14 from "@/public/assets/imgs/placeholder/testimonail-user1_4.svg";
 import home1testimonialtestimonailUser15 from "@/public/assets/imgs/placeholder/testimonail-user1_5.svg";
@@ -41,8 +41,14 @@ export const aboutV1BreadcrumbContent: AboutV1BreadcrumbContent = {
 
 export const aboutV1AboutContent: AboutV1AboutContent = {
   thumbs: [
-    { src: inneraboutinnerThumb1, alt: "placeholder" },
-    { src: inneraboutinnerThumb2, alt: "placeholder" },
+    {
+      src: inneraboutinnerThumb1,
+      alt: "Ruang kajian bergaya arsitektur Jawa dengan meja-meja rendah tertata rapi",
+    },
+    {
+      src: inneraboutinnerThumb2,
+      alt: "Tumpukan manuskrip Islam klasik di atas rehal kayu ukir",
+    },
   ],
   subtitle: "Sekilas SPI",
   titleLines: [
@@ -61,7 +67,10 @@ export const aboutV1AboutContent: AboutV1AboutContent = {
   trustedBefore: "Hadir di ",
   trustedHighlight: "6",
   trustedAfter: " kota di Indonesia",
-  infoThumb: { src: inneraboutinnerThumb3, alt: "placeholder" },
+  infoThumb: {
+    src: inneraboutinnerThumb3,
+    alt: "Detail ukiran kayu bermotif geometris Islam",
+  },
   stats: [
     { id: "students", value: "11", suffix: "", title: "Tahun berjalan" },
     { id: "courses", value: "6", suffix: "", title: "Kota" },
@@ -227,7 +236,7 @@ export const aboutV1TestimonialContent: AboutV1TestimonialContent = {
       delay: "0.25",
       thumb: {
         src: home1testimonialtestimonialThumb12,
-        alt: "placeholder",
+        alt: "Serambi masjid dengan halaman basah saat hujan",
       },
     },
     // NOTE: no alumni testimonials have been collected or consented to yet
