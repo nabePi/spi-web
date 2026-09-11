@@ -2,11 +2,11 @@ import type { CourseDetailsContent } from "@/types/inner/course-details";
 import type { RelatedCoursesContent } from "@/types/inner/courses";
 import innercoursescoursesDetailsv1Instructuor11 from "@/public/assets/imgs/placeholder/courses-detailsv1-instructuor1_1.svg";
 import innercoursescoursesDetailsv1Testiuser11 from "@/public/assets/imgs/placeholder/courses-detailsv1-testiuser1_1.svg";
-import innercoursescoursesDetailsv1Thumb11 from "@/public/assets/imgs/placeholder/courses-detailsv1-thumb1_1.svg";
-import innercoursescoursesDetailsv1CourseThumb11 from "@/public/assets/imgs/placeholder/courses-detailsv1-course-thumb1_1.svg";
-import innercoursescoursesDetailsv1CourseThumb12 from "@/public/assets/imgs/placeholder/courses-detailsv1-course-thumb1_2.svg";
-import innercoursescoursesDetailsv1CourseThumb13 from "@/public/assets/imgs/placeholder/courses-detailsv1-course-thumb1_3.svg";
-import innercoursescoursesDetailsv1CourseThumb14 from "@/public/assets/imgs/placeholder/courses-detailsv1-course-thumb1_4.svg";
+import innercoursescoursesDetailsv1Thumb11 from "@/public/assets/imgs/inner/courses-details/spi-sidebar-catatan-pagi.webp";
+import innercoursescoursesDetailsv1CourseThumb11 from "@/public/assets/imgs/inner/courses-details/spi-kursus-map-berkas.webp";
+import innercoursescoursesDetailsv1CourseThumb12 from "@/public/assets/imgs/inner/courses-details/spi-komik-ponsel.webp";
+import innercoursescoursesDetailsv1CourseThumb13 from "@/public/assets/imgs/inner/courses-details/spi-tuesday-lampu-hias.webp";
+import innercoursescoursesDetailsv1CourseThumb14 from "@/public/assets/imgs/inner/courses-details/spi-marjan-daun-hujan.webp";
 
 export const courseDetailsClassicV1Content: CourseDetailsContent = {
   layout: "tabs",
@@ -116,7 +116,7 @@ export const courseDetailsClassicV1Content: CourseDetailsContent = {
   ],
   sidebarThumb: {
     src: innercoursescoursesDetailsv1Thumb11,
-    alt: "placeholder",
+    alt: "Catatan pagi dan secangkir teh di meja kayu",
   },
   videoId: "M7lc1UVf-VE",
   price: "—",
@@ -144,7 +144,7 @@ export const courseDetailsClassicV1RelatedContent: RelatedCoursesContent = {
       author: "Seluruh cabang",
       rating: "5/5",
       thumb: innercoursescoursesDetailsv1CourseThumb11,
-      alt: "placeholder",
+      alt: "Map berkas terikat tali di atas bangku",
       clipId: "clip0_852_30611",
       price: "—",
       lessons: "7 Sesi",
@@ -156,7 +156,7 @@ export const courseDetailsClassicV1RelatedContent: RelatedCoursesContent = {
       author: "Program Daring",
       rating: "3/5",
       thumb: innercoursescoursesDetailsv1CourseThumb12,
-      alt: "placeholder",
+      alt: "Ponsel dengan layar kosong di atas meja",
       clipId: "clip0_852_30612",
       price: "—",
       lessons: "Daring",
@@ -168,7 +168,7 @@ export const courseDetailsClassicV1RelatedContent: RelatedCoursesContent = {
       author: "Program Daring",
       rating: "3/5",
       thumb: innercoursescoursesDetailsv1CourseThumb13,
-      alt: "placeholder",
+      alt: "Lampu hias hangat menyala saat senja",
       clipId: "clip0_852_30613",
       price: "—",
       lessons: "Mingguan",
@@ -180,7 +180,7 @@ export const courseDetailsClassicV1RelatedContent: RelatedCoursesContent = {
       author: "SPI Bogor",
       rating: "4.9/5",
       thumb: innercoursescoursesDetailsv1CourseThumb14,
-      alt: "placeholder",
+      alt: "Daun palem basah dengan tetesan hujan",
       clipId: "clip0_852_30614",
       price: "—",
       lessons: "20 Sesi",
