@@ -3,7 +3,6 @@ import ToastForm from "@/components/forms/ToastForm";
 import Link from "next/link";
 import Image, { type StaticImageData } from "next/image";
 import { siteConfig } from "@/lib/siteConfig";
-import megaMenumegaMenuThumb11 from "@/public/assets/imgs/mega-menu/mega-menu-thumb1_1.webp";
 import logoDefault from "@/public/assets/imgs/logo/logo.svg";
 import logoWhite from "@/public/assets/imgs/logo/logo-white.svg";
 import logoBlue from "@/public/assets/imgs/logo/logo-blue.svg";
@@ -16,10 +15,7 @@ import GlobeIcon from "@/icons/GlobeIcon";
 import Icon12e7c3d5 from "@/icons/Icon12e7c3d5";
 import Icon2c7c9c59 from "@/icons/Icon2c7c9c59";
 import Icon53961c91 from "@/icons/Icon53961c91";
-import Icon7521078f from "@/icons/Icon7521078f";
 import Icon957c3569 from "@/icons/Icon957c3569";
-import Icona29835d8 from "@/icons/Icona29835d8";
-import Iconb0a02cce from "@/icons/Iconb0a02cce";
 import MailIcon from "@/icons/MailIcon";
 import PhoneIcon from "@/icons/PhoneIcon";
 
@@ -32,114 +28,16 @@ interface NavItem {
   children?: NavItem[];
 }
 
-const homeMegaMenu: NavItem[] = [
-  { label: "Course Platforms", href: "/" },
-  { label: "E-Learning Hub", href: "/e-learning", badge: "hot" },
-  { label: "Marketplace", href: "/marketplace" },
-  { label: "Single Instructor", href: "/single-instructor", badge: "new" },
-  { label: "Distance Learning", href: "/distant-learning" },
-  { label: "Language School", href: "/language-school" },
-  { label: "Kindergarten", href: "/kindergarten" },
-  { label: "Business Coach", href: "/business-coach", badge: "new2" },
-  { label: "Cooking Courses", href: "/cooking-course" },
-  { label: "Health Coaching", href: "/health-coaching", badge: "hot2" },
-];
-
-const coursesMenu: NavItem[] = [
-  { label: "Course classic", href: "/courses-v1" },
-  { label: "Course 4 column grid", href: "/courses-v2" },
-  { label: "Course 3 column grid", href: "/courses-v3" },
-  { label: "Course sidebar left", href: "/courses-sidebar-left" },
-  { label: "Course sidebar right", href: "/courses-sidebar-right" },
-  {
-    label: "Course Details",
-    children: [
-      { label: "course details classic v1", href: "/course-details-classic-v1" },
-      { label: "course details classic v2", href: "/course-details-classic-v2" },
-      { label: "course details classic v3", href: "/course-details-classic-v3" },
-    ],
-  },
-  { label: "Kindergarten Course", href: "/kindergarten-course" },
-  { label: "Kindergarten Course Details", href: "/kindergarten-course-details" },
-];
-
-const instructorsMenu: NavItem[] = [
-  { label: "Instructor 01", href: "/instructor-v1" },
-  { label: "Instructor 02", href: "/instructor-v2" },
-  { label: "Instructor Details", href: "/instructor-details" },
-  { label: "Become A Mentor", href: "/become-mentor" },
-  { label: "Kindergarten Teacher", href: "/kindergarten-teacher" },
-  { label: "Kindergarten Teacher Details", href: "/kindergarten-teacher-details" },
-];
-
-const pagesMenu: NavItem[] = [
-  {
-    label: "About",
-    children: [
-      { label: "About v1", href: "/about-v1" },
-      { label: "Kindergarten About", href: "/kindergarten-about" },
-    ],
-  },
-  {
-    label: "Event",
-    children: [
-      { label: "Event Grid", href: "/event-grid" },
-      { label: "Event Details", href: "/event-details" },
-    ],
-  },
-  {
-    label: "Shop",
-    children: [
-      { label: "Shop", href: "/shop" },
-      { label: "Shop Details", href: "/shop-details" },
-      { label: "Cart", href: "/cart" },
-      { label: "Checkout", href: "/checkout" },
-    ],
-  },
-  {
-    label: "FAQ'S",
-    children: [
-      { label: "FAQ'S", href: "/faq" },
-      { label: "Kindergarten FAQ'S", href: "/kindergarten-faq" },
-    ],
-  },
-  {
-    label: "Profile",
-    children: [
-      { label: "Sign Up", href: "/signup" },
-      { label: "Sign In", href: "/login" },
-      { label: "Profile", href: "/profile" },
-    ],
-  },
-  {
-    label: "Contact",
-    children: [
-      { label: "Contact", href: "/contact" },
-      { label: "Kindergarten Contact", href: "/kindergarten-contact" },
-    ],
-  },
-  { label: "Pricing Table", href: "/pricing" },
-  {
-    label: "404 Page",
-    children: [
-      { label: "404 Page", href: "/error-404" },
-      { label: "Kindergarten 404 Page", href: "/kindergarten-404" },
-    ],
-  },
-];
-
-const blogMenu: NavItem[] = [
-  { label: "Blog 2 column grid", href: "/blog-two-column" },
-  { label: "Blog 3 column grid", href: "/blog-three-column" },
-  { label: "Blog Standard", href: "/blog-standard" },
-  {
-    label: "Blog Details",
-    children: [
-      { label: "Blog Details Sidebar Left", href: "/blog-details-leftsidebar" },
-      { label: "Blog Details Sidebar Right", href: "/blog-details-rightsidebar" },
-      { label: "Blog Details Full Width", href: "/blog-details-standard" },
-    ],
-  },
+/**
+ * Primary navigation. Only "/" exists so far; the remaining entries are
+ * placeholders until their pages are built.
+ */
+const mainMenu: NavItem[] = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "#" },
+  { label: "Program", href: "#" },
+  { label: "Blog", href: "#" },
+  { label: "Contact", href: "#" },
 ];
 
 function badgeClass(badge?: NavBadge): string {
@@ -198,133 +96,15 @@ function NavLink({ href, badge, children }: NavLinkProps) {
   return <a href={href}>{content}</a>;
 }
 
-function NavDropdownItem({ item }: { item: NavItem }) {
-  const hasChildren = Boolean(item.children?.length);
-
-  return (
-    <li className={hasChildren ? "menu-item-has-children" : undefined}>
-      {item.href ? (
-        <NavLink href={item.href} badge={item.badge}>
-          {item.label}
-        </NavLink>
-      ) : (
-        <a href="#">{item.label}</a>
-      )}
-      {hasChildren ? (
-        <ul>
-          {item.children!.map((child) => (
-            <NavDropdownItem key={child.label} item={child} />
-          ))}
-        </ul>
-      ) : null}
-    </li>
-  );
-}
-
-interface NavDropdownProps {
-  label: string;
-  items: NavItem[];
-}
-
-function NavDropdown({ label, items }: NavDropdownProps) {
-  return (
-    <li className="menu-item-has-children">
-      <a href="#">{label}</a>
-      <ul className="dp-menu">
-        {items.map((item) => (
-          <NavDropdownItem key={item.label} item={item} />
-        ))}
-      </ul>
-    </li>
-  );
-}
-
-function MegaMenuBanner() {
-  return (
-    <div className="mega-menu-home__banner d-none d-xl-flex">
-      <div className="mega-menu-home__banner-shape">
-        <Icon7521078f />
-      </div>
-      <div className="banner-content">
-        <div className="text">
-          Download our <br />
-          <span>learning app</span>
-        </div>
-
-        <div className="buttons">
-          <a href="#">
-            <Iconb0a02cce />
-          </a>
-          <a href="#">
-            <Icona29835d8 />
-          </a>
-        </div>
-      </div>
-      <div className="banner-image">
-        <Image
-          src={megaMenumegaMenuThumb11}
-          alt="App Mockup"
-        />
-      </div>
-    </div>
-  );
-}
-
-function MegaMenuColumn({ items }: { items: NavItem[] }) {
-  return (
-    <div className="mega-menu-home__column">
-      <ul>
-        {items.map((item) => (
-          <li key={item.label}>
-            <NavLink href={item.href!} badge={item.badge}>
-              {item.label}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function HomeMegaMenu() {
-  const leftColumn = homeMegaMenu.slice(0, 5);
-  const rightColumn = homeMegaMenu.slice(5);
-
-  return (
-    <li className="menu-item-has-children has-mega-menu">
-      <a href="#">Home</a>
-      <div className="mega-menu-home d-none d-xl-flex">
-        <div className="mega-menu-home__left">
-          <MegaMenuColumn items={leftColumn} />
-          <MegaMenuColumn items={rightColumn} />
-        </div>
-        <MegaMenuBanner />
-      </div>
-      <ul className="dp-menu d-xl-none">
-        {homeMegaMenu.map((item) => (
-          <li key={item.label}>
-            <NavLink href={item.href!} badge={item.badge}>
-              {item.label}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
-    </li>
-  );
-}
-
 function MainNav() {
   return (
     <nav className="main-menu" style={{ display: "block" }}>
       <ul>
-        <HomeMegaMenu />
-        <NavDropdown label="Courses" items={coursesMenu} />
-        <NavDropdown label="Instructors" items={instructorsMenu} />
-        <NavDropdown label="Pages" items={pagesMenu} />
-        <NavDropdown label="Blog" items={blogMenu} />
-        <li>
-          <NavLink href="/contact">Contact</NavLink>
-        </li>
+        {mainMenu.map((item) => (
+          <li key={item.label}>
+            <NavLink href={item.href!}>{item.label}</NavLink>
+          </li>
+        ))}
       </ul>
     </nav>
   );
