@@ -18,10 +18,10 @@ const Page = () => {
     <>
       <BreadcrumbSection />
       <AboutSection />
-      <WcuSection />
-      <TeamSection />
-      <TestimonialSection />
-      <ClientSection />
+      {/* <WcuSection /> */}
+      {/* <TeamSection /> */}
+      {/* <TestimonialSection /> */}
+      {/* <ClientSection /> */}
     </>
   );
 };

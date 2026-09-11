@@ -2,7 +2,7 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
 import Image from "next/image";
 import home2footerfooterBg21 from "@/public/assets/imgs/home2/footer/footer-bg2_1.webp";
-import logofooter2Logo from "@/public/assets/imgs/logo/footer2-logo.svg";
+import logofooter2Logo from "@/public/assets/imgs/logo/logo-spi/logo-cpz.png";
 import ToastForm from "@/components/forms/ToastForm";
 import ArrowOutwardIcon from "@/icons/ArrowOutwardIcon";
 import Iconf2ef33ce from "@/icons/Iconf2ef33ce";

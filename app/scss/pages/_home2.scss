@@ -2203,6 +2203,11 @@
   }
 
   &__logo {
+    img {
+      width: 177px;
+      height: auto;
+    }
+
     @media #{$lg} {
       max-width: 50%;
     }

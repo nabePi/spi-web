@@ -21,7 +21,7 @@ const Page = () => {
       />
       <TeamSection />
       <InstructorSection />
-      <TestimonialSection />
+      {/* <TestimonialSection /> */}
     </>
   );
 };
