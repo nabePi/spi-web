@@ -1,26 +1,22 @@
 export const siteConfig = {
-  name: "Sekolah Pemikiran Islam",
-  shortName: "SPI",
+  name: "InstituteFlow",
   url: process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000",
-  title:
-    "Sekolah Pemikiran Islam — Menghidupkan Tradisi Ilmu untuk Kejayaan Peradaban Islam",
+  title: "InstituteFlow - Education & Online Course NextJS Template",
   description:
-    "Sekolah Pemikiran Islam (SPI) adalah institusi pendidikan non formal yang menyelenggarakan kajian pemikiran Islam secara terencana dan terukur. Kelas gratis di enam kota.",
-  // TODO(contact): replace with real SPI photography before launch — PRD W-T5 / Appendix B
+    "InstituteFlow - Education & Online Course NextJS Template for schools, coaching and e-learning sites. Browse courses, instructors, events and inner pages.",
   ogImage: "/assets/imgs/home1/hero/hero-bg1_1.webp",
-  locale: "id_ID",
+  locale: "en_US",
   contact: {
-    // TODO(contact): every value below is placeholder data — PRD Appendix B
-    email: "sekretariat@spi.example.id",
-    phone: "+62 811-0000-0001",
-    address: "Jl. Contoh No. 1, Bogor, Jawa Barat 16111",
+    email: "info@instituteflow.com",
+    phone: "+1 415 123 4567",
+    address: "740 Park Avenue, New York, NY 10021, USA",
   },
-  // Verified real accounts — safe to publish (PRD Appendix B)
   social: {
-    instagram: "https://www.instagram.com/spi.indonesia/",
-    facebook: "https://web.facebook.com/Sekolah.Pemikiran.Islam/",
-    x: "https://twitter.com/SPI_Pusat",
-    medium: "https://spiindonesia.medium.com",
+    facebook: "https://facebook.com/",
+    x: "https://x.com/",
+    instagram: "https://instagram.com/",
+    linkedin: "https://linkedin.com/",
+    youtube: "https://youtube.com/",
   },
 } as const;
 

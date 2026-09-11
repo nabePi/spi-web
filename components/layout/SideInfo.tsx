@@ -6,26 +6,48 @@ import OffcanvasOverlay from "@/components/layout/OffcanvasOverlay";
 import SideInfoClose from "@/components/layout/SideInfoClose";
 import Link from "next/link";
 import { closeSideInfo } from "@/lib/template/sideInfo";
-import { siteConfig } from "@/lib/siteConfig";
 
-// TODO(brand): replace with the SPI logo — PRD W-T5
-const LOGO_SRC = "/assets/imgs/logo/logo.svg";
+function sideInfoLogos(pathname: string) {
+  if (pathname.startsWith("/kindergarten")) {
+    return {
+      header: "/assets/imgs/logo/logo-blue2.svg",
+      footer: "/assets/imgs/logo/logo-blue2.svg",
+    };
+  }
+  if (pathname.startsWith("/language-school")) {
+    return {
+      header: "/assets/imgs/logo/logo-blue.svg",
+      footer: "/assets/imgs/logo/logo-blue.svg",
+    };
+  }
+  if (pathname.startsWith("/cooking-course")) {
+    return {
+      header: "/assets/imgs/logo/logo-orange.svg",
+      footer: "/assets/imgs/logo/logo-blue2.svg",
+    };
+  }
+  if (pathname.startsWith("/business-coach")) {
+    return {
+      header: "/assets/imgs/logo/logo-green.svg",
+      footer: "/assets/imgs/logo/logo-blue2.svg",
+    };
+  }
+  if (pathname.startsWith("/health-coaching")) {
+    return {
+      header: "/assets/imgs/logo/logo-tan.svg",
+      footer: "/assets/imgs/logo/logo-tan.svg",
+    };
+  }
+  return {
+    header: "/assets/imgs/logo/logo.svg",
+    footer: "/assets/imgs/logo/logo.svg",
+  };
+}
 
-const socialLinks = [
-  { label: "IG", href: siteConfig.social.instagram, title: "Instagram" },
-  { label: "FB", href: siteConfig.social.facebook, title: "Facebook" },
-  { label: "X", href: siteConfig.social.x, title: "Twitter/X" },
-  { label: "MD", href: siteConfig.social.medium, title: "Medium" },
-];
-
-/**
- * Off-canvas panel. Also hosts the MeanMenu mount point
- * (`.mobile-menu`), so this component carries the mobile navigation —
- * it cannot be removed while MeanMenu is the mobile menu (PRD G2/G11).
- */
 const SideInfo = () => {
   const pathname = usePathname();
   const previousPath = useRef(pathname);
+  const logos = sideInfoLogos(pathname);
 
   useEffect(() => {
     if (previousPath.current === pathname) return;
@@ -41,65 +63,50 @@ const SideInfo = () => {
             <div className="offset-widget offset-header side-info__item">
               <div className="offset-logo">
                 <Link href="/">
-                  <img src={LOGO_SRC} alt={siteConfig.name} />
+                  <img src={logos.header} alt="site logo" />
                 </Link>
               </div>
               <SideInfoClose id="side-info-close" className="side-info-close">
                 <span className="material-symbols-outlined">close</span>
               </SideInfoClose>
             </div>
-            {/* MeanMenu injects the mobile navigation here — do not remove */}
             <div className="mobile-menu d-xl-none fix side-info__item" />
             <div className="offset-info-box side-info__item">
-              <h2 className="title">{siteConfig.shortName}</h2>
+              <h2 className="title">Hello There!</h2>
               <p className="text">
-                Kajian pemikiran Islam yang terencana dan terukur — gratis,
-                terbuka untuk umum.
+                We offer comprehensive range of services to help your business
+                thrive.
               </p>
             </div>
             <div className="offset-widget-box side-info__item">
-              <h2 className="title">Informasi</h2>
+              <h2 className="title">Information</h2>
               <div className="contact-meta">
                 <div className="contact-item">
                   <span className="text">
-                    <a
-                      href={`tel:${siteConfig.contact.phone.replace(/[^+\d]/g, "")}`}
-                    >
-                      {siteConfig.contact.phone}
-                    </a>
+                    <a href="tel:+22306965119">+2230 6965 119</a>
                   </span>
                 </div>
                 <div className="contact-item">
                   <span className="text">
-                    <a href={`mailto:${siteConfig.contact.email}`}>
-                      {siteConfig.contact.email}
-                    </a>
+                    <a href="mailto:InstituteFlow@gmail.com">InstituteFlow@gmail.com</a>
                   </span>
                 </div>
                 <div className="contact-item">
-                  <span className="text">{siteConfig.contact.address}</span>
+                  <span className="text">Avenue de Roma 1588, Lisboa</span>
                 </div>
               </div>
             </div>
             <div className="offset-widget-box side-info__item">
-              <h2 className="title">Ikuti Kami</h2>
+              <h2 className="title">Connect Us On</h2>
               <div className="social-links">
-                {socialLinks.map((item) => (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    title={item.title}
-                    aria-label={item.title}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {item.label}
-                  </a>
-                ))}
+                <a href="#">FB</a>
+                <a href="#">LN</a>
+                <a href="#">IN</a>
+                <a href="#">BE</a>
               </div>
             </div>
             <div className="offset-logo-footer side-info__item">
-              <img src={LOGO_SRC} alt="" />
+              <img src={logos.footer} alt="image" />
             </div>
           </div>
         </div>

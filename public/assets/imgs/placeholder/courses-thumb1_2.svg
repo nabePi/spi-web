@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="592" viewBox="0 0 840 592" role="img" aria-label="Placeholder 840x592">
+  <rect width="840" height="592" fill="#e6e6e6"/>
+  <rect x="0.5" y="0.5" width="839" height="591" fill="none" stroke="#bdbdbd"/>
+  <path d="M0 0 L840 592 M840 0 L0 592" stroke="#d4d4d4" stroke-width="1"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+        font-family="system-ui, sans-serif" font-size="74" fill="#8a8a8a">840 &#215; 592</text>
+</svg>

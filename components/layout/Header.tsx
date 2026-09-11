@@ -1,7 +1,9 @@
 import SideToggle from "@/components/layout/SideToggle";
+import ToastForm from "@/components/forms/ToastForm";
 import Link from "next/link";
 import Image, { type StaticImageData } from "next/image";
 import { siteConfig } from "@/lib/siteConfig";
+import megaMenumegaMenuThumb11 from "@/public/assets/imgs/mega-menu/mega-menu-thumb1_1.webp";
 import logoDefault from "@/public/assets/imgs/logo/logo.svg";
 import logoWhite from "@/public/assets/imgs/logo/logo-white.svg";
 import logoBlue from "@/public/assets/imgs/logo/logo-blue.svg";
@@ -10,7 +12,14 @@ import logoGreen from "@/public/assets/imgs/logo/logo-green.svg";
 import logoOrange from "@/public/assets/imgs/logo/logo-orange.svg";
 import logoTan from "@/public/assets/imgs/logo/logo-tan.svg";
 import ArrowOutwardIcon from "@/icons/ArrowOutwardIcon";
+import GlobeIcon from "@/icons/GlobeIcon";
+import Icon12e7c3d5 from "@/icons/Icon12e7c3d5";
 import Icon2c7c9c59 from "@/icons/Icon2c7c9c59";
+import Icon53961c91 from "@/icons/Icon53961c91";
+import Icon7521078f from "@/icons/Icon7521078f";
+import Icon957c3569 from "@/icons/Icon957c3569";
+import Icona29835d8 from "@/icons/Icona29835d8";
+import Iconb0a02cce from "@/icons/Iconb0a02cce";
 import MailIcon from "@/icons/MailIcon";
 import PhoneIcon from "@/icons/PhoneIcon";
 
@@ -23,55 +32,114 @@ interface NavItem {
   children?: NavItem[];
 }
 
-/**
- * Primary navigation — the eight top-level sections of the approved sitemap.
- * TODO(route): only "/" exists today; the rest arrive in later steps and 404
- * until then. Paths follow PRD §17.4 so no rework is needed when they land.
- */
-const mainMenu: NavItem[] = [
-  { label: "Beranda", href: "/" },
+const homeMegaMenu: NavItem[] = [
+  { label: "Course Platforms", href: "/" },
+  { label: "E-Learning Hub", href: "/e-learning", badge: "hot" },
+  { label: "Marketplace", href: "/marketplace" },
+  { label: "Single Instructor", href: "/single-instructor", badge: "new" },
+  { label: "Distance Learning", href: "/distant-learning" },
+  { label: "Language School", href: "/language-school" },
+  { label: "Kindergarten", href: "/kindergarten" },
+  { label: "Business Coach", href: "/business-coach", badge: "new2" },
+  { label: "Cooking Courses", href: "/cooking-course" },
+  { label: "Health Coaching", href: "/health-coaching", badge: "hot2" },
+];
+
+const coursesMenu: NavItem[] = [
+  { label: "Course classic", href: "/courses-v1" },
+  { label: "Course 4 column grid", href: "/courses-v2" },
+  { label: "Course 3 column grid", href: "/courses-v3" },
+  { label: "Course sidebar left", href: "/courses-sidebar-left" },
+  { label: "Course sidebar right", href: "/courses-sidebar-right" },
   {
-    label: "Tentang Kami",
+    label: "Course Details",
     children: [
-      { label: "Sekilas SPI", href: "/tentang-kami" },
-      { label: "Pendiri", href: "/tentang-kami/pendiri" },
-      { label: "Sejarah & Pencapaian", href: "/tentang-kami/sejarah" },
-      { label: "Filosofi Dasar: Konsep Adab", href: "/tentang-kami/filosofi-adab" },
-      { label: "Visi & Misi", href: "/tentang-kami/visi-misi" },
+      { label: "course details classic v1", href: "/course-details-classic-v1" },
+      { label: "course details classic v2", href: "/course-details-classic-v2" },
+      { label: "course details classic v3", href: "/course-details-classic-v3" },
+    ],
+  },
+  { label: "Kindergarten Course", href: "/kindergarten-course" },
+  { label: "Kindergarten Course Details", href: "/kindergarten-course-details" },
+];
+
+const instructorsMenu: NavItem[] = [
+  { label: "Instructor 01", href: "/instructor-v1" },
+  { label: "Instructor 02", href: "/instructor-v2" },
+  { label: "Instructor Details", href: "/instructor-details" },
+  { label: "Become A Mentor", href: "/become-mentor" },
+  { label: "Kindergarten Teacher", href: "/kindergarten-teacher" },
+  { label: "Kindergarten Teacher Details", href: "/kindergarten-teacher-details" },
+];
+
+const pagesMenu: NavItem[] = [
+  {
+    label: "About",
+    children: [
+      { label: "About v1", href: "/about-v1" },
+      { label: "Kindergarten About", href: "/kindergarten-about" },
     ],
   },
   {
-    label: "Program",
+    label: "Event",
     children: [
-      { label: "Semua Program", href: "/program" },
-      { label: "Jadwal Terkini", href: "/program/jadwal" },
-    ],
-  },
-  { label: "Cabang", href: "/cabang" },
-  {
-    label: "Berita & Artikel",
-    children: [
-      { label: "Berita Terkini", href: "/berita" },
-      { label: "Kisah Alumni", href: "/kisah-alumni" },
-      { label: "Liputan Media", href: "/liputan-media" },
+      { label: "Event Grid", href: "/event-grid" },
+      { label: "Event Details", href: "/event-details" },
     ],
   },
   {
-    label: "Sumber Daya",
+    label: "Shop",
     children: [
-      { label: "Publikasi", href: "/publikasi" },
-      { label: "FAQ", href: "/faq" },
-      { label: "Unduhan", href: "/unduhan" },
+      { label: "Shop", href: "/shop" },
+      { label: "Shop Details", href: "/shop-details" },
+      { label: "Cart", href: "/cart" },
+      { label: "Checkout", href: "/checkout" },
     ],
   },
   {
-    label: "Pendaftaran",
+    label: "FAQ'S",
     children: [
-      { label: "Panduan Pendaftaran", href: "/pendaftaran" },
-      { label: "Kontak Pendaftaran", href: "/pendaftaran/kontak" },
+      { label: "FAQ'S", href: "/faq" },
+      { label: "Kindergarten FAQ'S", href: "/kindergarten-faq" },
     ],
   },
-  { label: "Kontak", href: "/kontak" },
+  {
+    label: "Profile",
+    children: [
+      { label: "Sign Up", href: "/signup" },
+      { label: "Sign In", href: "/login" },
+      { label: "Profile", href: "/profile" },
+    ],
+  },
+  {
+    label: "Contact",
+    children: [
+      { label: "Contact", href: "/contact" },
+      { label: "Kindergarten Contact", href: "/kindergarten-contact" },
+    ],
+  },
+  { label: "Pricing Table", href: "/pricing" },
+  {
+    label: "404 Page",
+    children: [
+      { label: "404 Page", href: "/error-404" },
+      { label: "Kindergarten 404 Page", href: "/kindergarten-404" },
+    ],
+  },
+];
+
+const blogMenu: NavItem[] = [
+  { label: "Blog 2 column grid", href: "/blog-two-column" },
+  { label: "Blog 3 column grid", href: "/blog-three-column" },
+  { label: "Blog Standard", href: "/blog-standard" },
+  {
+    label: "Blog Details",
+    children: [
+      { label: "Blog Details Sidebar Left", href: "/blog-details-leftsidebar" },
+      { label: "Blog Details Sidebar Right", href: "/blog-details-rightsidebar" },
+      { label: "Blog Details Full Width", href: "/blog-details-standard" },
+    ],
+  },
 ];
 
 function badgeClass(badge?: NavBadge): string {
@@ -171,19 +239,92 @@ function NavDropdown({ label, items }: NavDropdownProps) {
   );
 }
 
+function MegaMenuBanner() {
+  return (
+    <div className="mega-menu-home__banner d-none d-xl-flex">
+      <div className="mega-menu-home__banner-shape">
+        <Icon7521078f />
+      </div>
+      <div className="banner-content">
+        <div className="text">
+          Download our <br />
+          <span>learning app</span>
+        </div>
+
+        <div className="buttons">
+          <a href="#">
+            <Iconb0a02cce />
+          </a>
+          <a href="#">
+            <Icona29835d8 />
+          </a>
+        </div>
+      </div>
+      <div className="banner-image">
+        <Image
+          src={megaMenumegaMenuThumb11}
+          alt="App Mockup"
+        />
+      </div>
+    </div>
+  );
+}
+
+function MegaMenuColumn({ items }: { items: NavItem[] }) {
+  return (
+    <div className="mega-menu-home__column">
+      <ul>
+        {items.map((item) => (
+          <li key={item.label}>
+            <NavLink href={item.href!} badge={item.badge}>
+              {item.label}
+            </NavLink>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function HomeMegaMenu() {
+  const leftColumn = homeMegaMenu.slice(0, 5);
+  const rightColumn = homeMegaMenu.slice(5);
+
+  return (
+    <li className="menu-item-has-children has-mega-menu">
+      <a href="#">Home</a>
+      <div className="mega-menu-home d-none d-xl-flex">
+        <div className="mega-menu-home__left">
+          <MegaMenuColumn items={leftColumn} />
+          <MegaMenuColumn items={rightColumn} />
+        </div>
+        <MegaMenuBanner />
+      </div>
+      <ul className="dp-menu d-xl-none">
+        {homeMegaMenu.map((item) => (
+          <li key={item.label}>
+            <NavLink href={item.href!} badge={item.badge}>
+              {item.label}
+            </NavLink>
+          </li>
+        ))}
+      </ul>
+    </li>
+  );
+}
+
 function MainNav() {
   return (
     <nav className="main-menu" style={{ display: "block" }}>
       <ul>
-        {mainMenu.map((item) =>
-          item.children ? (
-            <NavDropdown key={item.label} label={item.label} items={item.children} />
-          ) : (
-            <li key={item.label}>
-              <NavLink href={item.href!}>{item.label}</NavLink>
-            </li>
-          ),
-        )}
+        <HomeMegaMenu />
+        <NavDropdown label="Courses" items={coursesMenu} />
+        <NavDropdown label="Instructors" items={instructorsMenu} />
+        <NavDropdown label="Pages" items={pagesMenu} />
+        <NavDropdown label="Blog" items={blogMenu} />
+        <li>
+          <NavLink href="/contact">Contact</NavLink>
+        </li>
       </ul>
     </nav>
   );
@@ -198,29 +339,56 @@ function HeaderTop({ variant }: { variant: HeaderVariant }) {
         <div className="header-top__inner">
           <div className="header-top__left">
             <div className="header-top__left-item">
-              <a href={`mailto:${siteConfig.contact.email}`}>
+              <a href="mailto:support@instituteflow.com">
                 {useMatIcons ? (
                   <span className="material-icons-outlined">mail</span>
                 ) : (
                   <MailIcon fill={iconFill} />
                 )}
-                {siteConfig.contact.email}
+                support@instituteflow.com
               </a>
             </div>
             <div className="header-top__left-item">
-              <a href={`tel:${siteConfig.contact.phone.replace(/[^+\d]/g, "")}`}>
+              <a href="tel:+14155550127">
                 {useMatIcons ? (
                   <span className="material-icons-outlined">call</span>
                 ) : (
                   <PhoneIcon fill={iconFill} />
                 )}
-                {siteConfig.contact.phone}
+                (415) 555-0127
               </a>
             </div>
           </div>
           <p className="header-top__offer">
-            Kelas SPI <span>gratis</span> — terbuka untuk umum
+            Limited-Time Offer — Get Up To <span>30%</span> Off On Selected
+            Courses
           </p>
+          <div className="header-top__right">
+            <div className="language">
+              <a href="#!" className="language__current">
+                {useMatIcons ? (
+                  <span className="material-icons-sharp">language</span>
+                ) : (
+                  <GlobeIcon fill={iconFill} />
+                )}
+                English
+              </a>
+              <ul className="language__dropdown">
+                <li>
+                  <a href="#!">English</a>
+                </li>
+                <li>
+                  <a href="#!">Spanish</a>
+                </li>
+                <li>
+                  <a href="#!">French</a>
+                </li>
+              </ul>
+            </div>
+            <a href="#!" className="header-top__arabic">
+              العربية
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -359,14 +527,37 @@ function navInHeaderRight(variant: HeaderVariant): boolean {
   );
 }
 
+function HeaderSearch() {
+  return (
+    <div className="header-search d-none d-xl-block">
+      <ToastForm successMessage="Search submitted.">
+        <input
+          type="text"
+          name="q"
+          placeholder="Search..."
+          aria-label="Search"
+          required
+        />
+        <button type="submit" aria-label="Search">
+          <Icon12e7c3d5 />
+        </button>
+      </ToastForm>
+    </div>
+  );
+}
+
 function HeaderMain({
   variant,
   cta,
   logoSrc: logoSrcOverride,
+  cartBadgeClassName = "header-right__cart-badge",
+  showSearch = false,
 }: {
   variant: HeaderVariant;
   cta?: HeaderCta;
   logoSrc?: StaticImageData;
+  cartBadgeClassName?: string;
+  showSearch?: boolean;
 }) {
   const innerClass = headerInnerClassName(variant);
   const logoSrc = logoSrcOverride ?? headerLogoSrc(variant);
@@ -385,6 +576,7 @@ function HeaderMain({
                 />
               </Link>
             </div>
+            {showSearch ? <HeaderSearch /> : null}
             {!navInRight ? (
               <div className="header-nav">
                 <MainNav />
@@ -398,6 +590,23 @@ function HeaderMain({
                 <MainNav />
               </div>
             ) : null}
+
+            <Link
+              className="header-right__user d-none d-xl-flex"
+              href="/profile"
+              aria-label="My account"
+            >
+              <Icon957c3569 />
+            </Link>
+
+            <Link
+              className="header-right__cart d-none d-xl-flex"
+              href="/cart"
+              aria-label="Cart"
+            >
+              <Icon53961c91 />
+              <span className={cartBadgeClassName}>2</span>
+            </Link>
 
             {cta ? (
               <div className="header-button d-none d-xl-flex">
@@ -431,12 +640,16 @@ export function Header({
   variant = "default",
   cta,
   logoSrc,
+  cartBadgeClassName,
   showHeaderTop = true,
+  showSearch = false,
 }: {
   variant?: HeaderVariant;
   cta?: HeaderCta;
   logoSrc?: StaticImageData;
+  cartBadgeClassName?: string;
   showHeaderTop?: boolean;
+  showSearch?: boolean;
 }) {
   return (
     <header className={headerClassName(variant)}>
@@ -445,6 +658,8 @@ export function Header({
         variant={variant}
         cta={cta}
         logoSrc={logoSrc}
+        cartBadgeClassName={cartBadgeClassName}
+        showSearch={showSearch}
       />
     </header>
   );

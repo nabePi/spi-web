@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="574" height="750" viewBox="0 0 574 750" role="img" aria-label="Placeholder 574x750">
+  <rect width="574" height="750" fill="#e6e6e6"/>
+  <rect x="0.5" y="0.5" width="573" height="749" fill="none" stroke="#bdbdbd"/>
+  <path d="M0 0 L574 750 M574 0 L0 750" stroke="#d4d4d4" stroke-width="1"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+        font-family="system-ui, sans-serif" font-size="71" fill="#8a8a8a">574 &#215; 750</text>
+</svg>

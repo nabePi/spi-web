@@ -1,31 +1,41 @@
+import HeroSection from "@/components/pages/demos/e-learning/HeroSection";
+import FeatureStatsSection from "@/components/pages/demos/e-learning/FeatureStatsSection";
+import CategorySection from "@/components/pages/demos/e-learning/CategorySection";
+import CoursesSection from "@/components/pages/demos/e-learning/CoursesSection";
+import VideoSection from "@/components/pages/demos/e-learning/VideoSection";
+import CoursesPackageSection from "@/components/pages/demos/e-learning/CoursesPackageSection";
+import BrandSection from "@/components/pages/demos/e-learning/BrandSection";
+import HowItWorkSection from "@/components/pages/demos/e-learning/HowItWorkSection";
+import TeamSection from "@/components/pages/demos/e-learning/TeamSection";
+import TestimonialSection from "@/components/pages/demos/e-learning/TestimonialSection";
+import AppSection from "@/components/pages/demos/e-learning/AppSection";
+import BlogSection from "@/components/pages/demos/e-learning/BlogSection";
+import InstagramSection from "@/components/pages/demos/e-learning/InstagramSection";
 import { createMetadata } from "@/lib/metadata";
-import { siteConfig } from "@/lib/siteConfig";
 
 export const metadata = createMetadata({
-  title: siteConfig.title,
+  title: "E-Learning Hub",
+  description: "A modern e-learning hub with featured courses, learning packages and a mobile app experience.",
   path: "/",
-  absoluteTitle: true,
 });
 
-/**
- * Blank base page.
- *
- * Step 1 of the PRD implementation: proves the base layout (header `area2`,
- * footer `footer2`, global chrome, SCSS and plugin bootstrap) renders on its
- * own. Sections are composed in step 2.
- */
 const Page = () => {
   return (
-    <section className="section-padding">
-      <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <h1>{siteConfig.name}</h1>
-            <p>Halaman dasar. Konten akan ditambahkan pada tahap berikutnya.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <>
+      <HeroSection />
+      <FeatureStatsSection />
+      <CategorySection />
+      <CoursesSection />
+      <VideoSection />
+      <CoursesPackageSection />
+      <BrandSection />
+      <HowItWorkSection />
+      <TeamSection />
+      <TestimonialSection />
+      <AppSection />
+      <BlogSection />
+      <InstagramSection />
+    </>
   );
 };
 
