@@ -11,11 +11,11 @@ import home1teamteamThumb14 from "@/public/assets/imgs/placeholder/team-thumb1_4
 import home1teamteamThumb15 from "@/public/assets/imgs/placeholder/team-thumb1_5.svg";
 import home1teamteamThumb16 from "@/public/assets/imgs/placeholder/team-thumb1_6.svg";
 import home3instuctorinstructorBgPattern12 from "@/public/assets/imgs/home3/instuctor/instructor-bg-pattern1_2.png";
-import home3instuctorinstructorThumb11 from "@/public/assets/imgs/placeholder/instructor-thumb1_1.svg";
+import home3instuctorinstructorThumb11 from "@/public/assets/imgs/home3/instuctor/spi-dampak-lantern.webp";
 import home1testimonialtestimonailUser11 from "@/public/assets/imgs/placeholder/testimonail-user1_1.svg";
 import home1testimonialtestimonailUser12 from "@/public/assets/imgs/placeholder/testimonail-user1_2.svg";
-import home1testimonialtestimonialThumb11 from "@/public/assets/imgs/placeholder/testimonial-thumb1_1.svg";
-import home1testimonialtestimonialThumb12 from "@/public/assets/imgs/placeholder/testimonial-thumb1_2.svg";
+import home1testimonialtestimonialThumb11 from "@/public/assets/imgs/inner/testimonial/spi-kajian-circle.webp";
+import home1testimonialtestimonialThumb12 from "@/public/assets/imgs/inner/testimonial/spi-alumni-citynight.webp";
 import home1testimonialtestimonailUser13 from "@/public/assets/imgs/placeholder/testimonail-user1_3.svg";
 import home1testimonialtestimonailUser14 from "@/public/assets/imgs/placeholder/testimonail-user1_4.svg";
 import home1testimonialtestimonailUser15 from "@/public/assets/imgs/placeholder/testimonail-user1_5.svg";
@@ -92,7 +92,7 @@ export const instructorV1InstructorContent: InstructorV1InstructorContent = {
   cta: { label: "Daftar Sekarang", href: "/courses-v1" },
   thumb: {
     src: home3instuctorinstructorThumb11,
-    alt: "placeholder",
+    alt: "Lentera menyala, cahayanya menjangkau kegelapan",
   },
   stats: [
     { id: "instructors", modifier: "instructor1__stat--instructors", value: "14", label: "Angkatan" },
@@ -139,7 +139,7 @@ export const instructorV1TestimonialContent: InstructorV1TestimonialContent = {
       overlay: true,
       thumb: {
         src: home1testimonialtestimonialThumb11,
-        alt: "placeholder",
+        alt: "Buku-buku terbuka tersusun melingkar di atas tikar anyaman",
       },
       title: "Kajian mingguan",
       videoHref: "https://www.youtube.com/watch?v=e5Hc2B50Z7c",
@@ -149,7 +149,7 @@ export const instructorV1TestimonialContent: InstructorV1TestimonialContent = {
       delay: "0.25",
       thumb: {
         src: home1testimonialtestimonialThumb12,
-        alt: "placeholder",
+        alt: "Siluet kubah masjid dengan latar langit kota saat senja",
       },
     },
     // NOTE: the two quotes below need real, consented alumni testimonials —
