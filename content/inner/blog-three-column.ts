@@ -92,7 +92,7 @@ export const blogThreeColumnGridContent: BlogThreeColumnGridContent = {
       author: { src: home2blogblogUser21, alt: "placeholder" },
       authorName: "Redaksi SPI",
       date: "30 Juli 2026",
-      title: "Tujuh bulan, dua semester, dua puluh sesi — dan gratis.",
+      title: "Tujuh bulan, dua semester, dua puluh sesi terstruktur.",
       delay: "0.10",
     },
     {

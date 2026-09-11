@@ -5,7 +5,7 @@ import { createMetadata } from "@/lib/metadata";
 export const metadata = createMetadata({
   title: "Program",
   description:
-    "Kelas Reguler, Kursus Singkat, dan Program Daring Sekolah Pemikiran Islam — sembilan topik kajian, seluruhnya gratis.",
+    "Kelas Reguler, Kursus Singkat, dan Program Daring Sekolah Pemikiran Islam — sembilan topik kajian, terbuka untuk umum.",
   path: "/courses-v1",
 });
 

@@ -107,8 +107,8 @@ export const aboutV1WcuContent: AboutV1WcuContent = {
     delay: "0.60",
     thumb: { src: home1wcuwcuThumb11, alt: "placeholder" },
     videoHref: "https://www.youtube.com/watch?v=e5Hc2B50Z7c",
-    title: "Gratis dan terbuka",
-    desc: "Seluruh program SPI diselenggarakan tanpa biaya, terbuka untuk umum.",
+    title: "Fleksibel dan terbuka",
+    desc: "Program SPI dapat diikuti secara reguler maupun daring, terbuka untuk umum.",
   },
   instructors: {
     delay: "0.30",

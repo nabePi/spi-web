@@ -60,7 +60,7 @@ import home2instagraminstagramThumb25 from "@/public/assets/imgs/placeholder/ins
 import home2instagraminstagramThumb26 from "@/public/assets/imgs/placeholder/instagram-thumb2_6.svg";
 
 export const eLearningHeroContent: ELearningHeroContent = {
-  badgePrefix: "Gratis",
+  badgePrefix: "Bergabung",
   badgeText: "Terbuka untuk umum",
   titleBefore: "Menghidupkan tradisi ilmu untuk kejayaan\u00a0",
   titleHighlight: "peradaban Islam",
@@ -68,7 +68,7 @@ export const eLearningHeroContent: ELearningHeroContent = {
   primaryCta: { label: "Daftar Sekarang", href: "/courses-v1" },
   secondaryCta: { label: "Tentang SPI", href: "/courses-v2" },
   features: [
-    { label: "Kelas gratis" },
+    { label: "Kelas mingguan" },
     { label: "Enam kota" },
     { label: "Sejak 2014" },
   ],
@@ -92,7 +92,7 @@ export const eLearningFeatureStatsContent: ELearningFeatureStatsContent = {
     { id: "courses", title: "11 Tahun", text: "Berdiri sejak 2014", delay: "0.1" },
     { id: "flexible", title: "6 Kota", text: "Cabang aktif", delay: "0.2" },
     { id: "learners", title: "14 Angkatan", text: "SPI Fatahillah Jakarta", delay: "0.3" },
-    { id: "membership", title: "Gratis", text: "Seluruh program", delay: "0.4" },
+    { id: "membership", title: "9", text: "Topik kajian", delay: "0.4" },
   ],
 };
 
@@ -124,7 +124,7 @@ const courses: CourseCardData[] = [
     ratingValue: 4,
     lessons: "20 Sesi",
     students: "2 Semester",
-    price: "Gratis",
+    price: "—",
     oldPrice: "",
     offer: "Angkatan 14",
   },
@@ -137,7 +137,7 @@ const courses: CourseCardData[] = [
     ratingValue: 3,
     lessons: "7 Sesi",
     students: "1 Bulan",
-    price: "Gratis",
+    price: "—",
   },
   {
     href: "/course-details-classic-v1",
@@ -148,7 +148,7 @@ const courses: CourseCardData[] = [
     ratingValue: 4.5,
     lessons: "Daring",
     students: "Nasional",
-    price: "Gratis",
+    price: "—",
   },
   {
     href: "/course-details-classic-v1",
@@ -159,7 +159,7 @@ const courses: CourseCardData[] = [
     ratingValue: 5,
     lessons: "Mingguan",
     students: "Terbuka",
-    price: "Gratis",
+    price: "—",
     oldPrice: "",
     offer: "Rutin",
   },
@@ -168,7 +168,7 @@ const courses: CourseCardData[] = [
 export const eLearningCoursesContent: ELearningCoursesContent = {
   subtitle: "Program",
   titleBefore: "Tiga format kelas, seluruhnya",
-  titleHighlight: "gratis",
+  titleHighlight: "terbuka",
   cta: { label: "Lihat semua program", href: "/courses-v2" },
   items: courses,
 };

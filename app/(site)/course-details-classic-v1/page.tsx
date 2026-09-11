@@ -6,7 +6,7 @@ import { createMetadata } from "@/lib/metadata";
 export const metadata = createMetadata({
   title: "Kelas Reguler",
   description:
-    "Kajian pemikiran Islam dua semester: sekitar tujuh bulan, dua puluh sesi, sekali pertemuan setiap pekan — dan gratis.",
+    "Kajian pemikiran Islam dua semester: sekitar tujuh bulan, dua puluh sesi, sekali pertemuan setiap pekan — terbuka untuk umum.",
   path: "/course-details-classic-v1",
 });
 
