@@ -120,13 +120,13 @@ function HeaderTop({ variant }: { variant: HeaderVariant }) {
         <div className="header-top__inner">
           <div className="header-top__left">
             <div className="header-top__left-item">
-              <a href="mailto:support@instituteflow.com">
+              <a href="mailto:support@pemikiranislam.id">
                 {useMatIcons ? (
                   <span className="material-icons-outlined">mail</span>
                 ) : (
                   <MailIcon fill={iconFill} />
                 )}
-                support@instituteflow.com
+                support@pemikiranislam.id
               </a>
             </div>
             <div className="header-top__left-item">

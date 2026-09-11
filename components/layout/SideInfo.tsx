@@ -88,7 +88,7 @@ const SideInfo = () => {
                 </div>
                 <div className="contact-item">
                   <span className="text">
-                    <a href="mailto:InstituteFlow@gmail.com">InstituteFlow@gmail.com</a>
+                    <a href="mailto:info@pemikiranislam.id">info@pemikiranislam.id</a>
                   </span>
                 </div>
                 <div className="contact-item">

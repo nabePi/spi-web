@@ -169,7 +169,7 @@ const Footer2 = () => {
                   <div className="item">
                     <MailIcon fill="white" />
 
-                    <a href="mailto:support@instituteflow.com">support@instituteflow.com</a>
+                    <a href="mailto:support@pemikiranislam.id">support@pemikiranislam.id</a>
                   </div>
                 </div>
               </div>

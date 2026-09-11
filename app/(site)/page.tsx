@@ -12,12 +12,13 @@ import AppSection from "@/components/pages/demos/e-learning/AppSection";
 import BlogSection from "@/components/pages/demos/e-learning/BlogSection";
 import InstagramSection from "@/components/pages/demos/e-learning/InstagramSection";
 import { createMetadata } from "@/lib/metadata";
+import { siteConfig } from "@/lib/siteConfig";
 
 export const metadata = createMetadata({
-  title: "Sekolah Pemikiran Islam",
-  description:
-    "Sekolah Pemikiran Islam (SPI) menyelenggarakan kajian pemikiran Islam yang terencana dan terukur. Kelas mingguan di enam kota sejak 2014.",
+  title: siteConfig.title,
+  description: siteConfig.description,
   path: "/",
+  absoluteTitle: true,
 });
 
 const Page = () => {
