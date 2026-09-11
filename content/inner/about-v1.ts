@@ -7,8 +7,8 @@ import type {
   AboutV1WcuContent,
 } from "@/types/inner/about-v1";
 import innerbreadcumbbreadcumbBgPattern2 from "@/public/assets/imgs/inner/breadcumb/breadcumb-bg-pattern2.png";
-import inneraboutinnerThumb1 from "@/public/assets/imgs/inner/about/spi-ruang-kajian.webp";
-import inneraboutinnerThumb2 from "@/public/assets/imgs/inner/about/spi-manuskrip.webp";
+import inneraboutinnerThumb1 from "@/public/assets/imgs/inner/about/spi-quran-laptop.webp";
+import inneraboutinnerThumb2 from "@/public/assets/imgs/inner/about/spi-tumpukan-buku.webp";
 import inneraboutinnerThumb3 from "@/public/assets/imgs/inner/about/spi-ornamen-ukiran.webp";
 import home1wcuwcuPatternbg11 from "@/public/assets/imgs/home1/wcu/wcu-patternbg1_1.webp";
 import home1wcuwcuThumb11 from "@/public/assets/imgs/placeholder/wcu-thumb1_1.svg";
@@ -43,11 +43,11 @@ export const aboutV1AboutContent: AboutV1AboutContent = {
   thumbs: [
     {
       src: inneraboutinnerThumb1,
-      alt: "Ruang kajian bergaya arsitektur Jawa dengan meja-meja rendah tertata rapi",
+      alt: "Al-Qur'an dan laptop berdampingan di meja kerja, tradisi ilmu yang menavigasi zaman modern",
     },
     {
       src: inneraboutinnerThumb2,
-      alt: "Tumpukan manuskrip Islam klasik di atas rehal kayu ukir",
+      alt: "Tumpukan buku dan jurnal akademik di atas meja kerja kayu",
     },
   ],
   subtitle: "Sekilas SPI",
