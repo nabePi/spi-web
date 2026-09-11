@@ -28,14 +28,14 @@ const Page = () => {
       <CategorySection />
       <CoursesSection />
       <VideoSection />
-      <CoursesPackageSection />
-      <BrandSection />
-      <HowItWorkSection />
+      {/* <CoursesPackageSection /> */}
+      {/* <BrandSection /> */}
+      {/* <HowItWorkSection /> */}
       <TeamSection />
-      <TestimonialSection />
-      <AppSection />
+      {/* <TestimonialSection /> */}
+      {/* <AppSection /> */}
       <BlogSection />
-      <InstagramSection />
+      {/* <InstagramSection /> */}
     </>
   );
 };

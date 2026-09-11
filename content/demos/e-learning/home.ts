@@ -15,16 +15,16 @@ import type {
   ELearningVideoContent,
 } from "@/types/demos/e-learning/home";
 import home2heroheroBg21 from "@/public/assets/imgs/home2/hero/hero-bg2_1.webp";
-import home2heroheroThumb21 from "@/public/assets/imgs/placeholder/hero-thumb2_1.svg";
+import home2heroheroThumb21 from "@/public/assets/imgs/home/spi-hero-jendela.webp";
 import home2heroheroThumbUser21 from "@/public/assets/imgs/placeholder/hero-thumb-user2_1.svg";
 import home2heroheroThumbUser22 from "@/public/assets/imgs/placeholder/hero-thumb-user2_2.svg";
 import home2heroheroThumbUser23 from "@/public/assets/imgs/placeholder/hero-thumb-user2_3.svg";
 import home2heroheroThumbPattern21 from "@/public/assets/imgs/home2/hero/hero-thumb-pattern2_1.webp";
-import home2coursestopCoursesThumb11 from "@/public/assets/imgs/placeholder/top-courses-thumb1_1.svg";
-import home2coursestopCoursesThumb12 from "@/public/assets/imgs/placeholder/top-courses-thumb1_2.svg";
-import home2coursestopCoursesThumb13 from "@/public/assets/imgs/placeholder/top-courses-thumb1_3.svg";
-import home2coursestopCoursesThumb14 from "@/public/assets/imgs/placeholder/top-courses-thumb1_4.svg";
-import home2videovideoThumb from "@/public/assets/imgs/placeholder/video-thumb.svg";
+import home2coursestopCoursesThumb11 from "@/public/assets/imgs/home/spi-kelas-reguler.webp";
+import home2coursestopCoursesThumb12 from "@/public/assets/imgs/home/spi-kursus-singkat.webp";
+import home2coursestopCoursesThumb13 from "@/public/assets/imgs/home/spi-komik.webp";
+import home2coursestopCoursesThumb14 from "@/public/assets/imgs/home/spi-tuesday-special.webp";
+import home2videovideoThumb from "@/public/assets/imgs/home/spi-video-teaser.webp";
 import home2coursescourses1Bg from "@/public/assets/imgs/home2/courses/courses1-bg.webp";
 import home2coursescoursesThumb11 from "@/public/assets/imgs/placeholder/courses-thumb1_1.svg";
 import home2coursescoursesThumb12 from "@/public/assets/imgs/placeholder/courses-thumb1_2.svg";
@@ -46,11 +46,11 @@ import home2testimonialtestimonialThumb22 from "@/public/assets/imgs/placeholder
 import home2app2appBgThumb11 from "@/public/assets/imgs/home2/app2/app-bg-thumb1_1.webp";
 import home2app2appThumb11 from "@/public/assets/imgs/placeholder/app-thumb1_1.svg";
 import home2app2appThumbShape11 from "@/public/assets/imgs/home2/app2/app-thumb-shape1_1.webp";
-import home2blogblogThumb21 from "@/public/assets/imgs/placeholder/blog-thumb2_1.svg";
+import home2blogblogThumb21 from "@/public/assets/imgs/home/spi-blog-adab.webp";
 import home2blogblogUser21 from "@/public/assets/imgs/placeholder/blog-user2_1.svg";
-import home2blogblogThumb22 from "@/public/assets/imgs/placeholder/blog-thumb2_2.svg";
+import home2blogblogThumb22 from "@/public/assets/imgs/home/spi-blog-ghazwul-fikri.webp";
 import home2blogblogUser22 from "@/public/assets/imgs/placeholder/blog-user2_2.svg";
-import home2blogblogThumb23 from "@/public/assets/imgs/placeholder/blog-thumb2_3.svg";
+import home2blogblogThumb23 from "@/public/assets/imgs/home/spi-blog-marjan-bogor.webp";
 import home2blogblogUser23 from "@/public/assets/imgs/placeholder/blog-user2_3.svg";
 import home2instagraminstagramThumb21 from "@/public/assets/imgs/placeholder/instagram-thumb2_1.svg";
 import home2instagraminstagramThumb22 from "@/public/assets/imgs/placeholder/instagram-thumb2_2.svg";
@@ -73,7 +73,7 @@ export const eLearningHeroContent: ELearningHeroContent = {
     { label: "Sejak 2014" },
   ],
   bg: { src: home2heroheroBg21, alt: "placeholder" },
-  thumb: { src: home2heroheroThumb21, alt: "placeholder" },
+  thumb: { src: home2heroheroThumb21, alt: "Jendela lengkung dengan cahaya pagi masuk ke ruang kajian" },
   users: [
     { src: home2heroheroThumbUser21, alt: "placeholder" },
     { src: home2heroheroThumbUser22, alt: "placeholder" },
@@ -182,7 +182,7 @@ export const eLearningVideoContent: ELearningVideoContent = {
     { kind: "rating", rating: "4.8", ratingMax: "5", label: "Penilaian peserta" },
     { kind: "odometer", value: "115", suffix: "", label: "Peserta terbanyak, SPI UII 2020" },
   ],
-  thumb: { src: home2videovideoThumb, alt: "placeholder" },
+  thumb: { src: home2videovideoThumb, alt: "Ruang kajian bergaya masjid dengan sajadah tertata" },
   videoHref: "https://www.youtube.com/watch?v=7e90gBu4pas",
 };
 
@@ -414,7 +414,7 @@ export const eLearningBlogContent: ELearningBlogContent = {
     {
       href: "/blog-details-standard",
       category: "Filosofi Dasar",
-      thumb: { src: home2blogblogThumb21, alt: "placeholder" },
+      thumb: { src: home2blogblogThumb21, alt: "Jurnal terbuka dengan pena, melambangkan refleksi" },
       author: { src: home2blogblogUser21, alt: "placeholder" },
       authorName: "Dr. Akmal Sjafril",
       date: "5 September 2026",
@@ -424,7 +424,7 @@ export const eLearningBlogContent: ELearningBlogContent = {
     {
       href: "/blog-details-standard",
       category: "Pemikiran Islam",
-      thumb: { src: home2blogblogThumb22, alt: "placeholder" },
+      thumb: { src: home2blogblogThumb22, alt: "Ilustrasi abstrak kebisingan informasi" },
       author: { src: home2blogblogUser22, alt: "placeholder" },
       authorName: "Redaksi SPI",
       date: "28 Agustus 2026",
@@ -434,7 +434,7 @@ export const eLearningBlogContent: ELearningBlogContent = {
     {
       href: "/blog-details-standard",
       category: "Berita",
-      thumb: { src: home2blogblogThumb23, alt: "placeholder" },
+      thumb: { src: home2blogblogThumb23, alt: "Hujan di kaca jendela, suasana Bogor" },
       author: { src: home2blogblogUser23, alt: "placeholder" },
       authorName: "Redaksi SPI",
       date: "15 Agustus 2026",
