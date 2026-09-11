@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="760" viewBox="0 0 780 760" role="img" aria-label="Placeholder 780x760">
+  <rect width="780" height="760" fill="#e6e6e6"/>
+  <rect x="0.5" y="0.5" width="779" height="759" fill="none" stroke="#bdbdbd"/>
+  <path d="M0 0 L780 760 M780 0 L0 760" stroke="#d4d4d4" stroke-width="1"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+        font-family="system-ui, sans-serif" font-size="95" fill="#8a8a8a">780 &#215; 760</text>
+</svg>

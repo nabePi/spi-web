@@ -34,8 +34,9 @@ interface NavItem {
  */
 const mainMenu: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "About", href: "#" },
+  { label: "About", href: "/about-v1" },
   { label: "Program", href: "#" },
+  { label: "Alumni", href: "#" },
   { label: "Blog", href: "/blog-standard" },
   { label: "Contact", href: "/contact" },
 ];

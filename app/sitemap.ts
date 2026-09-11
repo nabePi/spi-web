@@ -2,7 +2,13 @@ import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/siteConfig";
 
 /** All public routes, relative to the site origin. */
-const routes = ["/", "/blog-standard", "/blog-details-standard", "/contact"];
+const routes = [
+  "/",
+  "/about-v1",
+  "/blog-standard",
+  "/blog-details-standard",
+  "/contact",
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
