@@ -37,7 +37,7 @@ const mainMenu: NavItem[] = [
   { label: "About", href: "/about-v1" },
   { label: "Program", href: "#" },
   { label: "Alumni", href: "#" },
-  { label: "Blog", href: "/blog-standard" },
+  { label: "Blog", href: "/blog-three-column" },
   { label: "Contact", href: "/contact" },
 ];
 

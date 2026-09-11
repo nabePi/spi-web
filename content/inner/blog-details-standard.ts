@@ -19,7 +19,7 @@ export const blogDetailsStandardBreadcrumbContent: BlogDetailsStandardBreadcrumb
   title: "Konsep Adab",
   items: [
     { label: "Beranda", href: "/" },
-    { label: "Berita & Artikel", href: "/blog-standard" },
+    { label: "Berita & Artikel", href: "/blog-three-column" },
     { label: "Konsep Adab" },
   ],
 };

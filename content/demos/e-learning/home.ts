@@ -409,7 +409,7 @@ export const eLearningBlogContent: ELearningBlogContent = {
   titleLine1: "Kajian dan kabar",
   titleLine2: "terbaru dari",
   titleHighlight: "SPI",
-  cta: { label: "Baca semua artikel", href: "/blog-standard" },
+  cta: { label: "Baca semua artikel", href: "/blog-three-column" },
   items: [
     {
       href: "/blog-details-standard",

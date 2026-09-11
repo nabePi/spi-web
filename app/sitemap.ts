@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/siteConfig";
 const routes = [
   "/",
   "/about-v1",
-  "/blog-standard",
+  "/blog-three-column",
   "/blog-details-standard",
   "/contact",
 ];
