@@ -14,8 +14,9 @@ import InstagramSection from "@/components/pages/demos/e-learning/InstagramSecti
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "E-Learning Hub",
-  description: "A modern e-learning hub with featured courses, learning packages and a mobile app experience.",
+  title: "Sekolah Pemikiran Islam",
+  description:
+    "Sekolah Pemikiran Islam (SPI) menyelenggarakan kajian pemikiran Islam yang terencana dan terukur. Kelas gratis di enam kota sejak 2014.",
   path: "/",
 });
 

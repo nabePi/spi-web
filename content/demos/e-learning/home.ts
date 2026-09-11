@@ -60,17 +60,17 @@ import home2instagraminstagramThumb25 from "@/public/assets/imgs/placeholder/ins
 import home2instagraminstagramThumb26 from "@/public/assets/imgs/placeholder/instagram-thumb2_6.svg";
 
 export const eLearningHeroContent: ELearningHeroContent = {
-  badgePrefix: "Lorem",
-  badgeText: "Ipsum dolor sit",
-  titleBefore: "Amet consectetur adipiscing elit sed\u00a0",
-  titleHighlight: "Do",
-  text: "Eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco.",
-  primaryCta: { label: "Laboris nisi", href: "/courses-v1" },
-  secondaryCta: { label: "Aliquip ex", href: "/courses-v2" },
+  badgePrefix: "Gratis",
+  badgeText: "Terbuka untuk umum",
+  titleBefore: "Menghidupkan tradisi ilmu untuk kejayaan\u00a0",
+  titleHighlight: "peradaban Islam",
+  text: "Sekolah Pemikiran Islam adalah lembaga pendidikan non-formal yang menyelenggarakan kajian strategis, terencana, dan terukur untuk menjawab kebutuhan umat sesuai zamannya.",
+  primaryCta: { label: "Daftar Sekarang", href: "/courses-v1" },
+  secondaryCta: { label: "Tentang SPI", href: "/courses-v2" },
   features: [
-    { label: "Ea commodo" },
-    { label: "Consequat duis" },
-    { label: "Aute" },
+    { label: "Kelas gratis" },
+    { label: "Enam kota" },
+    { label: "Sejak 2014" },
   ],
   bg: { src: home2heroheroBg21, alt: "placeholder" },
   thumb: { src: home2heroheroThumb21, alt: "placeholder" },
@@ -80,7 +80,7 @@ export const eLearningHeroContent: ELearningHeroContent = {
     { src: home2heroheroThumbUser23, alt: "placeholder" },
   ],
   rating: "4.9/5",
-  learnersText: "Irure in reprehenderit",
+  learnersText: "Alumni tersebar di enam kota",
   pattern: {
     src: home2heroheroThumbPattern21,
     alt: "placeholder",
@@ -89,28 +89,28 @@ export const eLearningHeroContent: ELearningHeroContent = {
 
 export const eLearningFeatureStatsContent: ELearningFeatureStatsContent = {
   items: [
-    { id: "courses", title: "Voluptate", text: "Velit esse", delay: "0.1" },
-    { id: "flexible", title: "Cillum eu", text: "Fugiat nulla", delay: "0.2" },
-    { id: "learners", title: "Pariatur", text: "Excepteur sint", delay: "0.3" },
-    { id: "membership", title: "Occaecat", text: "Cupidatat", delay: "0.4" },
+    { id: "courses", title: "11 Tahun", text: "Berdiri sejak 2014", delay: "0.1" },
+    { id: "flexible", title: "6 Kota", text: "Cabang aktif", delay: "0.2" },
+    { id: "learners", title: "14 Angkatan", text: "SPI Fatahillah Jakarta", delay: "0.3" },
+    { id: "membership", title: "Gratis", text: "Seluruh program", delay: "0.4" },
   ],
 };
 
 export const eLearningCategoryContent: ELearningCategoryContent = {
-  subtitle: "Non proident",
-  title: "Sunt culpa",
-  desc: "Qui officia deserunt mollit anim id est laborum lorem ipsum dolor sit.",
-  cta: { label: "Amet consectetur adipiscing", href: "/courses-v2" },
+  subtitle: "Kurikulum",
+  title: "Topik kajian",
+  desc: "Kajian SPI disusun sistematis dan terukur, memadukan tradisi keilmuan Islam klasik dengan tantangan pemikiran kontemporer.",
+  cta: { label: "Lihat seluruh kurikulum", href: "/courses-v2" },
   items: [
-    { id: "programming", name: "Elit", learners: "50,148,521 Learners", href: "/course-details-classic-v2" },
-    { id: "designing", name: "Sed", learners: "50,148,521 Learners", href: "/course-details-classic-v2" },
-    { id: "ai", name: "Do eiusmod", learners: "50,148,521 Learners", href: "/course-details-classic-v2" },
-    { id: "academic", name: "Tempor", learners: "50,148,521 Learners", href: "/course-details-classic-v2" },
-    { id: "language", name: "Incididunt", learners: "50,148,521 Learners", href: "/course-details-classic-v2" },
-    { id: "marketing", name: "Ut", learners: "50,148,521 Learners", href: "/course-details-classic-v2" },
-    { id: "business", name: "Labore", learners: "50,148,521 Learners", href: "/course-details-classic-v2" },
-    { id: "data-science", name: "Et dolore", learners: "50,148,521 Learners", href: "/course-details-classic-v2" },
-    { id: "health", name: "Magna", learners: "50,148,521 Learners", href: "/course-details-classic-v2" },
+    { id: "programming", name: "Kepemimpinan Profetik", learners: "Kelas Reguler", href: "/course-details-classic-v2" },
+    { id: "designing", name: "Al-Qur'an dan Peradaban", learners: "Kelas Reguler", href: "/course-details-classic-v2" },
+    { id: "ai", name: "Worldview of Islam", learners: "Kelas Reguler", href: "/course-details-classic-v2" },
+    { id: "academic", name: "Filsafat Islam Klasik", learners: "Kelas Reguler", href: "/course-details-classic-v2" },
+    { id: "language", name: "Tasawuf dan Masyarakat Jawa", learners: "Kelas Reguler", href: "/course-details-classic-v2" },
+    { id: "marketing", name: "Islam dan Gender", learners: "Kelas Reguler", href: "/course-details-classic-v2" },
+    { id: "business", name: "Fiqih Keluarga Milenial", learners: "Kelas Reguler", href: "/course-details-classic-v2" },
+    { id: "data-science", name: "Filologi Sastra Islam", learners: "Kelas Reguler", href: "/course-details-classic-v2" },
+    { id: "health", name: "Ghazwul Fikri", learners: "Kursus Singkat", href: "/course-details-classic-v2" },
   ],
 };
 
@@ -118,74 +118,77 @@ const courses: CourseCardData[] = [
   {
     href: "/course-details-classic-v1",
     thumb: home2coursestopCoursesThumb11,
-    title: "Aliqua enim ad",
-    author: "Minim veniam",
+    title: "Kelas Reguler — kajian pemikiran Islam dua semester",
+    author: "SPI Fatahillah, Jakarta",
     rating: "4/5",
     ratingValue: 4,
-    lessons: "12 Lessones",
-    students: "80 Students",
-    price: "$29.00",
-    oldPrice: "$56.00",
-    offer: "Quis nostrud",
+    lessons: "20 Sesi",
+    students: "2 Semester",
+    price: "Gratis",
+    oldPrice: "",
+    offer: "Angkatan 14",
   },
   {
     href: "/course-details-classic-v1",
     thumb: home2coursestopCoursesThumb12,
-    title: "Exercitation ullamco laboris",
-    author: "Nisi aliquip",
+    title: "Kursus Singkat untuk kelompok dan organisasi",
+    author: "Seluruh cabang",
     rating: "3/5",
     ratingValue: 3,
-    lessons: "12 Lessones",
-    students: "16 Students",
-    price: "$56.00",
+    lessons: "7 Sesi",
+    students: "1 Bulan",
+    price: "Gratis",
   },
   {
     href: "/course-details-classic-v1",
     thumb: home2coursestopCoursesThumb13,
-    title: "Ex ea commodo",
-    author: "Consequat duis",
+    title: "KOMIK — Kelas Online Pemikiran Islam",
+    author: "Program Daring",
     rating: "4.5/5",
     ratingValue: 4.5,
-    lessons: "12 Lessons",
-    students: "36 Students",
-    price: "$56.00",
+    lessons: "Daring",
+    students: "Nasional",
+    price: "Gratis",
   },
   {
     href: "/course-details-classic-v1",
     thumb: home2coursestopCoursesThumb14,
-    title: "Aute irure in reprehenderit voluptate",
-    author: "Velit esse",
+    title: "Tuesday's Special — sesi daring rutin",
+    author: "Program Daring",
     rating: "5/5",
     ratingValue: 5,
-    lessons: "12 Lessons",
-    students: "40 Students",
-    price: "$49.00",
-    oldPrice: "$99.00",
-    offer: "Cillum eu",
+    lessons: "Mingguan",
+    students: "Terbuka",
+    price: "Gratis",
+    oldPrice: "",
+    offer: "Rutin",
   },
 ];
 
 export const eLearningCoursesContent: ELearningCoursesContent = {
-  subtitle: "Fugiat nulla",
-  titleBefore: "Pariatur excepteur sint occaecat cupidatat",
-  titleHighlight: "Non",
-  cta: { label: "Proident sunt culpa", href: "/courses-v2" },
+  subtitle: "Program",
+  titleBefore: "Tiga format kelas, seluruhnya",
+  titleHighlight: "gratis",
+  cta: { label: "Lihat semua program", href: "/courses-v2" },
   items: courses,
 };
 
 export const eLearningVideoContent: ELearningVideoContent = {
   left: [
-    { kind: "odometer", value: "500", suffix: "k+", label: "Qui officia" },
-    { kind: "odometer", value: "100", suffix: "+", label: "Deserunt mollit" },
+    { kind: "odometer", value: "20", suffix: " sesi", label: "Per program reguler" },
+    { kind: "odometer", value: "6", suffix: " kota", label: "Cabang aktif" },
   ],
   right: [
-    { kind: "rating", rating: "4.8", ratingMax: "5", label: "Anim id" },
-    { kind: "odometer", value: "50", suffix: "+", label: "Est laborum" },
+    { kind: "rating", rating: "4.8", ratingMax: "5", label: "Penilaian peserta" },
+    { kind: "odometer", value: "115", suffix: "", label: "Peserta terbanyak, SPI UII 2020" },
   ],
   thumb: { src: home2videovideoThumb, alt: "placeholder" },
   videoHref: "https://www.youtube.com/watch?v=7e90gBu4pas",
 };
 
+// NOTE: pricing tiers have no counterpart at SPI — every program is free of
+// charge. Left as lorem ipsum pending a decision; the PRD recommends removing
+// this section entirely (Appendix C).
 export const eLearningPackagesContent: ELearningPackagesContent = {
   bg: { src: home2coursescourses1Bg, alt: "placeholder" },
   subtitle: "Lorem ipsum",
@@ -234,6 +237,8 @@ export const eLearningPackagesContent: ELearningPackagesContent = {
   ],
 };
 
+// NOTE: sponsor/brand logos are template assets; SPI has no sponsor set.
+// Heading left as lorem ipsum pending a decision.
 export const eLearningBrandContent: ELearningBrandContent = {
   subtitle: "Ex",
   titleBefore: "Ea commodo consequat",
@@ -241,9 +246,9 @@ export const eLearningBrandContent: ELearningBrandContent = {
 };
 
 export const eLearningHowItWorkContent: ELearningHowItWorkContent = {
-  subtitle: "Aute irure in",
-  titleBefore: "Reprehenderit voluptate",
-  titleHighlight: "Velit",
+  subtitle: "Alur",
+  titleBefore: "Cara mengikuti",
+  titleHighlight: "kelas SPI",
   items: [
     {
       id: "choose",
@@ -251,76 +256,76 @@ export const eLearningHowItWorkContent: ELearningHowItWorkContent = {
       active: true,
       delay: "0.1",
       thumb: { src: home2wpwpThumb11, alt: "placeholder" },
-      step: "Esse cillum",
-      title: "Eu fugiat nulla",
-      desc: "Pariatur excepteur sint occaecat cupidatat non proident sunt culpa.",
+      step: "Langkah 01",
+      title: "Pilih cabang terdekat",
+      desc: "SPI hadir di Jakarta, Bandung, Yogyakarta, Bogor, Tangerang, dan Padang.",
     },
     {
       id: "learn",
       modifier: "how-it-work-2__item--green",
       delay: "0.2",
       thumb: { src: home2wpwpThumb12, alt: "placeholder" },
-      step: "Qui officia",
-      title: "Deserunt mollit anim id",
-      desc: "Est laborum lorem ipsum dolor sit amet.",
+      step: "Langkah 02",
+      title: "Daftar pada angkatan yang dibuka",
+      desc: "Pendaftaran dibuka secara berkala di tiap cabang, tanpa biaya.",
     },
     {
       id: "practice",
       modifier: "how-it-work-2__item--orange",
       delay: "0.3",
       thumb: { src: home2wpwpThumb13, alt: "placeholder" },
-      step: "Consectetur adipiscing",
-      title: "Elit sed do",
-      desc: "Eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      step: "Langkah 03",
+      title: "Ikuti kajian mingguan",
+      desc: "Kelas reguler berlangsung sekitar tujuh bulan: dua semester, dua puluh sesi.",
     },
     {
       id: "certified",
       modifier: "how-it-work-2__item--indigo",
       delay: "0.4",
       thumb: { src: home2wpwpThumb14, alt: "placeholder" },
-      step: "Enim ad",
-      title: "Minim veniam",
-      desc: "Quis nostrud exercitation ullamco laboris nisi aliquip ex.",
+      step: "Langkah 04",
+      title: "Transmisikan ilmunya",
+      desc: "Alumni diharapkan kembali ke komunitasnya sebagai pelopor intelektual.",
     },
   ],
 };
 
 export const eLearningTeamContent: ELearningTeamContent = {
-  subtitle: "Ea",
-  titleLine1: "Meet with world-class",
-  titleLine2Before: "& dope",
-  titleHighlight: "Commodo",
-  cta: { label: "Consequat duis aute", href: "/instructor-v1" },
+  subtitle: "Cabang",
+  titleLine1: "Enam cabang di",
+  titleLine2Before: "seluruh",
+  titleHighlight: "Indonesia",
+  cta: { label: "Lihat semua cabang", href: "/instructor-v1" },
   members: [
     {
       href: "/instructor-details",
       thumb: { src: home2teamteamThumb21, alt: "placeholder" },
-      name: "Irure in reprehenderit",
-      role: "Voluptate velit esse",
+      name: "SPI Fatahillah",
+      role: "INSISTS, Kalibata, Jakarta Selatan",
       rating: "4.5",
       delay: "0.10",
     },
     {
       href: "/instructor-details",
       thumb: { src: home2teamteamThumb22, alt: "placeholder" },
-      name: "Cillum eu fugiat",
-      role: "Nulla pariatur",
+      name: "SPI Moh. Natsir",
+      role: "Masjid Istiqamah, Bandung",
       rating: "4.5",
       delay: "0.20",
     },
     {
       href: "/instructor-details",
       thumb: { src: home2teamteamThumb23, alt: "placeholder" },
-      name: "Excepteur sint occaecat",
-      role: "Cupidatat non",
+      name: "SPI UII",
+      role: "Universitas Islam Indonesia, Yogyakarta",
       rating: "4.5",
       delay: "0.30",
     },
     {
       href: "/instructor-details",
       thumb: { src: home2teamteamThumb24, alt: "placeholder" },
-      name: "Proident sunt culpa",
-      role: "Qui officia",
+      name: "SPI Bogor — MARJAN",
+      role: "Majelis Pemikiran di Kota Hujan",
       rating: "4.5",
       delay: "0.40",
     },
@@ -328,10 +333,10 @@ export const eLearningTeamContent: ELearningTeamContent = {
 };
 
 export const eLearningTestimonialContent: ELearningTestimonialContent = {
-  subtitle: "Deserunt",
-  titleLine1: "Our learners say honestly",
-  titleLine2: "worldwide",
-  titleHighlight: "Mollit",
+  subtitle: "Gagasan",
+  titleLine1: "Mengapa SPI ada, dalam",
+  titleLine2: "sendiri",
+  titleHighlight: "kata-katanya",
   items: [
     {
       id: "emily",
@@ -341,17 +346,17 @@ export const eLearningTestimonialContent: ELearningTestimonialContent = {
         alt: "placeholder",
       },
       quote:
-        "“ Before joining this platform, I struggled to find structured and practical learning resources. The courses here are extremely well-organized, and the instructors explain. ”",
+        "\u201c Saya meyakini bahwa aktivis dakwah bisa menjadi pelopor perubahan positif dengan cepat, salah satunya dengan cara melakukan berbagai kajian strategis yang terencana dan terstruktur untuk menjawab kebutuhan umat sesuai dengan zamannya. \u201d",
       author: {
         src: home2testimonialtestimonialThumbUser21,
         alt: "placeholder",
       },
-      authorName: "Anim id est",
-      designation: "Laborum lorem",
+      authorName: "Dr. Akmal Sjafril",
+      designation: "Pendiri dan Kepala Pusat SPI",
       rating: "4.9/5",
-      statNumber: "50k+",
-      statLabel: "Ipsum dolor",
-      studentsLabel: "Sit amet consectetur",
+      statNumber: "11",
+      statLabel: "Tahun berjalan",
+      studentsLabel: "Sejak 2014 hingga kini",
       avatars: [
         { src: home2testimonialtestimonialThumbUser22, alt: "placeholder" },
         { src: home2testimonialtestimonialThumbUser23, alt: "placeholder" },
@@ -366,17 +371,17 @@ export const eLearningTestimonialContent: ELearningTestimonialContent = {
         alt: "placeholder",
       },
       quote:
-        "“ I was looking for a flexible and reliable learning platform, and this exceeded my expectations. The variety of courses, clear learning paths, and practical assignments helped. ”",
+        "\u201c SPI hadir sebagai institusi pendidikan non formal yang memberikan kajian-kajian strategis bersifat terencana dan terukur demi menjawab kebutuhan umat sesuai zamannya. \u201d",
       author: {
         src: home2testimonialtestimonialThumbUser24,
         alt: "placeholder",
       },
-      authorName: "Adipiscing elit sed",
-      designation: "Do eiusmod",
+      authorName: "Sekolah Pemikiran Islam",
+      designation: "Pernyataan kelembagaan",
       rating: "4.9/5",
-      statNumber: "95%",
-      statLabel: "Tempor incididunt",
-      studentsLabel: "Ut labore et",
+      statNumber: "6",
+      statLabel: "Kota",
+      studentsLabel: "Jakarta hingga Padang",
       avatars: [
         { src: home2testimonialtestimonialThumbUser22, alt: "placeholder" },
         { src: home2testimonialtestimonialThumbUser23, alt: "placeholder" },
@@ -386,6 +391,9 @@ export const eLearningTestimonialContent: ELearningTestimonialContent = {
   ],
 };
 
+// NOTE: this section advertises a mobile app. SPI has none and none is
+// planned, so the wording is left as lorem ipsum; the PRD recommends removing
+// the section (Appendix C).
 export const eLearningAppContent: ELearningAppContent = {
   bg: home2app2appBgThumb11,
   subtitle: "Dolore magna aliqua",
@@ -397,47 +405,47 @@ export const eLearningAppContent: ELearningAppContent = {
 };
 
 export const eLearningBlogContent: ELearningBlogContent = {
-  subtitle: "Aliquip ex ea",
-  titleLine1: "Get the latest learning",
-  titleLine2: "tips and",
-  titleHighlight: "Commodo",
-  cta: { label: "Consequat duis aute", href: "/blog-standard" },
+  subtitle: "Berita & Artikel",
+  titleLine1: "Kajian dan kabar",
+  titleLine2: "terbaru dari",
+  titleHighlight: "SPI",
+  cta: { label: "Baca semua artikel", href: "/blog-standard" },
   items: [
     {
-      href: "/blog-details-rightsidebar",
-      category: "Irure",
+      href: "/blog-details-standard",
+      category: "Filosofi Dasar",
       thumb: { src: home2blogblogThumb21, alt: "placeholder" },
       author: { src: home2blogblogUser21, alt: "placeholder" },
-      authorName: "In reprehenderit",
-      date: "May 15, 2026",
-      title: "Voluptate velit esse cillum eu fugiat nulla pariatur.",
+      authorName: "Dr. Akmal Sjafril",
+      date: "5 September 2026",
+      title: "Konsep adab: meletakkan sesuatu pada tempatnya.",
       delay: "0.10",
     },
     {
-      href: "/blog-details-rightsidebar",
-      category: "Excepteur",
+      href: "/blog-details-standard",
+      category: "Pemikiran Islam",
       thumb: { src: home2blogblogThumb22, alt: "placeholder" },
       author: { src: home2blogblogUser22, alt: "placeholder" },
-      authorName: "Sint occaecat",
-      date: "May 25, 2026",
-      title: "Cupidatat non proident sunt culpa qui officia deserunt mollit anim.",
+      authorName: "Redaksi SPI",
+      date: "28 Agustus 2026",
+      title: "Ghazwul Fikri: mengenali invasi intelektual di sekitar kita.",
       delay: "0.20",
     },
     {
-      href: "/blog-details-rightsidebar",
-      category: "Id",
+      href: "/blog-details-standard",
+      category: "Berita",
       thumb: { src: home2blogblogThumb23, alt: "placeholder" },
       author: { src: home2blogblogUser23, alt: "placeholder" },
-      authorName: "Est laborum",
-      date: "Jun 28, 2026",
-      title: "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do.",
+      authorName: "Redaksi SPI",
+      date: "15 Agustus 2026",
+      title: "SPI Bogor meluncurkan MARJAN sebagai cabang keenam.",
       delay: "0.30",
     },
   ],
 };
 
 export const eLearningInstagramContent: ELearningInstagramContent = {
-  username: "Eiusmod",
+  username: "spi.indonesia",
   slides: [
     { src: home2instagraminstagramThumb21, alt: "placeholder" },
     { src: home2instagraminstagramThumb22, alt: "placeholder" },
