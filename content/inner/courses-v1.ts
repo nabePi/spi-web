@@ -1,18 +1,18 @@
 import type { CoursesV1Content } from "@/types/inner/courses-v1";
-import innercoursescoursesThumbgrid31 from "@/public/assets/imgs/placeholder/courses-thumbgrid3_1.svg";
-import innercoursescoursesThumbgrid32 from "@/public/assets/imgs/placeholder/courses-thumbgrid3_2.svg";
-import innercoursescoursesThumbgrid33 from "@/public/assets/imgs/placeholder/courses-thumbgrid3_3.svg";
-import innercoursescoursesThumbgrid34 from "@/public/assets/imgs/placeholder/courses-thumbgrid3_4.svg";
-import innercoursescoursesThumbgrid35 from "@/public/assets/imgs/placeholder/courses-thumbgrid3_5.svg";
-import innercoursescoursesThumbgrid36 from "@/public/assets/imgs/placeholder/courses-thumbgrid3_6.svg";
-import innercoursescoursesThumbgrid37 from "@/public/assets/imgs/placeholder/courses-thumbgrid3_7.svg";
-import innercoursescoursesThumbgrid38 from "@/public/assets/imgs/placeholder/courses-thumbgrid3_8.svg";
-import innercoursescoursesThumbgrid39 from "@/public/assets/imgs/placeholder/courses-thumbgrid3_9.svg";
-import innercoursescoursesClassicThumb11 from "@/public/assets/imgs/placeholder/courses-classic-thumb1_1.svg";
-import innercoursescoursesClassicThumb12 from "@/public/assets/imgs/placeholder/courses-classic-thumb1_2.svg";
-import innercoursescoursesClassicThumb13 from "@/public/assets/imgs/placeholder/courses-classic-thumb1_3.svg";
-import innercoursescoursesClassicThumb14 from "@/public/assets/imgs/placeholder/courses-classic-thumb1_4.svg";
-import innercoursescoursesClassicThumb15 from "@/public/assets/imgs/placeholder/courses-classic-thumb1_5.svg";
+import innercoursescoursesThumbgrid31 from "@/public/assets/imgs/inner/courses/spi-kepemimpinan-profetik.webp";
+import innercoursescoursesThumbgrid32 from "@/public/assets/imgs/inner/courses/spi-quran-peradaban.webp";
+import innercoursescoursesThumbgrid33 from "@/public/assets/imgs/inner/courses/spi-worldview-islam.webp";
+import innercoursescoursesThumbgrid34 from "@/public/assets/imgs/inner/courses/spi-filsafat-klasik.webp";
+import innercoursescoursesThumbgrid35 from "@/public/assets/imgs/inner/courses/spi-tasawuf-jawa.webp";
+import innercoursescoursesThumbgrid36 from "@/public/assets/imgs/inner/courses/spi-islam-gender.webp";
+import innercoursescoursesThumbgrid37 from "@/public/assets/imgs/inner/courses/spi-fiqih-keluarga.webp";
+import innercoursescoursesThumbgrid38 from "@/public/assets/imgs/inner/courses/spi-filologi-sastra.webp";
+import innercoursescoursesThumbgrid39 from "@/public/assets/imgs/inner/courses/spi-ghazwul-fikri-topik.webp";
+import innercoursescoursesClassicThumb11 from "@/public/assets/imgs/inner/courses/spi-kelas-reguler-exterior.webp";
+import innercoursescoursesClassicThumb12 from "@/public/assets/imgs/inner/courses/spi-kursus-singkat-intimate.webp";
+import innercoursescoursesClassicThumb13 from "@/public/assets/imgs/inner/courses/spi-komik-homedesk.webp";
+import innercoursescoursesClassicThumb14 from "@/public/assets/imgs/inner/courses/spi-tuesday-candle.webp";
+import innercoursescoursesClassicThumb15 from "@/public/assets/imgs/inner/courses/spi-marjan-steps.webp";
 
 export const coursesV1Content: CoursesV1Content = {
   filter: {
@@ -35,7 +35,7 @@ export const coursesV1Content: CoursesV1Content = {
       author: "Kelas Reguler",
       rating: "4.9/5",
       thumb: innercoursescoursesThumbgrid31,
-      alt: "placeholder",
+      alt: "Lentera kuningan menyala di atas meja kerja",
       clipId: "clip0_852_306115",
       price: "Gratis",
       lessons: "20 Sesi",
@@ -48,7 +48,7 @@ export const coursesV1Content: CoursesV1Content = {
       author: "Kelas Reguler",
       rating: "4.9/5",
       thumb: innercoursescoursesThumbgrid32,
-      alt: "placeholder",
+      alt: "Siluet kubah bangunan dengan latar matahari terbenam",
       clipId: "clip0_852_306116",
       price: "Gratis",
       lessons: "20 Sesi",
@@ -61,7 +61,7 @@ export const coursesV1Content: CoursesV1Content = {
       author: "Kelas Reguler",
       rating: "4.9/5",
       thumb: innercoursescoursesThumbgrid33,
-      alt: "placeholder",
+      alt: "Kompas kuningan di atas peta dunia kuno",
       clipId: "clip0_852_306117",
       price: "Gratis",
       lessons: "20 Sesi",
@@ -74,7 +74,7 @@ export const coursesV1Content: CoursesV1Content = {
       author: "Kelas Reguler",
       rating: "4.9/5",
       thumb: innercoursescoursesThumbgrid34,
-      alt: "placeholder",
+      alt: "Pena bulu dan tempat tinta di atas meja kayu",
       clipId: "clip0_852_306115",
       price: "Gratis",
       lessons: "20 Sesi",
@@ -87,7 +87,7 @@ export const coursesV1Content: CoursesV1Content = {
       author: "Kelas Reguler",
       rating: "4.9/5",
       thumb: innercoursescoursesThumbgrid35,
-      alt: "placeholder",
+      alt: "Jendela kisi kayu ukiran Jawa dengan cahaya menembus",
       clipId: "clip0_852_306116",
       price: "Gratis",
       lessons: "20 Sesi",
@@ -100,7 +100,7 @@ export const coursesV1Content: CoursesV1Content = {
       author: "Kelas Reguler",
       rating: "4.9/5",
       thumb: innercoursescoursesThumbgrid36,
-      alt: "placeholder",
+      alt: "Dua sajadah terlipat rapi berdampingan",
       clipId: "clip0_852_306117",
       price: "Gratis",
       lessons: "20 Sesi",
@@ -113,7 +113,7 @@ export const coursesV1Content: CoursesV1Content = {
       author: "Kelas Reguler",
       rating: "4.9/5",
       thumb: innercoursescoursesThumbgrid37,
-      alt: "placeholder",
+      alt: "Rak buku minimalis dengan tanaman kecil",
       clipId: "clip0_852_306115",
       price: "Gratis",
       lessons: "20 Sesi",
@@ -126,7 +126,7 @@ export const coursesV1Content: CoursesV1Content = {
       author: "Kelas Reguler",
       rating: "4.9/5",
       thumb: innercoursescoursesThumbgrid38,
-      alt: "placeholder",
+      alt: "Detail makro tepi kertas perkamen tua",
       clipId: "clip0_852_306116",
       price: "Gratis",
       lessons: "20 Sesi",
@@ -139,7 +139,7 @@ export const coursesV1Content: CoursesV1Content = {
       author: "Kursus Singkat",
       rating: "4.9/5",
       thumb: innercoursescoursesThumbgrid39,
-      alt: "placeholder",
+      alt: "Untaian lampu kecil buram dalam kegelapan",
       clipId: "clip0_852_306117",
       price: "Gratis",
       lessons: "7 Sesi",
@@ -155,7 +155,7 @@ export const coursesV1Content: CoursesV1Content = {
       author: "Jakarta, Bandung, Yogyakarta, Bogor, Tangerang, Padang",
       rating: "4.9/5",
       thumb: innercoursescoursesClassicThumb11,
-      alt: "placeholder",
+      alt: "Bangunan masjid sederhana dengan pohon palem",
       price: "Gratis",
       lessons: "20 Sesi",
       duration: "±7 Bulan",
@@ -168,7 +168,7 @@ export const coursesV1Content: CoursesV1Content = {
       author: "Seluruh cabang",
       rating: "4.9/5",
       thumb: innercoursescoursesClassicThumb12,
-      alt: "placeholder",
+      alt: "Lingkaran bantal duduk di ruangan kecil",
       price: "Gratis",
       lessons: "7 Sesi",
       duration: "1 Bulan",
@@ -181,7 +181,7 @@ export const coursesV1Content: CoursesV1Content = {
       author: "Program Daring",
       rating: "4.9/5",
       thumb: innercoursescoursesClassicThumb13,
-      alt: "placeholder",
+      alt: "Meja kerja rumahan dengan laptop dan secangkir teh",
       price: "Gratis",
       lessons: "Daring",
       duration: "Per angkatan",
@@ -194,7 +194,7 @@ export const coursesV1Content: CoursesV1Content = {
       author: "Program Daring",
       rating: "4.9/5",
       thumb: innercoursescoursesClassicThumb14,
-      alt: "placeholder",
+      alt: "Lilin menyala di samping buku tertutup saat senja",
       price: "Gratis",
       lessons: "Mingguan",
       duration: "Rutin",
@@ -207,7 +207,7 @@ export const coursesV1Content: CoursesV1Content = {
       author: "SPI Bogor",
       rating: "4.9/5",
       thumb: innercoursescoursesClassicThumb15,
-      alt: "placeholder",
+      alt: "Anak tangga batu basah menuju pintu masuk bangunan",
       price: "Gratis",
       lessons: "20 Sesi",
       duration: "±7 Bulan",
