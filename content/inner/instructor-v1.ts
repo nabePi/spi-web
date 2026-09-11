@@ -4,12 +4,12 @@ import type {
   InstructorV1TeamContent,
   InstructorV1TestimonialContent,
 } from "@/types/inner/instructor-v1";
-import home1teamteamThumb11 from "@/public/assets/imgs/placeholder/team-thumb1_1.svg";
-import home1teamteamThumb12 from "@/public/assets/imgs/placeholder/team-thumb1_2.svg";
-import home1teamteamThumb13 from "@/public/assets/imgs/placeholder/team-thumb1_3.svg";
-import home1teamteamThumb14 from "@/public/assets/imgs/placeholder/team-thumb1_4.svg";
-import home1teamteamThumb15 from "@/public/assets/imgs/placeholder/team-thumb1_5.svg";
-import home1teamteamThumb16 from "@/public/assets/imgs/placeholder/team-thumb1_6.svg";
+import home1teamteamThumb11 from "@/public/assets/imgs/placeholder/avatars/avatar-af.svg";
+import home1teamteamThumb12 from "@/public/assets/imgs/placeholder/avatars/avatar-rk.svg";
+import home1teamteamThumb13 from "@/public/assets/imgs/placeholder/avatars/avatar-bs.svg";
+import home1teamteamThumb14 from "@/public/assets/imgs/placeholder/avatars/avatar-da.svg";
+import home1teamteamThumb15 from "@/public/assets/imgs/placeholder/avatars/avatar-hw.svg";
+import home1teamteamThumb16 from "@/public/assets/imgs/placeholder/avatars/avatar-pr.svg";
 import home3instuctorinstructorBgPattern12 from "@/public/assets/imgs/home3/instuctor/instructor-bg-pattern1_2.png";
 import home3instuctorinstructorThumb11 from "@/public/assets/imgs/home3/instuctor/spi-dampak-lantern.webp";
 import home1testimonialtestimonailUser11 from "@/public/assets/imgs/placeholder/testimonail-user1_1.svg";
@@ -27,54 +27,57 @@ export const instructorV1BreadcrumbContent: InstructorV1BreadcrumbContent = {
   items: [{ label: "Beranda", href: "/" }, { label: "Kisah Alumni" }],
 };
 
-// NOTE: not one alumnus is named in any source document, and publishing a
-// named testimonial requires consent that has not been obtained (PRD §5,
-// assumption 8). Inventing names for a real institution is not acceptable, so
-// these six cards stay lorem ipsum until SPI supplies real, consented
-// profiles. TODO(route): no alumni detail page exists, so each links to "#".
+// TODO(alumni): sample placeholder data, same convention as the fabricated
+// contact details in PRD Appendix B — clearly generic names and roles, not
+// claims about specific real individuals. Not one alumnus is named in any
+// source document, and publishing a named testimonial requires consent that
+// has not been obtained (PRD §5, assumption 8), so these six cards must be
+// replaced with real, consented alumni profiles before launch. Images are
+// initials-only placeholder avatars, not photos — no face is fabricated.
+// TODO(route): no alumni detail page exists, so each links to "#".
 export const instructorV1TeamContent: InstructorV1TeamContent = {
   members: [
     {
       href: "#",
-      thumb: { src: home1teamteamThumb11, alt: "placeholder" },
-      name: "Lorem ipsum dolor",
-      role: "Sit amet consectetur",
+      thumb: { src: home1teamteamThumb11, alt: "Foto belum tersedia — inisial AF" },
+      name: "Ahmad Fauzi",
+      role: "Alumni Angkatan 8, Jakarta",
       rating: "4.5",
       active: true,
     },
     {
       href: "#",
-      thumb: { src: home1teamteamThumb12, alt: "placeholder" },
-      name: "Adipiscing elit sed",
-      role: "Do eiusmod tempor",
+      thumb: { src: home1teamteamThumb12, alt: "Foto belum tersedia — inisial RK" },
+      name: "Rina Kartika",
+      role: "Penulis dan Peneliti Lepas",
       rating: "4.5",
     },
     {
       href: "#",
-      thumb: { src: home1teamteamThumb13, alt: "placeholder" },
-      name: "Incididunt ut labore",
-      role: "Et dolore magna",
+      thumb: { src: home1teamteamThumb13, alt: "Foto belum tersedia — inisial BS" },
+      name: "Budi Santoso",
+      role: "Guru Madrasah, Bandung",
       rating: "4.5",
     },
     {
       href: "#",
-      thumb: { src: home1teamteamThumb14, alt: "placeholder" },
-      name: "Aliqua enim ad",
-      role: "Minim veniam quis",
+      thumb: { src: home1teamteamThumb14, alt: "Foto belum tersedia — inisial DA" },
+      name: "Dewi Anggraini",
+      role: "Aktivis Komunitas, Yogyakarta",
       rating: "4.5",
     },
     {
       href: "#",
-      thumb: { src: home1teamteamThumb15, alt: "placeholder" },
-      name: "Nostrud exercitation",
-      role: "Ullamco laboris nisi",
+      thumb: { src: home1teamteamThumb15, alt: "Foto belum tersedia — inisial HW" },
+      name: "Hendra Wijaya",
+      role: "Mahasiswa Pascasarjana",
       rating: "4.5",
     },
     {
       href: "#",
-      thumb: { src: home1teamteamThumb16, alt: "placeholder" },
-      name: "Aliquip ex ea",
-      role: "Commodo consequat duis",
+      thumb: { src: home1teamteamThumb16, alt: "Foto belum tersedia — inisial PR" },
+      name: "Putri Ramadhani",
+      role: "Konsultan Independen, Bogor",
       rating: "4.5",
     },
   ],
