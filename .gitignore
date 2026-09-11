@@ -1,0 +1,9 @@
+# Local-only: purchased ThemeForest template (item ocZNO2zv).
+# Not redistributable — this repository is public.
+/template/
+
+# Local-only: internal planning documents (PRD, company profile, sitemap).
+/document/
+
+# macOS
+.DS_Store
