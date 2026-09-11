@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="560" viewBox="0 0 880 560" role="img" aria-label="Placeholder 880x560">
+  <rect width="880" height="560" fill="#e6e6e6"/>
+  <rect x="0.5" y="0.5" width="879" height="559" fill="none" stroke="#bdbdbd"/>
+  <path d="M0 0 L880 560 M880 0 L0 560" stroke="#d4d4d4" stroke-width="1"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+        font-family="system-ui, sans-serif" font-size="70" fill="#8a8a8a">880 &#215; 560</text>
+</svg>

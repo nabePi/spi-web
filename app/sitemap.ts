@@ -7,6 +7,7 @@ const routes = [
   "/about-v1",
   "/alumni",
   "/courses-v1",
+  "/course-details-classic-v1",
   "/blog-three-column",
   "/blog-details-standard",
   "/contact",

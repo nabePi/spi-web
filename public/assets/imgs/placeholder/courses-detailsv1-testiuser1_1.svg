@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="208" height="222" viewBox="0 0 208 222" role="img" aria-label="Placeholder 208x222">
+  <rect width="208" height="222" fill="#e6e6e6"/>
+  <rect x="0.5" y="0.5" width="207" height="221" fill="none" stroke="#bdbdbd"/>
+  <path d="M0 0 L208 222 M208 0 L0 222" stroke="#d4d4d4" stroke-width="1"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+        font-family="system-ui, sans-serif" font-size="26" fill="#8a8a8a">208 &#215; 222</text>
+</svg>

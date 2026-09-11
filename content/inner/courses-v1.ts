@@ -26,11 +26,11 @@ export const coursesV1Content: CoursesV1Content = {
     listViewTitle: "Tampilan Daftar",
     defaultTab: "list",
   },
-  // The nine documented curriculum topics. TODO(route): no program detail
-  // page exists yet, so every card points at "#".
+  // The nine documented curriculum topics. TODO(route): the only detail
+  // page is the Kelas Reguler one; per-program pages are PRD W8.
   grid: [
     {
-      href: "#",
+      href: "/course-details-classic-v1",
       title: "Kepemimpinan Profetik",
       author: "Kelas Reguler",
       rating: "4.9/5",
@@ -43,7 +43,7 @@ export const coursesV1Content: CoursesV1Content = {
       students: "Terbuka umum",
     },
     {
-      href: "#",
+      href: "/course-details-classic-v1",
       title: "Al-Qur'an dan Peradaban",
       author: "Kelas Reguler",
       rating: "4.9/5",
@@ -56,7 +56,7 @@ export const coursesV1Content: CoursesV1Content = {
       students: "Terbuka umum",
     },
     {
-      href: "#",
+      href: "/course-details-classic-v1",
       title: "Worldview of Islam",
       author: "Kelas Reguler",
       rating: "4.9/5",
@@ -69,7 +69,7 @@ export const coursesV1Content: CoursesV1Content = {
       students: "Terbuka umum",
     },
     {
-      href: "#",
+      href: "/course-details-classic-v1",
       title: "Filsafat Islam Klasik",
       author: "Kelas Reguler",
       rating: "4.9/5",
@@ -82,7 +82,7 @@ export const coursesV1Content: CoursesV1Content = {
       students: "Terbuka umum",
     },
     {
-      href: "#",
+      href: "/course-details-classic-v1",
       title: "Tasawuf dan Masyarakat Jawa",
       author: "Kelas Reguler",
       rating: "4.9/5",
@@ -95,7 +95,7 @@ export const coursesV1Content: CoursesV1Content = {
       students: "Terbuka umum",
     },
     {
-      href: "#",
+      href: "/course-details-classic-v1",
       title: "Islam dan Gender",
       author: "Kelas Reguler",
       rating: "4.9/5",
@@ -108,7 +108,7 @@ export const coursesV1Content: CoursesV1Content = {
       students: "Terbuka umum",
     },
     {
-      href: "#",
+      href: "/course-details-classic-v1",
       title: "Fiqih Keluarga Milenial",
       author: "Kelas Reguler",
       rating: "4.9/5",
@@ -121,7 +121,7 @@ export const coursesV1Content: CoursesV1Content = {
       students: "Terbuka umum",
     },
     {
-      href: "#",
+      href: "/course-details-classic-v1",
       title: "Filologi Sastra Islam",
       author: "Kelas Reguler",
       rating: "4.9/5",
@@ -134,7 +134,7 @@ export const coursesV1Content: CoursesV1Content = {
       students: "Terbuka umum",
     },
     {
-      href: "#",
+      href: "/course-details-classic-v1",
       title: "Ghazwul Fikri",
       author: "Kursus Singkat",
       rating: "4.9/5",
@@ -150,7 +150,7 @@ export const coursesV1Content: CoursesV1Content = {
   // The three program formats plus the two named online offerings and MARJAN.
   list: [
     {
-      href: "#",
+      href: "/course-details-classic-v1",
       title: "Kelas Reguler — kajian pemikiran Islam dua semester",
       author: "Jakarta, Bandung, Yogyakarta, Bogor, Tangerang, Padang",
       rating: "4.9/5",
@@ -163,7 +163,7 @@ export const coursesV1Content: CoursesV1Content = {
       level: "Semua jenjang",
     },
     {
-      href: "#",
+      href: "/course-details-classic-v1",
       title: "Kursus Singkat untuk kelompok dan organisasi",
       author: "Seluruh cabang",
       rating: "4.9/5",
@@ -176,7 +176,7 @@ export const coursesV1Content: CoursesV1Content = {
       level: "Atas permintaan",
     },
     {
-      href: "#",
+      href: "/course-details-classic-v1",
       title: "KOMIK — Kelas Online Pemikiran Islam",
       author: "Program Daring",
       rating: "4.9/5",
@@ -189,7 +189,7 @@ export const coursesV1Content: CoursesV1Content = {
       level: "Semua jenjang",
     },
     {
-      href: "#",
+      href: "/course-details-classic-v1",
       title: "Tuesday's Special — sesi daring rutin",
       author: "Program Daring",
       rating: "4.9/5",
@@ -202,7 +202,7 @@ export const coursesV1Content: CoursesV1Content = {
       level: "Semua jenjang",
     },
     {
-      href: "#",
+      href: "/course-details-classic-v1",
       title: "MARJAN — Majelis Pemikiran di Kota Hujan",
       author: "SPI Bogor",
       rating: "4.9/5",
