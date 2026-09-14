@@ -9,16 +9,16 @@ const SiteToaster = () => (
       duration: 4000,
       style: {
         background: "#0065b5",
-        color: "#f8f5f2",
+        color: "#f2f5f8",
         borderRadius: "10px",
         fontFamily: "inherit",
         fontSize: "14px",
       },
       success: {
-        iconTheme: { primary: "#d17232", secondary: "#f8f5f2" },
+        iconTheme: { primary: "#d17232", secondary: "#f2f5f8" },
       },
       error: {
-        iconTheme: { primary: "#e85d4c", secondary: "#f8f5f2" },
+        iconTheme: { primary: "#e85d4c", secondary: "#f2f5f8" },
       },
     }}
   />

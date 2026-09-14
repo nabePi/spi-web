@@ -29,7 +29,7 @@ const TeamSection = () => {
                 <Link href={cta.href} className="theme-btn theme-btn--white">
                   <span className="text">{cta.label}</span>
                   <span className="icon">
-                    <ArrowOutwardIcon fill="#F8F5F2" />
+                    <ArrowOutwardIcon fill="#F2F5F8" />
                   </span>
                 </Link>
               </div>

@@ -55,6 +55,16 @@ two SPI blues share a hue, so every "secondary on primary" spot collapsed to
 One exception: the header-top "30%" sits on a **light** blue bar, where green
 would only reach 1.9:1, so it is white at 700 (3.4:1) instead.
 
+## Cool neutral ground (follow-up)
+
+The template's cream `#f8f5f2` was mixed to sit under green+orange and read as a
+warm cast under the blues. It is now mirrored channel-for-channel to `#f2f5f8`
+— same lightness, cool side — via `--bg`/`--bg2` in the SPI layer plus a sweep
+of 22 hardcoded `#f8f5f2` literals across 17 files. The two peach tints behind
+the alumni portraits were mirrored the same way (`#fff4ea` -> `#eaf4ff`,
+`#fbeee2` -> `#e2eefb`). A DOM scan of every real page reports no warm ground
+left.
+
 ## Deliberately left alone
 
 - **Rating stars** (`var(--orange)`): gold is the universal rating convention,

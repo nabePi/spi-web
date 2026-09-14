@@ -272,7 +272,7 @@
       height: 100%;
       background: linear-gradient(
         90deg,
-        #f8f5f2 0%,
+        #f2f5f8 0%,
         rgba(248, 245, 242, 0) 100%
       );
       z-index: 1;
@@ -295,7 +295,7 @@
       height: 100%;
       background: linear-gradient(
         90deg,
-        #f8f5f2 0%,
+        #f2f5f8 0%,
         rgba(248, 245, 242, 0) 100%
       );
       transform: rotate(-180deg);
@@ -1654,11 +1654,11 @@
       }
 
       &__thumb-bg1 {
-        background: #fff4ea;
+        background: #eaf4ff;
       }
 
       &__thumb-bg2 {
-        background: #fbeee2;
+        background: #e2eefb;
       }
 
       &__stat-icon {

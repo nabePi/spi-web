@@ -33,6 +33,13 @@
   --secondary: var(--spi-blue); // was #d87827
   --border: #0065b524; // was #1a453b24 (primary at 14%)
 
+  // Page/section ground. The template's cream (#f8f5f2) was mixed to sit under
+  // the old green+orange; under the blues it reads as a warm cast. These are
+  // that exact colour mirrored channel-for-channel (248,245,242 -> 242,245,248),
+  // so the ground keeps its lightness and subtlety and only changes side.
+  --bg: rgba(242, 245, 248, 1); // was rgba(248, 245, 242, 1)
+  --bg2: #f2f5f8; // was #f8f5f2
+
   // Accent for text/marks sitting on a dark brand surface (--primary sections,
   // breadcrumb banners, the navy footer). The template paired two complementary
   // hues here — dark green + orange, ~3.4:1 — but the two SPI blues share a hue

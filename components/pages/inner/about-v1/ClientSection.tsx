@@ -32,7 +32,7 @@ const ClientSection = () => {
                 <Link href={client.cta.href} className="theme-btn">
                   <span className="text">{client.cta.label}</span>
                   <span className="icon"
-                    ><ArrowOutwardIcon fill="#F8F5F2" />
+                    ><ArrowOutwardIcon fill="#F2F5F8" />
                   </span>
                 </Link>
               </div>

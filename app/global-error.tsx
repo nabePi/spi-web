@@ -23,7 +23,7 @@ export default function GlobalError({
           justifyContent: "center",
           fontFamily:
             "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
-          background: "#f8f5f2",
+          background: "#f2f5f8",
           color: "#0065b5",
           padding: "24px",
         }}
@@ -52,7 +52,7 @@ export default function GlobalError({
               padding: "14px 32px",
               fontSize: "16px",
               fontWeight: 600,
-              color: "#f8f5f2",
+              color: "#f2f5f8",
               background: "#0065b5",
             }}
           >
