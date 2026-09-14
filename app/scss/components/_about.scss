@@ -393,7 +393,7 @@
 
     .stats-items {
       background-color: var(--white);
-      border: 1px solid rgba(26, 69, 59, 0.14);
+      border: 1px solid rgba(0, 101, 181, 0.14);
       border-radius: 10px;
       padding: 25px 30px;
 
@@ -472,7 +472,7 @@
 
       .stats-divider {
         height: 1px;
-        background-color: rgba(26, 69, 59, 0.14);
+        background-color: rgba(0, 101, 181, 0.14);
         margin: 35px 0;
 
         @media #{$xl} {
@@ -550,7 +550,7 @@
     }
     .content-footer {
       background-color: var(--white);
-      border: 1px solid rgba(26, 69, 59, 0.14);
+      border: 1px solid rgba(0, 101, 181, 0.14);
       border-radius: 10px;
       padding: 25px 28px;
       margin-top: 20px;
@@ -814,7 +814,7 @@
     }
 
     &:not(:nth-of-type(4)) {
-      border-right: 1px solid rgba(26, 69, 59, 0.14);
+      border-right: 1px solid rgba(0, 101, 181, 0.14);
     }
 
     @media #{$sm} {

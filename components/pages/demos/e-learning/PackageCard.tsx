@@ -60,7 +60,7 @@ const PackageCard = ({ item }: { item: CoursePackageItem }) => {
             <span className="old">{item.oldPrice}</span>
           </div>
           <Link href={item.href} className="courses1__btn-arrow mt-10">
-            <ArrowOutwardIcon fill="#D87827" />
+            <ArrowOutwardIcon fill="#0082E4" />
           </Link>
         </div>
       </div>

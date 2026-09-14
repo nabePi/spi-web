@@ -391,7 +391,7 @@
     align-items: center;
     gap: 8px;
     border-radius: 14px;
-    border: 1px solid rgba(26, 69, 59, 0.14);
+    border: 1px solid rgba(0, 101, 181, 0.14);
     backdrop-filter: blur(4px);
     padding: 15px;
     margin-top: 55px;
@@ -534,7 +534,7 @@
       height: 42px;
       aspect-ratio: 1 / 1;
       border-radius: 4px;
-      border: 1px solid rgba(26, 69, 59, 0.14);
+      border: 1px solid rgba(0, 101, 181, 0.14);
       color: var(--blue);
       background-color: transparent;
       user-select: none;
@@ -638,7 +638,7 @@
     display: flex;
     flex-direction: column;
     border-radius: 6px;
-    border: 1px solid rgba(26, 69, 59, 0.14);
+    border: 1px solid rgba(0, 101, 181, 0.14);
     overflow: hidden;
     padding: 20px;
     height: 100%;
@@ -744,7 +744,7 @@
     &.testimonial1 {
       &__card {
         border-radius: 0;
-        border: 1px solid rgba(26, 69, 59, 0.14);
+        border: 1px solid rgba(0, 101, 181, 0.14);
         background-color: var(--bg2);
       }
     }
@@ -790,7 +790,7 @@
     &.testimonial1 {
       &__widget {
         border-radius: 0;
-        border: 1px solid rgba(26, 69, 59, 0.14);
+        border: 1px solid rgba(0, 101, 181, 0.14);
       }
     }
   }
@@ -812,7 +812,7 @@
     // any section-specific overrides
   }
   &__header {
-    border-top: 1px solid rgba(26, 69, 59, 0.14);
+    border-top: 1px solid rgba(0, 101, 181, 0.14);
   }
   &__sliders {
     position: relative;
@@ -871,7 +871,7 @@
   &__item {
     height: 100%;
     background: var(--white);
-    border: 1px solid rgba(26, 69, 59, 0.14);
+    border: 1px solid rgba(0, 101, 181, 0.14);
     padding: 30px;
     width: 440px;
     height: 340px;
@@ -890,7 +890,7 @@
       display: flex;
       align-items: center;
       gap: 6px;
-      border: 1px solid rgba(26, 69, 59, 0.14);
+      border: 1px solid rgba(0, 101, 181, 0.14);
       padding: 10px 16px;
       background: var(--white);
       margin-bottom: 24px;
@@ -1003,7 +1003,7 @@
     padding: 15px;
     background-color: var(--white);
     border-radius: 14px;
-    border: 1px solid rgba(26, 69, 59, 0.14);
+    border: 1px solid rgba(0, 101, 181, 0.14);
     backdrop-filter: blur(4px);
 
     .rating-avatars {
@@ -1087,7 +1087,7 @@
 
     &:not(:has(.item-thumb)) {
       padding: 30px;
-      border: 1px solid rgba(26, 69, 59, 0.14);
+      border: 1px solid rgba(0, 101, 181, 0.14);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -1117,7 +1117,7 @@
         display: inline-flex;
         align-items: center;
         gap: 4px;
-        border: 1px solid rgba(26, 69, 59, 0.14);
+        border: 1px solid rgba(0, 101, 181, 0.14);
         border-radius: 10px;
         padding: 11px 17px;
         margin-bottom: 25px;

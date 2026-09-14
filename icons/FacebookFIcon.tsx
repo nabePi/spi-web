@@ -1,6 +1,6 @@
 import type { SVGProps } from "react";
 
-const FacebookFIcon = ({ fill = "#1A453B", ...props }: SVGProps<SVGSVGElement>) => (
+const FacebookFIcon = ({ fill = "#0065B5", ...props }: SVGProps<SVGSVGElement>) => (
   <svg width="10" height="16" viewBox="0 0 10 16" fill="none" {...props}>
                           <path
                             d="M2.0625 9.35312V16H5.6875V9.35312H8.39062L8.95312 6.29688H5.6875V5.21562C5.6875 3.6 6.32188 2.98125 7.95938 2.98125C8.46875 2.98125 8.87813 2.99375 9.11563 3.01875V0.246875C8.66875 0.125 7.575 0 6.94375 0C3.60313 0 2.0625 1.57812 2.0625 4.98125V6.29688H0V9.35312H2.0625Z"

@@ -1,6 +1,6 @@
 import type { SVGProps } from "react";
 
-const Iconf0980b2a = ({ fill = "#D87827", ...props }: SVGProps<SVGSVGElement>) => (
+const Iconf0980b2a = ({ fill = "#0082E4", ...props }: SVGProps<SVGSVGElement>) => (
   <svg width="18" height="15" viewBox="0 0 18 15" fill="none" {...props}>
                       <path
                         fillRule="evenodd"

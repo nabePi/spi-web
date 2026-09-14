@@ -778,7 +778,7 @@
       padding: 10px 15px;
       gap: 15px;
       z-index: 5;
-      box-shadow: 0px 10px 30px rgba(26, 69, 59, 0.08);
+      box-shadow: 0px 10px 30px rgba(0, 101, 181, 0.08);
       backdrop-filter: blur(4px);
       animation: floatReview 7s ease-in-out infinite;
 
@@ -1047,7 +1047,7 @@
       align-items: center;
       gap: 10px;
       padding: 3px 15px 3px 3px;
-      border: 1px solid rgba(26, 69, 59, 0.14);
+      border: 1px solid rgba(0, 101, 181, 0.14);
       border-radius: 100px;
       background: var(--bg2);
       backdrop-filter: blur(4px);
@@ -1242,7 +1242,7 @@
     .divider-line {
       width: 280px;
       height: 1px;
-      background-color: rgba(26, 69, 59, 0.14);
+      background-color: rgba(0, 101, 181, 0.14);
 
       @media #{$lg} {
         width: 100%;
@@ -1499,7 +1499,7 @@
         .divider {
           height: 1px;
           opacity: 1;
-          background-color: rgba(26, 69, 59, 0.14);
+          background-color: rgba(0, 101, 181, 0.14);
           margin-block: 32px 30px;
         }
 

@@ -13,7 +13,7 @@
 
   &__sidebar {
     background-color: var(--white);
-    border: 1px solid rgba(26, 69, 59, 0.14);
+    border: 1px solid rgba(0, 101, 181, 0.14);
     border-radius: 10px;
     padding: 30px;
     height: fit-content;
@@ -21,7 +21,7 @@
 
   &__user {
     text-align: center;
-    border-bottom: 1px solid rgba(26, 69, 59, 0.14);
+    border-bottom: 1px solid rgba(0, 101, 181, 0.14);
     padding-bottom: 30px;
     margin-bottom: 30px;
 
@@ -82,7 +82,7 @@
           font-weight: 500;
           text-decoration: none;
           transition: all 0.3s ease;
-          background-color: rgba(216, 120, 39, 0.03);
+          background-color: rgba(0, 130, 228, 0.03);
 
 
           .material-symbols-outlined {
@@ -97,7 +97,7 @@
           }
 
           &:hover {
-            background-color: rgba(216, 120, 39, 0.1);
+            background-color: rgba(0, 130, 228, 0.1);
             color: var(--secondary);
           }
 
@@ -149,7 +149,7 @@
 
     .stat-card {
       background-color: var(--white);
-      border: 1px solid rgba(26, 69, 59, 0.14);
+      border: 1px solid rgba(0, 101, 181, 0.14);
       border-radius: 10px;
       padding: 30px;
       display: flex;
@@ -240,7 +240,7 @@
 
   &__box {
     background-color: var(--white);
-    border: 1px solid rgba(26, 69, 59, 0.14);
+    border: 1px solid rgba(0, 101, 181, 0.14);
     border-radius: 10px;
     padding: 40px;
 
@@ -255,7 +255,7 @@
       font-size: 24px;
       font-weight: 600;
       margin-bottom: 30px;
-      border-bottom: 1px solid rgba(26, 69, 59, 0.14);
+      border-bottom: 1px solid rgba(0, 101, 181, 0.14);
       padding-bottom: 20px;
     }
   }
@@ -308,7 +308,7 @@
     textarea {
       width: 100%;
       background: var(--white);
-      border: 1px solid rgba(26, 69, 59, 0.14);
+      border: 1px solid rgba(0, 101, 181, 0.14);
       border-radius: 6px;
       padding: 15px 20px;
       color: var(--text2);
@@ -344,7 +344,7 @@
       gap: 20px;
       padding-bottom: 20px;
       margin-bottom: 20px;
-      border-bottom: 1px solid rgba(26, 69, 59, 0.14);
+      border-bottom: 1px solid rgba(0, 101, 181, 0.14);
 
       &:last-child {
         padding-bottom: 0;
@@ -399,7 +399,7 @@
     align-items: center;
     gap: 20px;
     padding: 20px;
-    border: 1px solid rgba(26, 69, 59, 0.14);
+    border: 1px solid rgba(0, 101, 181, 0.14);
     border-radius: 10px;
     background-color: #fcfcfc;
     transition: all 0.3s ease;
@@ -465,7 +465,7 @@
         .progress-bar {
           flex-grow: 1;
           height: 8px;
-          background-color: rgba(26, 69, 59, 0.1);
+          background-color: rgba(0, 101, 181, 0.1);
           border-radius: 4px;
           overflow: hidden;
 
@@ -511,7 +511,7 @@
   }
 
   .cert-card {
-    border: 1px solid rgba(26, 69, 59, 0.14);
+    border: 1px solid rgba(0, 101, 181, 0.14);
     border-radius: 10px;
     padding: 30px;
     background-color: #fcfcfc;
@@ -596,7 +596,7 @@
     align-items: center;
     justify-content: space-between;
     padding-bottom: 25px;
-    border-bottom: 1px solid rgba(26, 69, 59, 0.14);
+    border-bottom: 1px solid rgba(0, 101, 181, 0.14);
 
     &:last-child {
       padding-bottom: 0;

@@ -206,7 +206,7 @@
   &.button-bg-whitev2 {
     width: fit-content;
     background: var(--white);
-    border: 1px solid rgba(26, 69, 59, 0.14);
+    border: 1px solid rgba(0, 101, 181, 0.14);
 
     .text {
       color: var(--primary);
@@ -697,7 +697,7 @@
   }
 
   &.v7 {
-    border: 1px solid rgba(26, 69, 59, 0.14);
+    border: 1px solid rgba(0, 101, 181, 0.14);
 
     .btn-icon {
       background-color: var(--white);
@@ -825,7 +825,7 @@
   }
   &.v11 {
     border-radius: 0;
-    border: 1px solid rgba(26, 69, 59, 0.14);
+    border: 1px solid rgba(0, 101, 181, 0.14);
     &::after {
       background-color: var(--green);
     }
@@ -867,7 +867,7 @@
       color: var(--green);
     }
     &:hover {
-      border-color: rgba(26, 69, 59, 0.14);
+      border-color: rgba(0, 101, 181, 0.14);
       &::after {
         height: 0;
         opacity: 0;
@@ -917,7 +917,7 @@
   }
   &.v14 {
     border-radius: 0;
-    border: 1px solid rgba(26, 69, 59, 0.14);
+    border: 1px solid rgba(0, 101, 181, 0.14);
     &::after {
       background-color: var(--light-orange);
     }
@@ -943,7 +943,7 @@
   }
   &.v15 {
     border-radius: 0;
-    border: 1px solid rgba(26, 69, 59, 0.14);
+    border: 1px solid rgba(0, 101, 181, 0.14);
     &::after {
       background-color: var(--light-orange);
     }
@@ -985,7 +985,7 @@
       color: var(--light-orange);
     }
     &:hover {
-      border-color: rgba(26, 69, 59, 0.14);
+      border-color: rgba(0, 101, 181, 0.14);
       &::after {
         height: 0;
         opacity: 0;
@@ -1107,7 +1107,7 @@
   }
   &.v20 {
     border-radius: 100px;
-    border: 1px solid rgba(26, 69, 59, 0.14);
+    border: 1px solid rgba(0, 101, 181, 0.14);
     &::after {
       background-color: var(--tan);
     }
@@ -1133,7 +1133,7 @@
     }
   }
   &.v21 {
-    border: 1px solid rgba(26, 69, 59, 0.14);
+    border: 1px solid rgba(0, 101, 181, 0.14);
     border-radius: 100px;
 
     &::after {

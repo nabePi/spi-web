@@ -85,7 +85,7 @@ const CourseGridCard = ({ course, colClass, variant }: CourseGridCardProps) => {
             href={course.href}
             className={isClassic ? "courses1__btn-arrow mt-10" : "courses1__btn-arrow"}
           >
-            <ArrowOutwardIcon fill="#D87827" />
+            <ArrowOutwardIcon fill="#0082E4" />
           </Link>
         </div>
       </div>

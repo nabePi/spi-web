@@ -298,12 +298,12 @@
         }
 
         .tag {
-          color: var(--orange);
+          color: var(--secondary);
         }
       }
 
       .item-content {
-        border: 1px solid rgba(26, 69, 59, 0.14);
+        border: 1px solid rgba(0, 101, 181, 0.14);
         border-top: none;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
@@ -318,6 +318,8 @@
               ul {
                 li {
                   span {
+                    // Rating stars stay gold on purpose — it is the universal
+                    // rating convention, not a leftover of the old palette.
                     color: var(--orange);
                   }
                 }
@@ -344,11 +346,11 @@
 
             a {
               &:hover {
-                color: var(--orange);
+                color: var(--secondary);
                 background-image: linear-gradient(
                   180deg,
-                  var(--orange) 0%,
-                  var(--orange) 100%
+                  var(--secondary) 0%,
+                  var(--secondary) 100%
                 );
               }
             }
@@ -377,12 +379,12 @@
 
             .button-square {
               span {
-                color: var(--orange);
+                color: var(--secondary);
               }
 
               &:hover {
-                background-color: var(--orange);
-                border-color: var(--orange);
+                background-color: var(--secondary);
+                border-color: var(--secondary);
 
                 span {
                   color: var(--white);
@@ -539,7 +541,7 @@
     }
 
     &.has-border-bottom {
-      border-bottom: 1px solid rgba(26, 69, 59, 0.14);
+      border-bottom: 1px solid rgba(0, 101, 181, 0.14);
     }
   }
 
@@ -843,7 +845,7 @@
           width: 42px;
           height: 42px;
           border-radius: 4px;
-          border: 1px solid rgba(26, 69, 59, 0.14);
+          border: 1px solid rgba(0, 101, 181, 0.14);
           background-color: var(--white);
           color: var(--primary);
           font-family: var(--font_mona);
@@ -879,7 +881,7 @@
 
   &__item {
     background-color: var(--white);
-    border: 1px solid rgba(26, 69, 59, 0.14);
+    border: 1px solid rgba(0, 101, 181, 0.14);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -1080,7 +1082,7 @@
       }
 
       .content-footer {
-        border-top: 1px solid rgba(26, 69, 59, 0.14);
+        border-top: 1px solid rgba(0, 101, 181, 0.14);
         padding-top: 24px;
 
         .content-meta-bottom {

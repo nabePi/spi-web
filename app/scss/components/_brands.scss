@@ -84,7 +84,7 @@
   &.section {
   }
   &__wrapper {
-    border-top: 1px solid rgba(26, 69, 59, 0.14);
+    border-top: 1px solid rgba(0, 101, 181, 0.14);
   }
   &__header {
     margin-bottom: 35px;
@@ -127,7 +127,7 @@
         (100% - (var(--brands-columns) - 1) * var(--brands-item-gap)) /
           var(--brands-columns)
       );
-    border: 1px solid rgba(26, 69, 59, 0.14);
+    border: 1px solid rgba(0, 101, 181, 0.14);
     overflow: hidden;
     padding: 45px 44px;
     text-align: center;

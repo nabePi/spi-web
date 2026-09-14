@@ -8,7 +8,7 @@ const SiteToaster = () => (
     toastOptions={{
       duration: 4000,
       style: {
-        background: "#1a453b",
+        background: "#0065b5",
         color: "#f8f5f2",
         borderRadius: "10px",
         fontFamily: "inherit",

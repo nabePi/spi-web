@@ -2,6 +2,7 @@
 >>> UTILITIES INDEX
 ----------------------------------------------------------------
 1. Variables scss
+1b. Variables SPI scss (brand palette override)
 2. Mixin scss
 3. Typography scss
 4. Animation scss
@@ -10,6 +11,7 @@
 --------------------------------------------------------------*/
 
 @import "variables";
+@import "variables-spi";
 @import "mixin";
 @import "typography";
 @import "animation";

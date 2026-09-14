@@ -86,7 +86,7 @@ const CourseListCard = ({ course, cardClass = "courses2__card" }: CourseListCard
           <Link href={course.href} className="theme-btn">
             <span className="text">View details</span>
             <span className="icon">
-              <ArrowOutwardIcon fill="#1A453B" />
+              <ArrowOutwardIcon fill="#0065B5" />
             </span>
           </Link>
         </div>

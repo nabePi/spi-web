@@ -44,7 +44,7 @@ const CoursesPackageSection = () => {
           <Link href={cta.href} className="theme-btn">
             <span className="text">{cta.label}</span>
             <span className="icon"
-              ><ArrowOutwardIcon fill="#1A453B" />
+              ><ArrowOutwardIcon fill="#0065B5" />
             </span>
           </Link>
         </div>

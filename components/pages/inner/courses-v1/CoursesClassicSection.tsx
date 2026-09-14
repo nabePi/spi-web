@@ -60,7 +60,7 @@ const CoursesClassicSection = () => {
                 <ToastForm successMessage="Search submitted.">
                   <input type="search" name="q" placeholder={content.filter.searchPlaceholder} required />
                   <button type="submit">
-                    <SearchIcon fill="#1A453B" />
+                    <SearchIcon fill="#0065B5" />
                   </button>
                 </ToastForm>
               </div>

@@ -164,7 +164,7 @@
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    border-bottom: 1px solid rgba(26, 69, 59, 0.14);
+    border-bottom: 1px solid rgba(0, 101, 181, 0.14);
 
     @media #{$md} {
       flex-direction: column;
@@ -237,7 +237,7 @@
     background-color: var(--white);
   }
   &__header {
-    border-top: 1px solid rgba(26, 69, 59, 0.14);
+    border-top: 1px solid rgba(0, 101, 181, 0.14);
   }
   &__thumb {
     overflow: hidden;
@@ -256,7 +256,7 @@
   }
   &__item {
     background-color: var(--white);
-    border: 1px solid rgba(26, 69, 59, 0.14);
+    border: 1px solid rgba(0, 101, 181, 0.14);
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -782,7 +782,7 @@
       grid-row: 3;
       height: 240px;
       background-color: var(--bg1);
-      border: 1px solid rgba(26, 69, 59, 0.14);
+      border: 1px solid rgba(0, 101, 181, 0.14);
       padding: 30px;
       display: flex;
       flex-direction: row;

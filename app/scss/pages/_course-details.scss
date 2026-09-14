@@ -670,7 +670,7 @@
         }
 
         .stars {
-          color: #d87827;
+          color: #0082e4;
           margin-bottom: 5px;
           font-size: 14px;
         }
@@ -698,7 +698,7 @@
           .stars {
             display: flex;
             gap: 2px;
-            color: #d87827;
+            color: #0082e4;
             font-size: 12px;
             width: 65px;
             flex-shrink: 0;
@@ -778,7 +778,7 @@
             }
 
             .stars {
-              color: #d87827;
+              color: #0082e4;
               font-size: 12px;
             }
           }
@@ -1108,7 +1108,7 @@
           .social {
             a {
               color: var(--black3);
-              border: 1px solid rgba(26, 69, 59, 0.14);
+              border: 1px solid rgba(0, 101, 181, 0.14);
 
               @media #{$sm} {
                 font-size: 14px;

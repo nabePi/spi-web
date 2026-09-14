@@ -1,0 +1,49 @@
+/*----------------------------------------*/
+/* SPI brand palette                       */
+/*----------------------------------------*/
+
+/*
+  Sekolah Pemikiran Islam base colors, sampled from the official logo
+  (public/assets/imgs/logo/logo-spi/logo-color-horizontal.png):
+
+    dark blue   #0065b5   rgb(0, 101, 181)   book spine
+    light blue  #0082e4   rgb(0, 130, 228)   book cover + wordmark
+    green       #88d00e   rgb(136, 208, 14)  outer spine accent
+
+  The two blues carry the brand; the green stays a minor accent, mirroring
+  how the logo itself is weighted.
+
+  This file does NOT edit the template's original palette — `_variables.scss`
+  is left untouched and still documents the stock InstituteFlow colors
+  (--primary #1a453b, --secondary #d87827). This partial is imported after it
+  so these declarations win, which keeps the original one `@import` away if it
+  ever needs to be restored. The pre-retheme tree is also tagged in git as
+  `backup/pre-spi-palette`.
+*/
+
+:root {
+  // Logo base colors
+  --spi-blue-dark: #0065b5;
+  --spi-blue: #0082e4;
+  --spi-green: #88d00e;
+
+  // The template's brand variables now refer to the SPI palette.
+  // Original values are kept in _variables.scss for reference.
+  --primary: var(--spi-blue-dark); // was #1a453b
+  --secondary: var(--spi-blue); // was #d87827
+  --border: #0065b524; // was #1a453b24 (primary at 14%)
+
+  // Accent for text/marks sitting on a dark brand surface (--primary sections,
+  // breadcrumb banners, the navy footer). The template paired two complementary
+  // hues here — dark green + orange, ~3.4:1 — but the two SPI blues share a hue
+  // and collapse to ~1.5:1. The logo's green is the logo's own partner to the
+  // blues, so it takes this role; it is also the only place green appears,
+  // which keeps it the minor accent.
+  --accent-on-dark: var(--spi-green);
+
+  // NOTE: --green is deliberately NOT overridden. That variable is the
+  // template's green *demo theme* colour (business-coach buttons, category
+  // chips), not a brand colour — repointing it at the logo's lime only
+  // recoloured demo pages. Use --spi-green explicitly where the logo's
+  // green is actually wanted.
+}

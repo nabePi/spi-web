@@ -36,7 +36,7 @@ const CoursesSection = () => {
           <Link href={cta.href} className="theme-btn bg-white">
             <span className="text">{cta.label}</span>
             <span className="icon">
-              <ArrowOutwardIcon fill="#1A453B" />
+              <ArrowOutwardIcon fill="#0065B5" />
             </span>
           </Link>
         </div>

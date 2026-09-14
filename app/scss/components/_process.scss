@@ -125,7 +125,7 @@
   }
   &__item {
     background-color: var(--white);
-    border: 1px solid rgba(26, 69, 59, 0.14);
+    border: 1px solid rgba(0, 101, 181, 0.14);
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -355,7 +355,7 @@
       color: var(--primary);
 
       .item-step {
-        border-color: rgba(26, 69, 59, 0.14);
+        border-color: rgba(0, 101, 181, 0.14);
         color: var(--primary);
       }
 

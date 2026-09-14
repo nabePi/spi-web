@@ -136,7 +136,7 @@ const Footer2 = () => {
                 <button type="submit" className="theme-btn button-bg-orange">
                   <span className="text">Sign up</span>
                   <span className="icon">
-                    <ArrowOutwardIcon fill="#1A453B" />
+                    <ArrowOutwardIcon fill="#0065B5" />
                   </span>
                 </button>
               </ToastForm>

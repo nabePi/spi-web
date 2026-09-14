@@ -62,7 +62,7 @@ const BrandSection = () => {
                 </div>
                 <div className="col-lg-3 col-md-4 col-6">
                   <div className="brand2__item">
-                    <Icon0dfd9a8e fill="#1A453B" />
+                    <Icon0dfd9a8e fill="#0065B5" />
                   </div>
                 </div>
                 <div className="col-lg-3 col-md-4 col-6">

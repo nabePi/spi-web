@@ -1,6 +1,6 @@
 import type { SVGProps } from "react";
 
-const Icon1cd17113 = ({ fill = "#1A453B", ...props }: SVGProps<SVGSVGElement>) => (
+const Icon1cd17113 = ({ fill = "#0065B5", ...props }: SVGProps<SVGSVGElement>) => (
   <svg width="58" height="64" viewBox="0 0 58 64" fill="none" {...props}>
             <g opacity="0.1">
               <path

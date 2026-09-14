@@ -106,7 +106,7 @@
           display: flex;
           align-items: center;
           height: 50px;
-          border: 1px solid rgba(26, 69, 59, 0.14);
+          border: 1px solid rgba(0, 101, 181, 0.14);
           border-radius: 100px;
           padding: 0 30px;
           width: 260px;
@@ -151,7 +151,7 @@
 
         .book-now-btn {
           height: 50px;
-          border: 1px solid rgba(26, 69, 59, 0.14);
+          border: 1px solid rgba(0, 101, 181, 0.14);
           border-radius: 100px;
           display: inline-flex;
           align-items: center;
@@ -213,7 +213,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          border: 1px solid rgba(26, 69, 59, 0.14);
+          border: 1px solid rgba(0, 101, 181, 0.14);
           color: var(--primary);
           transition: all 0.3s ease;
           text-decoration: none;
@@ -260,7 +260,7 @@
     .shop-details__tab-divider {
       width: 100%;
       height: 1px;
-      background-color: rgba(26, 69, 59, 0.14);
+      background-color: rgba(0, 101, 181, 0.14);
       margin-bottom: 25px;
     }
 
@@ -409,7 +409,7 @@
         input,
         textarea {
           width: 100%;
-          border: 1px solid rgba(26, 69, 59, 0.14);
+          border: 1px solid rgba(0, 101, 181, 0.14);
           border-radius: 6px;
           padding: 15px 20px;
           color: var(--primary);

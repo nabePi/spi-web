@@ -24,7 +24,7 @@ export default function GlobalError({
           fontFamily:
             "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
           background: "#f8f5f2",
-          color: "#1a453b",
+          color: "#0065b5",
           padding: "24px",
         }}
       >
@@ -53,7 +53,7 @@ export default function GlobalError({
               fontSize: "16px",
               fontWeight: 600,
               color: "#f8f5f2",
-              background: "#1a453b",
+              background: "#0065b5",
             }}
           >
             Try again

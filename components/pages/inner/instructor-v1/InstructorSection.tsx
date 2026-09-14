@@ -52,17 +52,17 @@ const InstructorSection = () => {
                   <Link href={cta.href} className="theme-btn button-bg-whitev2">
                     <span className="text">{cta.label}</span>
                     <span className="icon"
-                      ><ArrowOutwardIcon fill="#1A453B" />
+                      ><ArrowOutwardIcon fill="#0065B5" />
                     </span>
                   </Link>
                   <div className="instructor1__badges">
                     {/* Badge 1: Laurel wreath */}
                     <div className="instructor1__badge-seal">
-                      <Icon599fa41f fill="#1A453B" />
+                      <Icon599fa41f fill="#0065B5" />
                     </div>
                     {/* Badge 2: ULTRA badge */}
                     <div className="instructor1__badge-seal">
-                      <Icon330f6f20 fill="#1A453B" />
+                      <Icon330f6f20 fill="#0065B5" />
                     </div>
                   </div>
                 </div>
