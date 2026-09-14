@@ -39,8 +39,8 @@ function sideInfoLogos(pathname: string) {
     };
   }
   return {
-    header: "/assets/imgs/logo/logo.svg",
-    footer: "/assets/imgs/logo/logo.svg",
+    header: "/assets/imgs/logo/logo-spi/logo-color-horizontal-small.png",
+    footer: "/assets/imgs/logo/logo-spi/logo-icon-color.png",
   };
 }
 
@@ -105,7 +105,7 @@ const SideInfo = () => {
                 <a href="#">BE</a>
               </div>
             </div>
-            <div className="offset-logo-footer side-info__item">
+            <div className="offset-logo-footer side-info__item d-none">
               <img src={logos.footer} alt="image" />
             </div>
           </div>
