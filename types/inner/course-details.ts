@@ -20,21 +20,9 @@ export type CourseCurriculumSection = {
   headingId: string;
   collapseId: string;
   title: string;
+  description?: string;
   open?: boolean;
   lessons: CourseCurriculumLesson[];
-};
-
-export type CourseReviewBar = {
-  stars: string;
-  width: string;
-  count: string;
-};
-
-export type CourseReviewItem = {
-  name: string;
-  text: string;
-  thumb: ImageAsset;
-  rating: string;
 };
 
 export type CourseIncludeItem = {
@@ -61,17 +49,12 @@ export type CourseDetailsContent = {
   tabs?: CourseDetailsTab[];
   overviewTitle?: string;
   overviewParagraphs: string[];
-  highlightsTitle: string;
-  highlights: string[];
-  learnTitle: string;
-  learnItems: string[];
-  curriculum: CourseCurriculumSection[];
+  highlightsTitle?: string;
+  highlights?: string[];
+  learnTitle?: string;
+  learnItems?: string[];
+  curriculum?: CourseCurriculumSection[];
   instructor: CourseDetailsInstructor;
-  reviewsTitle: string;
-  reviewScore: string;
-  reviewCount: string;
-  reviewBars: CourseReviewBar[];
-  reviews: CourseReviewItem[];
   sidebarThumb: ImageAsset;
   videoId: string;
   price: string;

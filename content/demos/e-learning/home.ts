@@ -129,20 +129,20 @@ const courses: CourseCardData[] = [
     offer: "Angkatan 14",
   },
   {
-    href: "/course-details-classic-v1",
+    href: "/kursus-singkat",
     thumb: home2coursestopCoursesThumb12,
     title: "Kursus Singkat untuk kelompok dan organisasi",
     author: "Seluruh cabang",
     rating: "3/5",
     ratingValue: 3,
-    lessons: "7 Sesi",
-    students: "1 Bulan",
+    lessons: "22 Sesi",
+    students: "2 Semester",
     price: "—",
   },
   {
-    href: "/course-details-classic-v1",
+    href: "/komik-intensif",
     thumb: home2coursestopCoursesThumb13,
-    title: "KOMIK — Kelas Online Pemikiran Islam",
+    title: "KOMIK Intensif (Kelas Online Pemikiran Islam Intensif)",
     author: "Program Daring",
     rating: "4.5/5",
     ratingValue: 4.5,
@@ -151,7 +151,7 @@ const courses: CourseCardData[] = [
     price: "—",
   },
   {
-    href: "/course-details-classic-v1",
+    href: "/tuesdays-special",
     thumb: home2coursestopCoursesThumb14,
     title: "Tuesday's Special — sesi daring rutin",
     author: "Program Daring",
@@ -183,7 +183,7 @@ export const eLearningVideoContent: ELearningVideoContent = {
     { kind: "odometer", value: "115", suffix: "", label: "Peserta terbanyak, SPI UII 2020" },
   ],
   thumb: { src: home2videovideoThumb, alt: "Ruang kajian bergaya masjid dengan sajadah tertata" },
-  videoHref: "https://www.youtube.com/watch?v=7e90gBu4pas",
+  videoHref: "https://www.youtube.com/watch?v=lrhxrMZozA0",
 };
 
 // NOTE: pricing tiers have no counterpart at SPI — every program is free of

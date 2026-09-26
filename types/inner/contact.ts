@@ -18,7 +18,7 @@ export type ContactBreadcrumbContent = {
 };
 
 export type ContactInfoItem = {
-  id: "email" | "hours-1" | "hours-2";
+  id: "phone" | "email" | "hours-1";
   iconClass: string;
   label: string;
   value: string;

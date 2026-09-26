@@ -28,16 +28,32 @@ interface NavItem {
   children?: NavItem[];
 }
 
-/**
- * Primary navigation. Only "/" exists so far; the remaining entries are
- * placeholders until their pages are built.
- */
+/** Primary navigation. */
 const mainMenu: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about-v1" },
-  { label: "Program", href: "/courses-v1" },
-  { label: "Alumni", href: "/alumni" },
-  { label: "Blog", href: "/blog-three-column" },
+  {
+    label: "Profile",
+    href: "/about-v1",
+    children: [
+      { label: "Sejarah", href: "/about-v1/sejarah" },
+      { label: "Visi, Misi, & Pemikiran", href: "/about-v1/visi-misi-pemikiran" },
+      { label: "Pengajar", href: "/about-v1/pengajar-alt" },
+    ],
+  },
+  {
+    label: "Program & Kelas",
+    href: "/courses-v1",
+    children: [
+      { label: "Kursus Singkat", href: "/kursus-singkat" },
+      { label: "KOMIK Intensif (Kelas Online Pemikiran Islam Intensif)", href: "/komik-intensif" },
+      { label: "Tuesday's Special", href: "/tuesdays-special" },
+    ],
+  },
+  {
+    label: "Media",
+    href: "/blog-three-column",
+    children: [{ label: "Blog", href: "/blog-three-column" }],
+  },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -102,8 +118,20 @@ function MainNav() {
     <nav className="main-menu" style={{ display: "block" }}>
       <ul>
         {mainMenu.map((item) => (
-          <li key={item.label}>
+          <li
+            key={item.label}
+            className={item.children ? "menu-item-has-children" : undefined}
+          >
             <NavLink href={item.href!}>{item.label}</NavLink>
+            {item.children ? (
+              <ul className="dp-menu">
+                {item.children.map((child) => (
+                  <li key={child.label}>
+                    <NavLink href={child.href!}>{child.label}</NavLink>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
           </li>
         ))}
       </ul>
@@ -373,17 +401,21 @@ function HeaderMain({
             ) : null}
 
             <Link
-              className="header-right__user d-none d-xl-flex"
+              className="header-right__user invisible d-none d-xl-flex"
               href="/profile"
               aria-label="My account"
+              aria-hidden="true"
+              tabIndex={-1}
             >
               <Icon957c3569 />
             </Link>
 
             <Link
-              className="header-right__cart d-none d-xl-flex"
+              className="header-right__cart invisible d-none d-xl-flex"
               href="/cart"
               aria-label="Cart"
+              aria-hidden="true"
+              tabIndex={-1}
             >
               <Icon53961c91 />
               <span className={cartBadgeClassName}>2</span>

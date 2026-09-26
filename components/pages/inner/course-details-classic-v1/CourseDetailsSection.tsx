@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { courseDetailsClassicV1Content } from "@/content/inner/course-details-classic-v1";
 import type { CourseDetailsContent, CourseIncludeItem } from "@/types/inner/course-details";
 import Image from "next/image";
 import CheckBoldIcon from "@/icons/CheckBoldIcon";
@@ -76,35 +75,39 @@ const OverviewBlock = ({ content }: { content: CourseDetailsContent }) => (
     {content.overviewParagraphs.map((paragraph) => (
       <p key={paragraph}>{paragraph}</p>
     ))}
-    <div className="highlight-list">
-      <h3 className="title">{content.highlightsTitle}</h3>
-      <ul>
-        {content.highlights.map((item) => (
-          <li key={item}>
-            {checkIcon}
-            <span>{item}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-    <div className="highlight-list mb-0">
-      <h3 className="title">{content.learnTitle}</h3>
-      <ul>
-        {content.learnItems.map((item) => (
-          <li key={item}>
-            {checkIcon}
-            <span>{item}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
+    {content.highlights && content.highlights.length > 0 ? (
+      <div className="highlight-list">
+        <h3 className="title">{content.highlightsTitle}</h3>
+        <ul>
+          {content.highlights.map((item) => (
+            <li key={item}>
+              {checkIcon}
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ) : null}
+    {content.learnItems && content.learnItems.length > 0 ? (
+      <div className="highlight-list mb-0">
+        <h3 className="title">{content.learnTitle}</h3>
+        <ul>
+          {content.learnItems.map((item) => (
+            <li key={item}>
+              {checkIcon}
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ) : null}
   </div>
 );
 
 const CurriculumBlock = ({ content }: { content: CourseDetailsContent }) => (
   <div className="course-details1__curriculum">
     <div className="accordion" id="curriculumAccordion">
-      {content.curriculum.map((section) => (
+      {(content.curriculum ?? []).map((section) => (
         <div className="accordion-item" key={section.id}>
           <h2 className="accordion-header" id={section.headingId}>
             <button
@@ -128,6 +131,7 @@ const CurriculumBlock = ({ content }: { content: CourseDetailsContent }) => (
             data-bs-parent="#curriculumAccordion"
           >
             <div className="accordion-body">
+              {section.description ? <p className="mb-20">{section.description}</p> : null}
               <ul>
                 {section.lessons.map((lesson) => (
                   <li key={lesson.title}>
@@ -216,64 +220,9 @@ const InstructorBlock = ({ content }: { content: CourseDetailsContent }) => (
   </div>
 );
 
-const ReviewsBlock = ({ content }: { content: CourseDetailsContent }) => (
-  <div className="course-details1__reviews">
-    <h3 className="title mb-30">{content.reviewsTitle}</h3>
-    <div className="review-summary">
-      <div className="overall">
-        <div className="score">{content.reviewScore}</div>
-        <div className="stars">
-          {fullStar}
-          {fullStar}
-          {fullStar}
-          {fullStar}
-          {halfStar}
-        </div>
-        <div className="count">{content.reviewCount}</div>
-      </div>
-      <div className="bars">
-        {content.reviewBars.map((bar) => (
-          <div className="bar-item" key={bar.stars}>
-            <div className="stars">
-              {bar.stars}
-              {fullStar}
-            </div>
-            <div className="progress">
-              <div className="progress-bar" style={{ width: bar.width }}></div>
-            </div>
-            <div className="count">{bar.count}</div>
-          </div>
-        ))}
-      </div>
-    </div>
-    <div className="review-list mt-50">
-      {content.reviews.map((item) => (
-        <div className="review-item" key={item.name}>
-          <div className="avatar">
-            <Image src={item.thumb.src} alt={item.thumb.alt} />
-          </div>
-          <div className="content">
-            <div className="top">
-              <div className="stars">
-                {fullStar}
-                {fullStar}
-                {fullStar}
-                {fullStar}
-                {halfStar}
-              </div>
-              <h4 className="name">{item.name}</h4>
-            </div>
-            <p className="text">{item.text}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-);
-
-const CourseDetailsSection = () => {
-  const content = courseDetailsClassicV1Content;
+const CourseDetailsSection = ({ content }: { content: CourseDetailsContent }) => {
   const useTabs = content.layout === "tabs";
+  const hasCurriculum = Boolean(content.curriculum && content.curriculum.length > 0);
 
   return (
     <section className="course-details1 v3">
@@ -305,23 +254,21 @@ const CourseDetailsSection = () => {
                     <div className="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
                       <OverviewBlock content={content} />
                     </div>
-                    <div className="tab-pane fade" id="curriculum" role="tabpanel" aria-labelledby="curriculum-tab">
-                      <CurriculumBlock content={content} />
-                    </div>
+                    {hasCurriculum ? (
+                      <div className="tab-pane fade" id="curriculum" role="tabpanel" aria-labelledby="curriculum-tab">
+                        <CurriculumBlock content={content} />
+                      </div>
+                    ) : null}
                     <div className="tab-pane fade" id="instructor" role="tabpanel" aria-labelledby="instructor-tab">
                       <InstructorBlock content={content} />
-                    </div>
-                    <div className="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
-                      <ReviewsBlock content={content} />
                     </div>
                   </div>
                 </>
               ) : (
                 <>
                   <OverviewBlock content={content} />
-                  <CurriculumBlock content={content} />
+                  {hasCurriculum ? <CurriculumBlock content={content} /> : null}
                   <InstructorBlock content={content} />
-                  <ReviewsBlock content={content} />
                 </>
               )}
             </div>

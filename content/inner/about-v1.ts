@@ -2,6 +2,8 @@ import type {
   AboutV1AboutContent,
   AboutV1BreadcrumbContent,
   AboutV1ClientContent,
+  AboutV1HeroContent,
+  AboutV1PengajarContent,
   AboutV1TeamContent,
   AboutV1TestimonialContent,
   AboutV1WcuContent,
@@ -36,7 +38,7 @@ export const aboutV1BreadcrumbContent: AboutV1BreadcrumbContent = {
   },
   items: [{ label: "Beranda", href: "/" }, { label: "Tentang Kami" }],
   title: "Tentang Kami",
-  text: "Sekolah Pemikiran Islam berdiri pada 2014 sebagai respons intelektual terhadap tantangan ideologis yang dihadapi umat Muslim Indonesia hari ini.",
+  text: "Lembaga pendidikan nonformal yang menghadirkan kajian tematik berbasis pemikiran Islam, sejarah, dan peradaban.",
 };
 
 export const aboutV1AboutContent: AboutV1AboutContent = {
@@ -57,8 +59,8 @@ export const aboutV1AboutContent: AboutV1AboutContent = {
     { before: "peradaban Islam." },
   ],
   paragraphs: [
-    "SPI adalah lembaga pendidikan non-formal yang berkomitmen menghidupkan kembali tradisi keilmuan sebagai fondasi kebangkitan peradaban Islam. Sejak 2014, kajiannya berjalan secara terencana dan terukur, bukan sebagai rangkaian ceramah lepas.",
-    "Landasannya adalah Surat At-Taubah ayat 122, yang menyerukan agar segolongan orang beriman memperdalam pengetahuan agamanya untuk memberi peringatan dan membimbing kaumnya. Dari ayat itulah misi SPI bertolak: mencetak generasi pemikir kritis yang mampu menavigasi kompleksitas zaman tanpa melepaskan nilai-nilai Islam.",
+    "Sekolah Pemikiran Islam (SPI) adalah lembaga pendidikan nonformal yang menghadirkan kajian-kajian tematik berbasis pemikiran Islam, sejarah, dan peradaban. SPI hadir untuk membekali generasi Muslim dengan pemahaman Islam yang mendalam serta kemampuan menghadapi tantangan pemikiran di era modern.",
+    "SPI menyelenggarakan program pendidikan yang mengintegrasikan kajian keislaman, wawasan peradaban, dan analisis terhadap berbagai isu kontemporer. Melalui proses pembelajaran yang sistematis, SPI berupaya melahirkan generasi yang memiliki tradisi ilmu, kepedulian terhadap umat, dan kontribusi nyata bagi masyarakat.",
   ],
   // NOTE: no satisfaction survey exists for SPI — label left as lorem ipsum.
   satisfaction: "95",
@@ -125,9 +127,8 @@ export const aboutV1WcuContent: AboutV1WcuContent = {
     desc: "Hubungi sekretariat atau cabang terdekat untuk jadwal angkatan berikutnya.",
     cta: { label: "Daftar Sekarang", href: "/courses-v1" },
     mailTitle: "Email Sekretariat",
-    // TODO(contact): placeholder — PRD Appendix B
-    mailHref: "mailto:sekretariat@spi.example.id",
-    mailLabel: "sekretariat@spi.example.id",
+    mailHref: "mailto:markaz.spi@gmail.com",
+    mailLabel: "markaz.spi@gmail.com",
     person: {
       name: "Sekretariat Pusat",
       role: "SPI Bogor",
@@ -290,4 +291,131 @@ export const aboutV1ClientContent: AboutV1ClientContent = {
   titleMid: "consectetur ",
   titleHighlight: "adipiscing",
   cta: { label: "Hubungi Kami", href: "/contact" },
+};
+
+// Adapted from the theme's instructor-details profile-hero template
+// (photo + heading + about + achievements + socials) for the school's
+// history instead of an instructor bio.
+export const aboutV1SejarahHeroContent: AboutV1HeroContent = {
+  breadcrumb: {
+    bg: { src: innerbreadcumbbreadcumbBgPattern2, alt: "pattern" },
+    items: [
+      { label: "Beranda", href: "/" },
+      { label: "Profil", href: "/about-v1" },
+      { label: "Sejarah" },
+    ],
+    title: "Sejarah",
+    text: "Perjalanan Sekolah Pemikiran Islam sejak berdiri pada 2014.",
+  },
+  thumb: {
+    src: home1testimonialtestimonialThumb12,
+    alt: "Serambi masjid, ruang kajian Sekolah Pemikiran Islam",
+  },
+  subtitle: "Sejarah",
+  title: "Sejarah",
+  since: "Sejak 2014",
+  aboutTitle: "Awal Mula",
+  aboutText:
+    "Sekolah Pemikiran Islam berdiri pada tahun 2014 sebagai respons terhadap kebutuhan akan ruang belajar yang membahas Islam secara komprehensif dan kontekstual.",
+  milestonesTitle: "Perkembangan",
+  milestonesText:
+    "Berawal dari kelas-kelas kajian pemikiran Islam dengan kurikulum terstruktur, SPI terus berkembang dengan menghadirkan berbagai program pembelajaran di berbagai kota serta menjangkau peserta dari beragam latar belakang.",
+  stats: [
+    { icon: "school", label: "11 Tahun Berjalan" },
+    { icon: "location_city", label: "6 Kota" },
+    { icon: "groups", label: "14 Angkatan di Jakarta" },
+    { icon: "event", label: "20 Sesi per Program" },
+  ],
+  followTitle: "Ikuti Kami",
+  followText: "Kabar dan jadwal kajian SPI juga dibagikan lewat kanal media sosial berikut.",
+  socials: [
+    { label: "Facebook", href: "https://www.facebook.com/Sekolah.Pemikiran.Islam" },
+    { label: "Instagram", href: "https://www.instagram.com/spi.indonesia/" },
+    { label: "YouTube", href: "https://www.youtube.com/@SekolahPemikiranIslam" },
+    { label: "Threads", href: "https://www.threads.com/@spi.indonesia" },
+    { label: "X", href: "https://x.com/MarkazSPI" },
+  ],
+};
+
+// Adapted from the same instructor-details profile-hero template as
+// aboutV1SejarahHeroContent. Misi is rendered as a numbered list via
+// milestonesItems rather than a single paragraph, matching the source copy.
+export const aboutV1VisiMisiHeroContent: AboutV1HeroContent = {
+  breadcrumb: {
+    bg: { src: innerbreadcumbbreadcumbBgPattern2, alt: "pattern" },
+    items: [
+      { label: "Beranda", href: "/" },
+      { label: "Profil", href: "/about-v1" },
+      { label: "Visi, Misi, & Pemikiran" },
+    ],
+    title: "Visi, Misi, & Pemikiran",
+    text: "Arah dan tujuan yang menjadi landasan kajian SPI.",
+  },
+  thumb: {
+    src: inneraboutinnerThumb1,
+    alt: "Al-Qur'an dan laptop berdampingan di meja kerja, tradisi ilmu yang menavigasi zaman modern",
+  },
+  subtitle: "Visi & Misi",
+  title: "Visi, Misi, & Pemikiran",
+  aboutTitle: "Visi",
+  aboutText:
+    "Menjadi lembaga pendidikan yang berkontribusi membangkitkan kembali tradisi ilmu untuk mengembalikan kejayaan peradaban Islam.",
+  milestonesTitle: "Misi",
+  milestonesItems: [
+    "Menghadirkan kajian strategis yang terencana dan terstruktur untuk menjawab kebutuhan umat sesuai tantangan zaman.",
+    "Menyelenggarakan pendidikan intelektual bagi generasi muda Muslim agar mampu memahami Islam secara mendalam.",
+    "Mendorong lahirnya generasi yang aktif berkontribusi dalam membangun masyarakat dan peradaban.",
+  ],
+  followTitle: "Ikuti Kami",
+  followText: "Kabar dan jadwal kajian SPI juga dibagikan lewat kanal media sosial berikut.",
+  socials: [
+    { label: "Facebook", href: "https://www.facebook.com/Sekolah.Pemikiran.Islam" },
+    { label: "Instagram", href: "https://www.instagram.com/spi.indonesia/" },
+    { label: "YouTube", href: "https://www.youtube.com/@SekolahPemikiranIslam" },
+    { label: "Threads", href: "https://www.threads.com/@spi.indonesia" },
+    { label: "X", href: "https://x.com/MarkazSPI" },
+  ],
+};
+
+export const aboutV1PengajarContent: AboutV1PengajarContent = {
+  breadcrumb: {
+    bg: { src: innerbreadcumbbreadcumbBgPattern2, alt: "pattern" },
+    items: [
+      { label: "Beranda", href: "/" },
+      { label: "Profil", href: "/about-v1" },
+      { label: "Pengajar" },
+    ],
+    title: "Pengajar",
+    text: "Pengajar, peneliti, dan praktisi lintas bidang keilmuan Islam.",
+  },
+  subtitle: "Pengajar",
+  title: "Pengajar",
+  paragraphs: [
+    "Sekolah Pemikiran Islam (SPI) didukung oleh para pengajar, peneliti, dan praktisi yang memiliki latar belakang keilmuan di berbagai bidang, mulai dari pemikiran Islam, sejarah, pendidikan, filsafat, hingga isu-isu kontemporer.",
+    "Para pengajar SPI berperan dalam menghadirkan proses pembelajaran yang mendalam, sistematis, dan kontekstual melalui kajian, diskusi, penelitian, serta pengembangan literasi Islam.",
+  ],
+  members: [
+    { name: "Dr. Akmal Sjafril", initials: "AS" },
+    { name: "Asep Sobari, Lc", initials: "AS" },
+    { name: "Dr. Muhammad Ardiansyah", initials: "MA" },
+    { name: "Dr. Wido Supraha", initials: "WS" },
+    { name: "Prof. Dr. Syamsuddin Arif", initials: "SA" },
+    { name: "Prof. Usep Moh. Ishaq, Ph.D.", initials: "UI" },
+    { name: "Dr. Kharis Nugroho, Lc., M.Ud", initials: "KN" },
+    { name: "Dr. Wendi Zarman, M.Si", initials: "WZ" },
+    { name: "Dr. Nashruddin Syarief, S.S., M.Pd.I", initials: "NS" },
+    { name: "Dr. Tiar Anwar Bachtiar", initials: "TB" },
+    { name: "Dr. Kholili Hasib", initials: "KH" },
+    { name: "Dr. Deden Anjar H, M.Hum", initials: "DH" },
+    { name: "Dr. Akhmad R. Damyati", initials: "AD" },
+    { name: "Dr. Bahrul Ulum", initials: "BU" },
+    { name: "Dr. Susiyanto", initials: "SU" },
+    { name: "Ahmad Rofiqi, Lc., M.Pd.I", initials: "AR" },
+    { name: "Muhammad Fadhila Azka, S.Th.I., M.Ag.", initials: "MA" },
+    { name: "Erwyn Kurniawan, S.IP", initials: "EK" },
+    { name: "Adi Zulfikar, S.T.", initials: "AZ" },
+    { name: "Hafizh Muftisanny", initials: "HM" },
+    { name: "Anila Gusfani", initials: "AG" },
+    { name: "Rani Nur Asriani, S.Fil", initials: "RA" },
+  ],
 };

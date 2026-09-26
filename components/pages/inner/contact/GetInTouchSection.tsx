@@ -6,6 +6,7 @@ import Icon477a2778 from "@/icons/Icon477a2778";
 import Icon5c7cdbd0 from "@/icons/Icon5c7cdbd0";
 import Iconb2d73122 from "@/icons/Iconb2d73122";
 import Iconfc979fda from "@/icons/Iconfc979fda";
+import PhoneIcon from "@/icons/PhoneIcon";
 import SectionBooksIcon from "@/icons/SectionBooksIcon";
 import StudentsIcon9901 from "@/icons/StudentsIcon9901";
 
@@ -37,11 +38,13 @@ const GetInTouchSection = () => {
                     <div
                       className="getintouch1__info-icon getintouch1__info-icon--orange"
                     >
-                      <Iconb2d73122 />
+                      <PhoneIcon fill="white" />
                     </div>
                     <div className="getintouch1__info-text">
                       <span>{info[0].label}</span>
-                      <a href={info[0].href}>{info[0].value}</a>
+                      <a href={info[0].href} target="_blank" rel="noopener noreferrer">
+                        {info[0].value}
+                      </a>
                     </div>
                   </div>
                   <div
@@ -50,11 +53,11 @@ const GetInTouchSection = () => {
                     <div
                       className="getintouch1__info-icon getintouch1__info-icon--green"
                     >
-                      <Icon5c7cdbd0 />
+                      <Iconb2d73122 />
                     </div>
                     <div className="getintouch1__info-text">
                       <span>{info[1].label}</span>
-                      <p>{info[1].value}</p>
+                      <a href={info[1].href}>{info[1].value}</a>
                     </div>
                   </div>
                   <div

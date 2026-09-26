@@ -2,9 +2,6 @@ import ToastForm from "@/components/forms/ToastForm";
 import { coursesV1Content } from "@/content/inner/courses-v1";
 import CourseGridCard from "@/components/pages/inner/courses-v1/CourseGridCard";
 import CourseListCard from "@/components/pages/inner/courses-v1/CourseListCard";
-import ListingPagination from "@/components/shared/ListingPagination";
-import ArrowForwardIcon from "@/icons/ArrowForwardIcon";
-import Icon16e664c1 from "@/icons/Icon16e664c1";
 import Icon95bb8f36 from "@/icons/Icon95bb8f36";
 import Icon9e9a1e76 from "@/icons/Icon9e9a1e76";
 import SearchIcon from "@/icons/SearchIcon";
@@ -102,12 +99,6 @@ const CoursesClassicSection = () => {
             </div>
           </div>
         </div>
-
-        <ListingPagination
-          items={content.pagination}
-          prevIcon={<Icon16e664c1 />}
-          nextIcon={<ArrowForwardIcon />}
-        />
       </div>
     </div>
   );

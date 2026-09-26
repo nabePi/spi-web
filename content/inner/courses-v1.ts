@@ -8,18 +8,16 @@ import innercoursescoursesThumbgrid36 from "@/public/assets/imgs/inner/courses/s
 import innercoursescoursesThumbgrid37 from "@/public/assets/imgs/inner/courses/spi-fiqih-keluarga.webp";
 import innercoursescoursesThumbgrid38 from "@/public/assets/imgs/inner/courses/spi-filologi-sastra.webp";
 import innercoursescoursesThumbgrid39 from "@/public/assets/imgs/inner/courses/spi-ghazwul-fikri-topik.webp";
-import innercoursescoursesClassicThumb11 from "@/public/assets/imgs/inner/courses/spi-kelas-reguler-exterior.webp";
 import innercoursescoursesClassicThumb12 from "@/public/assets/imgs/inner/courses/spi-kursus-singkat-intimate.webp";
 import innercoursescoursesClassicThumb13 from "@/public/assets/imgs/inner/courses/spi-komik-homedesk.webp";
 import innercoursescoursesClassicThumb14 from "@/public/assets/imgs/inner/courses/spi-tuesday-candle.webp";
-import innercoursescoursesClassicThumb15 from "@/public/assets/imgs/inner/courses/spi-marjan-steps.webp";
 
 export const coursesV1Content: CoursesV1Content = {
   filter: {
     showingBefore: "Menampilkan",
-    showingRange: "1-9",
+    showingRange: "1-3",
     showingMid: "dari",
-    showingTotal: "14",
+    showingTotal: "3",
     showingAfter: "Program",
     searchPlaceholder: "Cari program...",
     gridViewTitle: "Tampilan Grid",
@@ -147,37 +145,24 @@ export const coursesV1Content: CoursesV1Content = {
       students: "Terbuka umum",
     },
   ],
-  // The three program formats plus the two named online offerings and MARJAN.
+  // The three active program formats.
   list: [
     {
-      href: "/course-details-classic-v1",
-      title: "Kelas Reguler — kajian pemikiran Islam dua semester",
-      author: "Jakarta, Bandung, Yogyakarta, Bogor, Tangerang, Padang",
-      rating: "4.9/5",
-      thumb: innercoursescoursesClassicThumb11,
-      alt: "Bangunan masjid sederhana dengan pohon palem",
-      price: "—",
-      lessons: "20 Sesi",
-      duration: "±7 Bulan",
-      students: "Terbuka umum",
-      level: "Semua jenjang",
-    },
-    {
-      href: "/course-details-classic-v1",
+      href: "/kursus-singkat",
       title: "Kursus Singkat untuk kelompok dan organisasi",
       author: "Seluruh cabang",
       rating: "4.9/5",
       thumb: innercoursescoursesClassicThumb12,
       alt: "Lingkaran bantal duduk di ruangan kecil",
       price: "—",
-      lessons: "7 Sesi",
-      duration: "1 Bulan",
-      students: "Kelompok",
-      level: "Atas permintaan",
+      lessons: "22 Sesi",
+      duration: "2 Semester",
+      students: "Terbuka umum",
+      level: "Semua jenjang",
     },
     {
-      href: "/course-details-classic-v1",
-      title: "KOMIK — Kelas Online Pemikiran Islam",
+      href: "/komik-intensif",
+      title: "KOMIK Intensif (Kelas Online Pemikiran Islam Intensif)",
       author: "Program Daring",
       rating: "4.9/5",
       thumb: innercoursescoursesClassicThumb13,
@@ -189,7 +174,7 @@ export const coursesV1Content: CoursesV1Content = {
       level: "Semua jenjang",
     },
     {
-      href: "/course-details-classic-v1",
+      href: "/tuesdays-special",
       title: "Tuesday's Special — sesi daring rutin",
       author: "Program Daring",
       rating: "4.9/5",
@@ -201,27 +186,5 @@ export const coursesV1Content: CoursesV1Content = {
       students: "Terbuka umum",
       level: "Semua jenjang",
     },
-    {
-      href: "/course-details-classic-v1",
-      title: "MARJAN — Majelis Pemikiran di Kota Hujan",
-      author: "SPI Bogor",
-      rating: "4.9/5",
-      thumb: innercoursescoursesClassicThumb15,
-      alt: "Anak tangga batu basah menuju pintu masuk bangunan",
-      price: "—",
-      lessons: "20 Sesi",
-      duration: "±7 Bulan",
-      students: "Terbuka umum",
-      level: "Semua jenjang",
-    },
-  ],
-  pagination: [
-    { label: "Sebelumnya", href: "#", direction: "prev" },
-    { label: "1", href: "#", active: true },
-    { label: "2", href: "#" },
-    { label: "...", href: "#", ellipsis: true },
-    { label: "3", href: "#" },
-    { label: "5", href: "#" },
-    { label: "Berikutnya", href: "#", direction: "next" },
   ],
 };

@@ -9,7 +9,7 @@ import { createMetadata } from "@/lib/metadata";
 export const metadata = createMetadata({
   title: "Tentang Kami",
   description:
-    "Sekolah Pemikiran Islam berdiri pada 2014 untuk menghidupkan kembali tradisi ilmu. Visi, misi, dan konsep adab yang menjadi landasannya.",
+    "Sekolah Pemikiran Islam adalah lembaga pendidikan nonformal yang menghadirkan kajian tematik berbasis pemikiran Islam, sejarah, dan peradaban.",
   path: "/about-v1",
 });
 

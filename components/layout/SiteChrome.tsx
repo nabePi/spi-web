@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import type { StaticImageData } from "next/image";
 import { Header } from "@/components/layout/Header";
 import type { HeaderCta, HeaderVariant } from "@/components/layout/Header";
-import Footer2 from "@/components/layout/Footer2";
+import Footer1 from "@/components/layout/Footer1";
 
 export type { HeaderVariant, HeaderCta };
 
@@ -33,7 +33,7 @@ const SiteChrome = ({
       <div id="smooth-wrapper" suppressHydrationWarning>
         <div id="smooth-content" suppressHydrationWarning>
           <main suppressHydrationWarning>{children}</main>
-          <Footer2 />
+          <Footer1 />
         </div>
       </div>
     </>

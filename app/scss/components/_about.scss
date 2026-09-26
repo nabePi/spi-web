@@ -900,6 +900,49 @@
   }
 }
 
+.pengajar-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  height: 100%;
+  padding: 20px 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background-color: var(--white);
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: var(--primary);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  }
+
+  &__avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: var(--white);
+    font-family: var(--font_mona);
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0%;
+  }
+
+  &__name {
+    font-family: var(--font_mona);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    color: var(--primary);
+    margin: 0;
+  }
+}
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);

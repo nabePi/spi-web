@@ -7,7 +7,7 @@ import { createMetadata } from "@/lib/metadata";
 export const metadata = createMetadata({
   title: "Kontak",
   description:
-    "Hubungi Sekretariat Pusat Sekolah Pemikiran Islam di Bogor, atau kontak cabang di Jakarta, Bandung, Yogyakarta, Tangerang, dan Padang.",
+    "Hubungi Sekretariat Pusat Sekolah Pemikiran Islam di Jagakarsa, Jakarta Selatan, atau kontak cabang di Bandung, Yogyakarta, Bogor, Tangerang, dan Padang.",
   path: "/contact",
 });
 

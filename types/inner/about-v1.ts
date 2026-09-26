@@ -181,3 +181,50 @@ export type AboutV1ClientContent = {
   titleHighlight: string;
   cta: LinkItem;
 };
+
+export type AboutV1PengajarMember = {
+  name: string;
+  /** First + last significant word of the name, for the avatar circle. */
+  initials: string;
+};
+
+export type AboutV1PengajarContent = {
+  breadcrumb: AboutV1BreadcrumbContent;
+  subtitle: string;
+  title: string;
+  paragraphs: string[];
+  members: AboutV1PengajarMember[];
+};
+
+export type AboutV1HeroStat = {
+  icon: string;
+  label: string;
+};
+
+export type AboutV1HeroSocial = {
+  label: string;
+  href: string;
+};
+
+/**
+ * Content shape for a profile-hero-style page, adapted from the theme's
+ * instructor-details template (photo + heading + about + achievements +
+ * socials) for non-instructor subjects such as the school's history.
+ */
+export type AboutV1HeroContent = {
+  breadcrumb: AboutV1BreadcrumbContent;
+  thumb: ImageAsset;
+  subtitle: string;
+  title: string;
+  since?: string;
+  aboutTitle: string;
+  aboutText: string;
+  milestonesTitle: string;
+  /** Rendered as a paragraph. Use `milestonesItems` instead for a numbered list. */
+  milestonesText?: string;
+  milestonesItems?: string[];
+  stats?: AboutV1HeroStat[];
+  followTitle: string;
+  followText: string;
+  socials: AboutV1HeroSocial[];
+};

@@ -72,10 +72,9 @@ const SideInfo = () => {
             </div>
             <div className="mobile-menu d-xl-none fix side-info__item" />
             <div className="offset-info-box side-info__item">
-              <h2 className="title">Hello There!</h2>
+              <h2 className="title">Assalamu’alaykum!</h2>
               <p className="text">
-                We offer comprehensive range of services to help your business
-                thrive.
+                Mari mengenal Islam lebih mendalam melalui kajian pemikiran, sejarah, dan peradaban secara terstruktur. 
               </p>
             </div>
             <div className="offset-widget-box side-info__item">
@@ -83,26 +82,64 @@ const SideInfo = () => {
               <div className="contact-meta">
                 <div className="contact-item">
                   <span className="text">
-                    <a href="tel:+22306965119">+2230 6965 119</a>
+                    <a
+                      href="https://wa.me/6281285574547"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      +62 812-8557-4547
+                    </a>
                   </span>
                 </div>
+                
                 <div className="contact-item">
                   <span className="text">
-                    <a href="mailto:info@pemikiranislam.id">info@pemikiranislam.id</a>
+                    <a href="mailto:markaz.spi@gmail.com">markaz.spi@gmail.com</a>
                   </span>
                 </div>
                 <div className="contact-item">
-                  <span className="text">Avenue de Roma 1588, Lisboa</span>
+                  <span className="text">Jagakarsa, Jakarta Selatan 12630, DKI Jakarta</span>
                 </div>
               </div>
             </div>
             <div className="offset-widget-box side-info__item">
               <h2 className="title">Connect Us On</h2>
               <div className="social-links">
-                <a href="#">FB</a>
-                <a href="#">LN</a>
-                <a href="#">IN</a>
-                <a href="#">BE</a>
+                <a
+                  href="https://www.facebook.com/Sekolah.Pemikiran.Islam"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  FB
+                </a>
+                <a
+                  href="https://www.instagram.com/spi.indonesia/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  IG
+                </a>
+                <a
+                  href="https://www.youtube.com/@SekolahPemikiranIslam"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  YT
+                </a>
+                <a
+                  href="https://www.threads.com/@spi.indonesia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  T
+                </a>
+                <a
+                  href="https://x.com/MarkazSPI"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  X
+                </a>
               </div>
             </div>
             <div className="offset-logo-footer side-info__item d-none">

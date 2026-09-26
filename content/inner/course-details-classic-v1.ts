@@ -1,12 +1,6 @@
 import type { CourseDetailsContent } from "@/types/inner/course-details";
-import type { RelatedCoursesContent } from "@/types/inner/courses";
 import innercoursescoursesDetailsv1Instructuor11 from "@/public/assets/imgs/placeholder/courses-detailsv1-instructuor1_1.svg";
-import innercoursescoursesDetailsv1Testiuser11 from "@/public/assets/imgs/placeholder/courses-detailsv1-testiuser1_1.svg";
 import innercoursescoursesDetailsv1Thumb11 from "@/public/assets/imgs/inner/courses-details/spi-sidebar-catatan-pagi.webp";
-import innercoursescoursesDetailsv1CourseThumb11 from "@/public/assets/imgs/inner/courses-details/spi-kursus-map-berkas.webp";
-import innercoursescoursesDetailsv1CourseThumb12 from "@/public/assets/imgs/inner/courses-details/spi-komik-ponsel.webp";
-import innercoursescoursesDetailsv1CourseThumb13 from "@/public/assets/imgs/inner/courses-details/spi-tuesday-lampu-hias.webp";
-import innercoursescoursesDetailsv1CourseThumb14 from "@/public/assets/imgs/inner/courses-details/spi-marjan-daun-hujan.webp";
 
 export const courseDetailsClassicV1Content: CourseDetailsContent = {
   layout: "tabs",
@@ -16,7 +10,6 @@ export const courseDetailsClassicV1Content: CourseDetailsContent = {
     { id: "overview-tab", target: "overview", label: "Ringkasan Program", active: true },
     { id: "curriculum-tab", target: "curriculum", label: "Kurikulum" },
     { id: "instructor-tab", target: "instructor", label: "Pengajar" },
-    { id: "reviews-tab", target: "reviews", label: "Ulasan" },
   ],
   overviewParagraphs: [
     "Kelas Reguler adalah program inti Sekolah Pemikiran Islam: kajian berbasis semester yang diadakan mingguan di tiap cabang. Satu angkatan berlangsung sekitar tujuh bulan — dua semester dengan total dua puluh sesi pembelajaran, sekali pertemuan setiap pekan.",
@@ -90,35 +83,11 @@ export const courseDetailsClassicV1Content: CourseDetailsContent = {
       { label: "Twitter/X", href: "https://twitter.com/SPI_Pusat", icon: "twitter" },
     ],
   },
-  // NOTE: SPI collects no course reviews and no participant ratings exist in
-  // any source. The score, bars and review text below are placeholder data —
-  // this tab should either be removed or fed real, consented feedback.
-  reviewsTitle: "Ulasan",
-  reviewScore: "5",
-  reviewCount: "0 Ulasan",
-  reviewBars: [
-    { stars: "5", width: "0%", count: "0" },
-    { stars: "4", width: "0%", count: "0" },
-    { stars: "3", width: "0%", count: "0" },
-    { stars: "2", width: "0%", count: "0" },
-    { stars: "1", width: "0%", count: "0" },
-  ],
-  reviews: [
-    {
-      name: "Lorem ipsum dolor",
-      text: "Sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud.",
-      thumb: {
-        src: innercoursescoursesDetailsv1Testiuser11,
-        alt: "placeholder",
-      },
-      rating: "4.9/5",
-    },
-  ],
   sidebarThumb: {
     src: innercoursescoursesDetailsv1Thumb11,
     alt: "Catatan pagi dan secangkir teh di meja kayu",
   },
-  videoId: "M7lc1UVf-VE",
+  videoId: "lrhxrMZozA0",
   price: "—",
   // TODO(registration): the external registration channel is still undecided
   // (PRD §5.1) — this is the single place its URL will be set.
@@ -132,59 +101,4 @@ export const courseDetailsClassicV1Content: CourseDetailsContent = {
     { id: "certificate", label: "Sertifikat", value: "Tidak" },
   ],
   shareLabel: "Bagikan:",
-};
-
-export const courseDetailsClassicV1RelatedContent: RelatedCoursesContent = {
-  title: "Program lainnya",
-  items: [
-    {
-      // TODO(route): per-program detail pages do not exist yet — PRD W8.
-      href: "#",
-      title: "Kursus Singkat untuk kelompok dan organisasi",
-      author: "Seluruh cabang",
-      rating: "5/5",
-      thumb: innercoursescoursesDetailsv1CourseThumb11,
-      alt: "Map berkas terikat tali di atas bangku",
-      clipId: "clip0_852_30611",
-      price: "—",
-      lessons: "7 Sesi",
-      students: "1 Bulan",
-    },
-    {
-      href: "#",
-      title: "KOMIK — Kelas Online Pemikiran Islam",
-      author: "Program Daring",
-      rating: "3/5",
-      thumb: innercoursescoursesDetailsv1CourseThumb12,
-      alt: "Ponsel dengan layar kosong di atas meja",
-      clipId: "clip0_852_30612",
-      price: "—",
-      lessons: "Daring",
-      students: "Nasional",
-    },
-    {
-      href: "#",
-      title: "Tuesday's Special — sesi daring rutin",
-      author: "Program Daring",
-      rating: "3/5",
-      thumb: innercoursescoursesDetailsv1CourseThumb13,
-      alt: "Lampu hias hangat menyala saat senja",
-      clipId: "clip0_852_30613",
-      price: "—",
-      lessons: "Mingguan",
-      students: "Terbuka umum",
-    },
-    {
-      href: "#",
-      title: "MARJAN — Majelis Pemikiran di Kota Hujan",
-      author: "SPI Bogor",
-      rating: "4.9/5",
-      thumb: innercoursescoursesDetailsv1CourseThumb14,
-      alt: "Daun palem basah dengan tetesan hujan",
-      clipId: "clip0_852_30614",
-      price: "—",
-      lessons: "20 Sesi",
-      students: "±7 Bulan",
-    },
-  ],
 };

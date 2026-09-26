@@ -12,26 +12,24 @@ export const contactContent: ContactContent = {
   titleHighlight: "pendaftaran",
   info: [
     {
-      id: "email",
+      id: "phone",
       iconClass: "getintouch1__info-icon getintouch1__info-icon--orange",
+      label: "Nomor WhatsApp:",
+      value: "+62 812-8557-4547",
+      href: "https://wa.me/6281285574547",
+    },
+    {
+      id: "email",
+      iconClass: "getintouch1__info-icon getintouch1__info-icon--green",
       label: "Alamat Email:",
-      // TODO(contact): placeholder — see PRD Appendix B
-      value: "sekretariat@spi.example.id",
-      href: "mailto:sekretariat@spi.example.id",
+      value: "markaz.spi@gmail.com",
+      href: "mailto:markaz.spi@gmail.com",
     },
     {
       id: "hours-1",
-      iconClass: "getintouch1__info-icon getintouch1__info-icon--green",
-      label: "Sekretariat Pusat",
-      // TODO(contact): placeholder — SPI has not supplied a publishable address
-      value: "Jl. Contoh No. 1, Bogor, Jawa Barat 16111",
-    },
-    {
-      id: "hours-2",
       iconClass: "getintouch1__info-icon getintouch1__info-icon--orange",
-      label: "Cabang",
-      value:
-        "Jakarta · Bandung · Yogyakarta · Bogor · Tangerang · Padang",
+      label: "Sekretariat Pusat",
+      value: "Jagakarsa, Jakarta Selatan 12630, DKI Jakarta",
     },
   ],
   form: {
@@ -55,6 +53,5 @@ export const contactContent: ContactContent = {
 };
 
 export const contactMapContent: ContactMapContent = {
-  // TODO(contact): centred on Bogor pending a publishable secretariat address
-  src: "https://maps.google.com/maps?q=Bogor,+Jawa+Barat,+Indonesia&z=12&output=embed",
+  src: "https://maps.google.com/maps?q=Jagakarsa,+Jakarta+Selatan+12630,+DKI+Jakarta&z=14&output=embed",
 };

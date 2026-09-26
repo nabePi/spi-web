@@ -66,7 +66,7 @@ export type CoursesListingContent = {
   filter: CourseFilterContent;
   grid: CourseGridItem[];
   list: CourseListItem[];
-  pagination: ListingPaginationItem[];
+  pagination?: ListingPaginationItem[];
   sidebar?: CourseSidebarContent;
 };
 

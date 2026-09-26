@@ -1,3 +1,6 @@
+// Backup of the footer used before the switch to Footer1 (instructed:
+// "Backup existing footer" before adopting the alternate footer1 design).
+// Not imported anywhere — kept only so the previous footer can be restored.
 import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
 import Image from "next/image";

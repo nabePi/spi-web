@@ -7,7 +7,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       headerCta={{
         kind: "theme-btn",
         href: "/courses-v1",
-        label: "Enroll now",
+        label: "Register now",
         modifierClass: "button-bg-secondary",
       }}
     >

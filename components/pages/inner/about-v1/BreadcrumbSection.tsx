@@ -3,9 +3,14 @@ import Link from "next/link";
 import { aboutV1BreadcrumbContent } from "@/content/inner/about-v1";
 import Image from "next/image";
 import Icond37aeee4 from "@/icons/Icond37aeee4";
+import type { AboutV1BreadcrumbContent } from "@/types/inner/about-v1";
 
-const BreadcrumbSection = () => {
-  const breadcrumb = aboutV1BreadcrumbContent;
+const BreadcrumbSection = ({
+  content = aboutV1BreadcrumbContent,
+}: {
+  content?: AboutV1BreadcrumbContent;
+}) => {
+  const breadcrumb = content;
 
   return (
     <section className="breadcrumb1 v2">
