@@ -11,6 +11,7 @@ import { Tags } from "./payload/collections/Tags";
 import { Authors } from "./payload/collections/Authors";
 import { Articles } from "./payload/collections/Articles";
 import { Events } from "./payload/collections/Events";
+import { Papers } from "./payload/collections/Papers";
 import { SiteSettings } from "./payload/globals/SiteSettings";
 
 const filename = fileURLToPath(import.meta.url);
@@ -30,7 +31,7 @@ export default buildConfig({
   },
 
   // Collections
-  collections: [Users, Media, Categories, Tags, Authors, Articles, Events],
+  collections: [Users, Media, Categories, Tags, Authors, Articles, Events, Papers],
 
   // Globals
   globals: [SiteSettings],

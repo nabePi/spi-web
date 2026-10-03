@@ -53,7 +53,11 @@ const mainMenu: NavItem[] = [
   {
     label: "Media",
     href: "/blog-three-column",
-    children: [{ label: "Blog", href: "/blog-three-column" }],
+    children: [
+      { label: "Blog", href: "/blog-three-column" },
+      { label: "Agenda & Kegiatan", href: "/events" },
+      { label: "Karya Tulis", href: "/papers" },
+    ],
   },
   { label: "Contact", href: "/contact" },
 ];

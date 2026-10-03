@@ -61,7 +61,12 @@ flowchart TD
    - **Database Impact**: Exactly +1 Table (`events`)
    - **Scope**: Centralized publication of webinars, daurah, offline events, and workshops with schedule badges, countdowns, speaker attributions, and external intake links.
 
-4. **[Module 4: Academic Programs & Instructors](03-programs-instructors.md)** (Deferred)
+4. **[Module 4: Papers / Karya Ilmiah](04-papers.md)** (Implemented, Phase 1)
+   - **Type**: Upload-enabled Collection (`Papers`)
+   - **Database Impact**: Exactly +2 Tables (`papers`, `papers_rels` for tags)
+   - **Scope**: PDF library (5 MB limit, inline preview only) with admin-written explanation (rich text), free-text author, reused categories and tags, blog-like listing and detail pages, and reserved fields for future AI-generated summaries.
+
+5. **[Module 5: Academic Programs & Instructors](03-programs-instructors.md)** (Deferred)
    - **Type**: Collections (`Instructors`, `Programs`)
    - **Database Impact**: 6 Tables (`instructors`, `instructors_socials`, `programs`, `programs_rels`, `programs_curriculum`, `programs_curriculum_lessons`)
    - **Scope**: Complete faculty directory with scholar credentials, academic programs, semester-based curriculum structures, intake enrollment statuses, and public program catalog.

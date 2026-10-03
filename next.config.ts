@@ -25,6 +25,16 @@ const securityHeaders = [
   },
 ];
 
+// The PDF preview route is framed by the paper page, so it must allow
+// same-origin framing (the global policy denies all framing).
+const previewHeaders = [
+  { key: "X-Frame-Options", value: "SAMEORIGIN" },
+  {
+    key: "Content-Security-Policy",
+    value: "default-src 'self'; frame-ancestors 'self'",
+  },
+];
+
 const nextConfig: NextConfig = {
   output: "standalone",
   poweredByHeader: false,
@@ -51,6 +61,10 @@ const nextConfig: NextConfig = {
       {
         source: "/(.*)",
         headers: securityHeaders,
+      },
+      {
+        source: "/papers/:slug/preview",
+        headers: previewHeaders,
       },
     ];
   },

@@ -15,6 +15,8 @@ const routes = [
   "/komik-intensif",
   "/tuesdays-special",
   "/blog-three-column",
+  "/events",
+  "/papers",
   "/blog-details-standard",
   "/contact",
 ];
