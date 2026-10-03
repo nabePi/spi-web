@@ -12,6 +12,8 @@ const BlogCard = ({ item }: { item: BlogThreeColumnCardItem }) => {
             <Image
               src={item.thumb.src}
               alt={item.thumb.alt}
+              width={typeof item.thumb.src === "string" ? 820 : undefined}
+              height={typeof item.thumb.src === "string" ? 480 : undefined}
             />
           </Link>
         </div>
@@ -21,6 +23,8 @@ const BlogCard = ({ item }: { item: BlogThreeColumnCardItem }) => {
               <Image
                 src={item.author.src}
                 alt={item.author.alt}
+                width={typeof item.author.src === "string" ? 40 : undefined}
+                height={typeof item.author.src === "string" ? 40 : undefined}
               />
               <span>{item.authorName}</span>
             </Link>
