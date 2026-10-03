@@ -66,9 +66,14 @@ flowchart TD
    - **Database Impact**: Exactly +2 Tables (`papers`, `papers_rels` for tags)
    - **Scope**: PDF library (5 MB limit, inline preview only) with admin-written explanation (rich text), free-text author, reused categories and tags, blog-like listing and detail pages, and reserved fields for future AI-generated summaries.
 
-5. **[Module 5: Academic Programs & Instructors](03-programs-instructors.md)** (Deferred)
-   - **Type**: Collections (`Instructors`, `Programs`)
-   - **Database Impact**: 6 Tables (`instructors`, `instructors_socials`, `programs`, `programs_rels`, `programs_curriculum`, `programs_curriculum_lessons`)
-   - **Scope**: Complete faculty directory with scholar credentials, academic programs, semester-based curriculum structures, intake enrollment statuses, and public program catalog.
+5. **[Module 5: Lecturers (Pengajar) & Chapters (Cabang)](05-lecturers-chapters.md)**
+   - **Type**: Collections (`Lecturers`, `Chapters`)
+   - **Database Impact**: Exactly +2 Tables (`lecturers`, `chapters`)
+   - **Scope**: Centralized faculty directory (22 scholars) and 6 regional chapters (Jakarta, Bandung, Yogyakarta, Bogor, Tangerang, Padang) with public routes `/pengajar` and `/cabang`, dynamic homepage integration, and contact listings.
+
+6. **[Module 6: Academic Programs](03-programs-instructors.md)** (Deferred)
+   - **Type**: Collection (`Programs`)
+   - **Database Impact**: 4 Tables (`programs`, `programs_rels`, `programs_curriculum`, `programs_curriculum_lessons`)
+   - **Scope**: Flagship academic programs, semester-based curriculum structures, intake enrollment statuses, and public program catalog.
 
 

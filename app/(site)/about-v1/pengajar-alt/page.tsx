@@ -1,11 +1,9 @@
 import BreadcrumbSection from "@/components/pages/inner/about-v1/BreadcrumbSection";
 import PengajarTeamSection from "@/components/pages/inner/about-v1/PengajarTeamSection";
 import { aboutV1PengajarContent } from "@/content/inner/about-v1";
+import { getPublishedLecturers } from "@/lib/getLecturers";
 import { createMetadata } from "@/lib/metadata";
 
-// Alternative layout for /about-v1/pengajar, for side-by-side comparison —
-// same content, styled after the /alumni card grid (photo-slot card) instead
-// of the compact initials-circle grid. Not linked from navigation.
 export const metadata = createMetadata({
   title: "Pengajar (Alternatif)",
   description:
@@ -13,11 +11,15 @@ export const metadata = createMetadata({
   path: "/about-v1/pengajar-alt",
 });
 
-const Page = () => {
+export const revalidate = 60;
+
+const Page = async () => {
+  const lecturers = await getPublishedLecturers();
+
   return (
     <>
       <BreadcrumbSection content={aboutV1PengajarContent.breadcrumb} />
-      <PengajarTeamSection />
+      <PengajarTeamSection lecturers={lecturers} />
     </>
   );
 };

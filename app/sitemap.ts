@@ -17,6 +17,8 @@ const routes = [
   "/blog-three-column",
   "/events",
   "/papers",
+  "/pengajar",
+  "/cabang",
   "/blog-details-standard",
   "/contact",
 ];

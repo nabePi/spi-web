@@ -38,7 +38,8 @@ const mainMenu: NavItem[] = [
     children: [
       { label: "Sejarah", href: "/about-v1/sejarah" },
       { label: "Visi, Misi, & Pemikiran", href: "/about-v1/visi-misi-pemikiran" },
-      { label: "Pengajar", href: "/about-v1/pengajar-alt" },
+      { label: "Pengajar", href: "/pengajar" },
+      { label: "Cabang", href: "/cabang" },
     ],
   },
   {

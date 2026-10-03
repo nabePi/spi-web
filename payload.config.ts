@@ -12,6 +12,8 @@ import { Authors } from "./payload/collections/Authors";
 import { Articles } from "./payload/collections/Articles";
 import { Events } from "./payload/collections/Events";
 import { Papers } from "./payload/collections/Papers";
+import { Lecturers } from "./payload/collections/Lecturers";
+import { Chapters } from "./payload/collections/Chapters";
 import { SiteSettings } from "./payload/globals/SiteSettings";
 
 const filename = fileURLToPath(import.meta.url);
@@ -31,7 +33,18 @@ export default buildConfig({
   },
 
   // Collections
-  collections: [Users, Media, Categories, Tags, Authors, Articles, Events, Papers],
+  collections: [
+    Users,
+    Media,
+    Categories,
+    Tags,
+    Authors,
+    Articles,
+    Events,
+    Papers,
+    Lecturers,
+    Chapters,
+  ],
 
   // Globals
   globals: [SiteSettings],
