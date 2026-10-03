@@ -29,14 +29,13 @@ flowchart TD
         B8 --> B9[2.9 Regression Testing & Build]
     end
 
-    subgraph Phase 3: Academic Programs & Instructors
-        C1[3.1 Instructors Collection] --> C2[3.2 Programs Collection]
-        C2 --> C3[3.3 Register Collections]
-        C3 --> C4[3.4 Type Generation & DB Footprint Check]
-        C4 --> C5[3.5 Seed Faculty & Flagship Programs]
-        C5 --> C6[3.6 Frontend Query Helpers]
-        C6 --> C7[3.7 Program & Faculty Page Integration]
-        C7 --> C8[3.8 Regression Testing & Build]
+    subgraph Phase 3: Events
+        C1[3.1 Events Collection] --> C2[3.2 Register in Config]
+        C2 --> C3[3.3 Single Table DB Verification]
+        C3 --> C4[3.4 Seed Representative Events]
+        C4 --> C5[3.5 Frontend Query Helpers]
+        C5 --> C6[3.6 Event Card & Details Integration]
+        C6 --> C7[3.7 Regression Testing & Build]
     end
 
     A8 --> B1
@@ -57,8 +56,14 @@ flowchart TD
    - **Database Impact**: Exactly +5 Tables (`articles`, `articles_rels`, `categories`, `tags`, `authors`)
    - **Scope**: Full editorial publishing, Lexical rich text, single primary category, multi-topic tags, decoupled author credentials, archive grid, and article reading views.
 
-3. **[Module 3: Academic Programs & Instructors](03-programs-instructors.md)**
+3. **[Module 3: Events (Webinars, Offline Events, Daurah)](03-events.md)**
+   - **Type**: Collection (`Events`)
+   - **Database Impact**: Exactly +1 Table (`events`)
+   - **Scope**: Centralized publication of webinars, daurah, offline events, and workshops with schedule badges, countdowns, speaker attributions, and external intake links.
+
+4. **[Module 4: Academic Programs & Instructors](03-programs-instructors.md)** (Deferred)
    - **Type**: Collections (`Instructors`, `Programs`)
    - **Database Impact**: 6 Tables (`instructors`, `instructors_socials`, `programs`, `programs_rels`, `programs_curriculum`, `programs_curriculum_lessons`)
    - **Scope**: Complete faculty directory with scholar credentials, academic programs, semester-based curriculum structures, intake enrollment statuses, and public program catalog.
+
 

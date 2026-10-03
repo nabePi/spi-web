@@ -10,6 +10,7 @@ import { Categories } from "./payload/collections/Categories";
 import { Tags } from "./payload/collections/Tags";
 import { Authors } from "./payload/collections/Authors";
 import { Articles } from "./payload/collections/Articles";
+import { Events } from "./payload/collections/Events";
 import { SiteSettings } from "./payload/globals/SiteSettings";
 
 const filename = fileURLToPath(import.meta.url);
@@ -29,7 +30,7 @@ export default buildConfig({
   },
 
   // Collections
-  collections: [Users, Media, Categories, Tags, Authors, Articles],
+  collections: [Users, Media, Categories, Tags, Authors, Articles, Events],
 
   // Globals
   globals: [SiteSettings],
