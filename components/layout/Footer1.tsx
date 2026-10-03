@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
+import type { SiteSettingsData } from "@/lib/getSiteSettings";
 import Image from "next/image";
 import ToastForm from "@/components/forms/ToastForm";
 import home1footerfooterBgPattern from "@/public/assets/imgs/home1/footer/footer-bg-pattern.webp";
@@ -23,7 +24,19 @@ const socials = [
   { label: "X/Twitter", href: "https://x.com/MarkazSPI", icon: <XIcon /> },
 ];
 
-const Footer1 = ({ className = "" }: { className?: string }) => {
+const Footer1 = ({ className = "", settings }: { className?: string; settings?: SiteSettingsData }) => {
+  const contactPhone = settings?.contact?.phone || "+62 812-8557-4547";
+  const contactEmail = settings?.contact?.email || "markaz.spi@gmail.com";
+  const whatsappUrl = settings?.contact?.whatsapp
+    ? settings.contact.whatsapp.startsWith("http")
+      ? settings.contact.whatsapp
+      : `https://wa.me/${settings.contact.whatsapp.replace(/[^0-9]/g, "")}`
+    : "https://wa.me/6281285574547";
+  const footerDesc =
+    settings?.footer?.footerDescription ||
+    "Lembaga pendidikan nonformal yang menghadirkan kajian tematik berbasis pemikiran Islam, sejarah, dan peradaban.";
+  const copyright = settings?.footer?.copyrightText || `${siteConfig.name}. All rights reserved.`;
+
   return (
     <footer className={`footer1 site-footer${className ? ` ${className}` : ""}`}>
       <div className="footer1__bg">
@@ -73,20 +86,18 @@ const Footer1 = ({ className = "" }: { className?: string }) => {
           <div className="footer1__widget">
             <div className="footer1__logo mb-30">
               <Link href="/">
-                <Image src={logofooterLogoWhite} alt={siteConfig.name} />
+                <Image src={logofooterLogoWhite} alt={settings?.general?.siteName || siteConfig.name} />
               </Link>
             </div>
-            <p className="footer1__desc">
-              Lembaga pendidikan nonformal yang menghadirkan kajian tematik berbasis pemikiran Islam, sejarah, dan peradaban.
-            </p>
+            <p className="footer1__desc">{footerDesc}</p>
             <div className="footer1__contact">
               <div className="footer1__contact-item">
                 <PhoneIcon fill="white" />
-                <a href="tel:+6281285574547">+62 812-8557-4547</a>
+                <a href={`tel:${contactPhone.replace(/\s+/g, "")}`}>{contactPhone}</a>
               </div>
               <div className="footer1__contact-item">
                 <MailIcon fill="white" />
-                <a href="mailto:markaz.spi@gmail.com">markaz.spi@gmail.com</a>
+                <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
               </div>
             </div>
           </div>
@@ -119,11 +130,11 @@ const Footer1 = ({ className = "" }: { className?: string }) => {
             <ul className="footer1__links">
               <li><Link href="/contact">Hubungi Kami</Link></li>
               <li>
-                <a href="https://wa.me/6281285574547" target="_blank" rel="noopener noreferrer">
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                   WhatsApp
                 </a>
               </li>
-              <li><a href="mailto:markaz.spi@gmail.com">Email</a></li>
+              <li><a href={`mailto:${contactEmail}`}>Email</a></li>
             </ul>
           </div>
 
@@ -145,7 +156,7 @@ const Footer1 = ({ className = "" }: { className?: string }) => {
 
         <div className="footer1__bottom">
           <p className="copyright">
-            ©2026<span> {siteConfig.name}.</span> All rights reserved.
+            ©2026<span> {settings?.general?.siteName || siteConfig.name}.</span> {copyright.replace(/^.*\. All rights reserved\./, "All rights reserved.")}
           </p>
           <div className="footer1__social text-center text-md-end">
             {socials.map((social) => (

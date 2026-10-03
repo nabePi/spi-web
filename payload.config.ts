@@ -4,8 +4,9 @@ import { sqliteAdapter } from "@payloadcms/db-sqlite";
 import { buildConfig } from "payload";
 import path from "path";
 import { fileURLToPath } from "url";
-import { Users } from "@/payload/collections/Users";
-import { Media } from "@/payload/collections/Media";
+import { Users } from "./payload/collections/Users";
+import { Media } from "./payload/collections/Media";
+import { SiteSettings } from "./payload/globals/SiteSettings";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -25,6 +26,9 @@ export default buildConfig({
 
   // Collections
   collections: [Users, Media],
+
+  // Globals
+  globals: [SiteSettings],
 
   // Rich text editor
   editor: lexicalEditor(),

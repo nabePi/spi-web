@@ -3,6 +3,7 @@ import ToastForm from "@/components/forms/ToastForm";
 import Link from "next/link";
 import Image, { type StaticImageData } from "next/image";
 import { siteConfig } from "@/lib/siteConfig";
+import type { SiteSettingsData } from "@/lib/getSiteSettings";
 import logoDefault from "@/public/assets/imgs/logo/logo.svg";
 import logoWhite from "@/public/assets/imgs/logo/logo-spi/logo-white-horizontal.png";
 import logoBlue from "@/public/assets/imgs/logo/logo-blue.svg";
@@ -139,39 +140,65 @@ function MainNav() {
   );
 }
 
-function HeaderTop({ variant }: { variant: HeaderVariant }) {
+function HeaderTop({
+  variant,
+  settings,
+}: {
+  variant: HeaderVariant;
+  settings?: SiteSettingsData;
+}) {
   const useMatIcons = variant === "area2-seven" || variant === "area2-seven-inner";
   const iconFill = useMatIcons ? "currentColor" : "white";
+  const contactEmail = settings?.contact?.email || "support@pemikiranislam.id";
+  const contactPhone = settings?.contact?.phone || "(415) 555-0127";
+  const announcement = settings?.announcement;
+
   return (
     <div className="header-top d-none d-lg-block">
       <div className="container">
         <div className="header-top__inner">
           <div className="header-top__left">
             <div className="header-top__left-item">
-              <a href="mailto:support@pemikiranislam.id">
+              <a href={`mailto:${contactEmail}`}>
                 {useMatIcons ? (
                   <span className="material-icons-outlined">mail</span>
                 ) : (
                   <MailIcon fill={iconFill} />
                 )}
-                support@pemikiranislam.id
+                {contactEmail}
               </a>
             </div>
             <div className="header-top__left-item">
-              <a href="tel:+14155550127">
+              <a href={`tel:${contactPhone.replace(/\s+/g, "")}`}>
                 {useMatIcons ? (
                   <span className="material-icons-outlined">call</span>
                 ) : (
                   <PhoneIcon fill={iconFill} />
                 )}
-                (415) 555-0127
+                {contactPhone}
               </a>
             </div>
           </div>
-          <p className="header-top__offer">
-            Limited-Time Offer — Get Up To <span>30%</span> Off On Selected
-            Courses
-          </p>
+          {announcement?.enabled && announcement.text ? (
+            <p className="header-top__offer">
+              {announcement.badge ? <span>{announcement.badge} — </span> : null}
+              {announcement.text}
+              {announcement.linkUrl ? (
+                <Link
+                  href={announcement.linkUrl}
+                  className="ms-2 text-decoration-underline"
+                  target={announcement.openInNewTab ? "_blank" : undefined}
+                  rel={announcement.openInNewTab ? "noopener noreferrer" : undefined}
+                >
+                  {announcement.linkLabel || "Selengkapnya"}
+                </Link>
+              ) : null}
+            </p>
+          ) : (
+            <p className="header-top__offer">
+              Menghidupkan Tradisi Ilmu untuk Kejayaan Peradaban Islam
+            </p>
+          )}
           <div className="header-top__right">
             <div className="language">
               <a href="#!" className="language__current">
@@ -456,6 +483,7 @@ export function Header({
   cartBadgeClassName,
   showHeaderTop = true,
   showSearch = false,
+  settings,
 }: {
   variant?: HeaderVariant;
   cta?: HeaderCta;
@@ -463,10 +491,11 @@ export function Header({
   cartBadgeClassName?: string;
   showHeaderTop?: boolean;
   showSearch?: boolean;
+  settings?: SiteSettingsData;
 }) {
   return (
     <header className={headerClassName(variant)}>
-      {showHeaderTop ? <HeaderTop variant={variant} /> : null}
+      {showHeaderTop ? <HeaderTop variant={variant} settings={settings} /> : null}
       <HeaderMain
         variant={variant}
         cta={cta}

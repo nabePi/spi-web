@@ -8,36 +8,47 @@ import GlobalVideoModal from "@/components/layout/GlobalVideoModal";
 import SiteToaster from "@/components/layout/SiteToaster";
 import { fontVariables } from "@/components/layout/fonts";
 import { siteConfig } from "@/lib/siteConfig";
+import { getSiteSettings } from "@/lib/getSiteSettings";
 import "./plugins.css";
 import "./scss/style.scss";
 
-export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
-  title: {
-    default: siteConfig.title,
-    template: `%s | ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
-  applicationName: siteConfig.name,
-  authors: [{ name: siteConfig.name }],
-  icons: { icon: "/assets/imgs/favicon.webp" },
-  alternates: { canonical: "/" },
-  openGraph: {
-    type: "website",
-    siteName: siteConfig.name,
-    title: siteConfig.title,
-    description: siteConfig.description,
-    url: "/",
-    locale: siteConfig.locale,
-    images: [{ url: siteConfig.ogImage, alt: siteConfig.name }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.title,
-    description: siteConfig.description,
-    images: [siteConfig.ogImage],
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const settings = await getSiteSettings();
+  const siteUrl = siteConfig.url;
+  const siteName = settings.general.siteName || siteConfig.name;
+  const siteTitle = settings.seo.defaultTitle || siteConfig.title;
+  const siteDesc = settings.seo.defaultDescription || siteConfig.description;
+  const ogImg = settings.seo.defaultOgImage?.url || siteConfig.ogImage;
+  const favicon = settings.general.favicon?.url || "/assets/imgs/favicon.webp";
+
+  return {
+    metadataBase: new URL(siteUrl),
+    title: {
+      default: siteTitle,
+      template: `%s | ${siteName}`,
+    },
+    description: siteDesc,
+    applicationName: siteName,
+    authors: [{ name: siteName }],
+    icons: { icon: favicon },
+    alternates: { canonical: "/" },
+    openGraph: {
+      type: "website",
+      siteName: siteName,
+      title: siteTitle,
+      description: siteDesc,
+      url: "/",
+      locale: settings.seo.locale || siteConfig.locale,
+      images: [{ url: ogImg, alt: siteName }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: siteTitle,
+      description: siteDesc,
+      images: [ogImg],
+    },
+  };
+}
 
 export const viewport: Viewport = {
   themeColor: "#0065b5",
