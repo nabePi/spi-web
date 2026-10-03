@@ -1,3 +1,5 @@
+import type { Where } from "payload";
+
 export interface ArticleDoc {
   id: number;
   title: string;
@@ -63,7 +65,7 @@ export async function getPublishedArticles({
     const config = (await import("@payload-config")).default;
     const payload = await getPayload({ config });
 
-    const where: Record<string, unknown> = {
+    const where: Where = {
       status: {
         equals: "published",
       },
@@ -159,7 +161,7 @@ export async function getRelatedArticles(
     const config = (await import("@payload-config")).default;
     const payload = await getPayload({ config });
 
-    const where: Record<string, unknown> = {
+    const where: Where = {
       status: {
         equals: "published",
       },

@@ -29,7 +29,18 @@ flowchart TD
         B8 --> B9[2.9 Regression Testing & Build]
     end
 
+    subgraph Phase 3: Academic Programs & Instructors
+        C1[3.1 Instructors Collection] --> C2[3.2 Programs Collection]
+        C2 --> C3[3.3 Register Collections]
+        C3 --> C4[3.4 Type Generation & DB Footprint Check]
+        C4 --> C5[3.5 Seed Faculty & Flagship Programs]
+        C5 --> C6[3.6 Frontend Query Helpers]
+        C6 --> C7[3.7 Program & Faculty Page Integration]
+        C7 --> C8[3.8 Regression Testing & Build]
+    end
+
     A8 --> B1
+    B9 --> C1
 ```
 
 ---
@@ -45,3 +56,9 @@ flowchart TD
    - **Type**: Collections (`Categories`, `Tags`, `Authors`, `Articles`)
    - **Database Impact**: Exactly +5 Tables (`articles`, `articles_rels`, `categories`, `tags`, `authors`)
    - **Scope**: Full editorial publishing, Lexical rich text, single primary category, multi-topic tags, decoupled author credentials, archive grid, and article reading views.
+
+3. **[Module 3: Academic Programs & Instructors](03-programs-instructors.md)**
+   - **Type**: Collections (`Instructors`, `Programs`)
+   - **Database Impact**: 6 Tables (`instructors`, `instructors_socials`, `programs`, `programs_rels`, `programs_curriculum`, `programs_curriculum_lessons`)
+   - **Scope**: Complete faculty directory with scholar credentials, academic programs, semester-based curriculum structures, intake enrollment statuses, and public program catalog.
+

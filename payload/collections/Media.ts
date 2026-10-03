@@ -8,6 +8,9 @@ export const Media: CollectionConfig = {
   upload: {
     staticDir: "media",
   },
+  access: {
+    read: () => true,
+  },
   fields: [
     {
       name: "alt",

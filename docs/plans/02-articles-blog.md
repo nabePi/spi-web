@@ -113,10 +113,10 @@
 ---
 
 ## Verification Criteria (Definition of Done)
-- [ ] 4 collections (`Categories`, `Tags`, `Authors`, `Articles`) implemented and registered.
-- [ ] Database contains exactly 5 new tables (`categories`, `tags`, `authors`, `articles`, `articles_rels`).
-- [ ] Initial categories, tags, author, and sample articles successfully seeded.
-- [ ] REST API endpoints return correct filtered data.
-- [ ] Frontend blog listing and details pages render dynamic CMS data with zero downtime fallback.
-- [ ] Full route test suite (18+ routes) returns `200 OK`.
-- [ ] `npm run build` and `npx tsc --noEmit` pass with 0 errors.
+- [x] 4 collections (`Categories`, `Tags`, `Authors`, `Articles`) implemented and registered.
+- [x] Database contains exactly 5 new tables (`categories`, `tags`, `authors`, `articles`, `articles_rels`).
+- [x] Initial categories, tags, author, and sample articles successfully seeded.
+- [x] REST API endpoints return correct filtered data.
+- [x] Frontend blog listing and details pages render dynamic CMS data with zero downtime fallback.
+- [x] Full route test suite (24 routes) returns `200 OK`.
+- [x] `npm run build` and `npx tsc --noEmit` pass with 0 errors.

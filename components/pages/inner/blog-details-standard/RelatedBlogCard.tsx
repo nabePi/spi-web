@@ -16,12 +16,16 @@ const RelatedBlogCard = ({ item }: { item: BlogDetailsRelatedItem }) => {
       <Image
         src={item.thumb.src}
         alt={item.thumb.alt}
+        width={typeof item.thumb.src === "string" ? 600 : undefined}
+        height={typeof item.thumb.src === "string" ? 380 : undefined}
       />
     </Link>
   ) : (
     <Image
       src={item.thumb.src}
       alt={item.thumb.alt}
+      width={typeof item.thumb.src === "string" ? 600 : undefined}
+      height={typeof item.thumb.src === "string" ? 380 : undefined}
     />
   );
 
@@ -30,6 +34,8 @@ const RelatedBlogCard = ({ item }: { item: BlogDetailsRelatedItem }) => {
       <Image
         src={item.author.src}
         alt={item.author.alt}
+        width={typeof item.author.src === "string" ? 32 : undefined}
+        height={typeof item.author.src === "string" ? 32 : undefined}
       />
       <span>{item.authorName}</span>
     </Link>
@@ -38,6 +44,8 @@ const RelatedBlogCard = ({ item }: { item: BlogDetailsRelatedItem }) => {
       <Image
         src={item.author.src}
         alt={item.author.alt}
+        width={typeof item.author.src === "string" ? 32 : undefined}
+        height={typeof item.author.src === "string" ? 32 : undefined}
       />
       <span>{item.authorName}</span>
     </div>

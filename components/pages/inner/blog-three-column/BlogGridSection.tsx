@@ -11,7 +11,7 @@ const BlogGridSection = async () => {
 
   const displayItems = hasCmsArticles
     ? cmsResult.docs.map((doc, idx) => ({
-        href: `/blog-details-standard`,
+        href: `/blog/${doc.slug}`,
         category: doc.category?.name || "Artikel",
         thumb: {
           src: doc.featuredImage?.url || "/assets/imgs/inner/blog/spi-adab-blocks.webp",

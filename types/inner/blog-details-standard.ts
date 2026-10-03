@@ -16,14 +16,18 @@ export type BlogDetailsStandardBreadcrumbContent = {
   title: string;
   items: BreadcrumbItem[];
 };
+export type DynamicBlogImageAsset = {
+  src: StaticImageData | string;
+  alt: string;
+};
 
 export type BlogDetailsRelatedItem = {
   href: string;
   category?: string;
   categoryLinked?: boolean;
-  thumb: ImageAsset;
+  thumb: DynamicBlogImageAsset;
   thumbLinked?: boolean;
-  author: ImageAsset;
+  author: DynamicBlogImageAsset;
   authorName: string;
   date: string;
   title: string;
