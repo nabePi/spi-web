@@ -1,0 +1,48 @@
+{
+  "worktree": {
+    "setup": [
+      "if [ -f \"$PASEO_SOURCE_CHECKOUT_PATH/.env\" ]; then cp \"$PASEO_SOURCE_CHECKOUT_PATH/.env\" .env; elif [ -f .env.example ] && [ ! -f .env ]; then cp .env.example .env; fi",
+      "npm ci || npm install"
+    ],
+    "teardown": [
+      "rm -rf .next"
+    ]
+  },
+  "scripts": {
+    "web": {
+      "type": "service",
+      "command": "npm run dev -- --port ${PASEO_PORT:-3000}"
+    },
+    "dev": {
+      "type": "service",
+      "command": "npm run dev -- --port ${PASEO_PORT:-3000}"
+    },
+    "build": {
+      "command": "npm run build"
+    },
+    "start": {
+      "type": "service",
+      "command": "npm run start -- --port ${PASEO_PORT:-3000}"
+    },
+    "lint": {
+      "command": "npm run lint"
+    },
+    "typecheck": {
+      "command": "npx tsc --noEmit"
+    }
+  },
+  "metadataGeneration": {
+    "title": {
+      "instructions": "Keep workspace titles concise, describing the task in a few words without a leading verb."
+    },
+    "branchName": {
+      "instructions": "Use kebab-case format: <type>/<short-description> (e.g., feat/about-page, fix/nav-menu)."
+    },
+    "commitMessage": {
+      "instructions": "Follow Conventional Commits format: <type>: <description> (e.g., feat: ..., fix: ..., chore: ...). Keep messages concise, imperative, and in lowercase."
+    },
+    "pullRequest": {
+      "instructions": "Provide a concise summary of changes, motivation, and an explicit testing/verification checklist."
+    }
+  }
+}
