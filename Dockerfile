@@ -33,6 +33,10 @@ COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 
+# Directories for SQLite database and uploaded media
+RUN mkdir -p /app/data /app/media \
+  && chown -R nextjs:nodejs /app/data /app/media
+
 USER nextjs
 EXPOSE 3000
 

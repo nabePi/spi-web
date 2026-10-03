@@ -11,9 +11,19 @@ services:
       # Base URL publik situs, dipakai untuk metadata & canonical URL.
       # Set nilai sebenarnya lewat env var Dokploy, contoh: https://pemikiranislam.id
       NEXT_PUBLIC_APP_URL: ${NEXT_PUBLIC_APP_URL:-http://localhost:3000}
+      # Payload CMS
+      PAYLOAD_SECRET: ${PAYLOAD_SECRET}
+      DATABASE_URI: ${DATABASE_URI:-file:/app/data/payload.db}
+    volumes:
+      - payload_data:/app/data
+      - payload_media:/app/media
     healthcheck:
       test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://127.0.0.1:3000/"]
       interval: 30s
       timeout: 5s
       retries: 3
       start_period: 10s
+
+volumes:
+  payload_data:
+  payload_media:

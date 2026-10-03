@@ -18,6 +18,12 @@
 *.tsbuildinfo
 next-env.d.ts
 
+# payload cms
+/data/
+/media/
+payload-types.ts
+
+
 # env files
 .env
 .env*.local

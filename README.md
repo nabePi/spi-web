@@ -7,6 +7,7 @@ Basis kode ini awalnya berasal dari template ThemeForest berbayar ("InstituteFlo
 ## Tech stack
 
 - [Next.js](https://nextjs.org/) 16 (App Router) + React 19 + TypeScript
+- [Payload CMS](https://payloadcms.com/) 3 (Headless CMS) + SQLite (adapter `@payloadcms/db-sqlite`)
 - Sass (SCSS) untuk styling, Bootstrap 5 untuk sebagian komponen
 - GSAP (ScrollTrigger, ScrollSmoother, SplitText) untuk animasi scroll
 - Swiper, Odometer, counterup2, vanilla-tilt, magnific-popup — komponen interaktif bawaan template
@@ -41,24 +42,40 @@ Belum ada test suite di proyek ini.
 | Variabel              | Wajib? | Default                 | Keterangan                                              |
 | ---------------------- | ------ | ------------------------ | -------------------------------------------------------- |
 | `NEXT_PUBLIC_APP_URL`  | Tidak  | `http://localhost:3000` | Base URL situs, dipakai untuk metadata & canonical URL. |
+| `PAYLOAD_SECRET`       | Ya     | -                        | Kunci rahasia untuk otentikasi admin Payload CMS.       |
+| `DATABASE_URI`         | Tidak  | `file:./data/payload.db` | URI database SQLite (atau Postgres/MongoDB jika diubah).|
+
+## Payload CMS
+
+Website ini dilengkapi CMS headless bawaan menggunakan [Payload CMS](https://payloadcms.com/) v3:
+
+- **Admin Panel**: Akses di `http://localhost:3000/admin`. Pada kunjungan pertama, Anda akan diarahkan ke halaman pembuatan user admin pertama.
+- **REST API**: Tersedia di `/api/[collection]` (contoh: `/api/users`, `/api/media`).
+- **Konfigurasi CMS**: Berada di `payload.config.ts`.
+- **Koleksi**: Didefinisikan di `payload/collections/` (`Users.ts`, `Media.ts`).
+- **Database & Media**: SQLite database disimpan di folder `data/` dan file upload disimpan di `media/` (keduanya di-gitignore).
 
 ## Struktur proyek
 
 ```
 app/                  # Routing Next.js App Router
   (site)/             # Route group halaman publik (home, about-v1, alumni, blog, contact, dll.)
+  (payload)/          # Route group admin panel & REST API Payload CMS (/admin, /api)
 components/
   layout/             # Header, footer, preloader, chrome situs, bootstrap vendor script
   pages/              # Komponen section per halaman (demos/ & inner/)
   forms/              # Komponen form
   shared/              # Komponen bersama (breadcrumb, paginasi, dll.)
 content/              # Konten & data teks/gambar per halaman (typed)
+payload/              # Koleksi data Payload CMS (Users, Media, dll.)
 types/                # Tipe TypeScript untuk konten di atas
 icons/                # Komponen ikon SVG
 lib/                  # Konfigurasi situs, metadata helper, bootstrap vendor JS
 context/              # Provider React (animasi GSAP, dll.)
 public/assets/        # Gambar, video, font statis
 plans/                # Dokumen perencanaan kerja (per tanggal)
+data/                 # Penyimpanan SQLite database (lokal, di-gitignore)
+media/                # Penyimpanan file upload CMS (lokal, di-gitignore)
 ```
 
 Konten teks dan gambar tiap halaman diatur di `content/{demos,inner}/<halaman>.ts` (bertipe sesuai `types/{demos,inner}/<halaman>.ts`), bukan langsung di dalam komponen — ubah file di `content/` untuk mengganti copywriting atau gambar suatu section.
