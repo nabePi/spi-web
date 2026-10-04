@@ -58,6 +58,7 @@ const mainMenu: NavItem[] = [
       { label: "Blog", href: "/blog-three-column" },
       { label: "Agenda & Kegiatan", href: "/events" },
       { label: "Karya Tulis", href: "/papers" },
+      { label: "Galeri", href: "/galeri" },
     ],
   },
   { label: "Contact", href: "/contact" },

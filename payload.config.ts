@@ -14,6 +14,7 @@ import { Events } from "./payload/collections/Events";
 import { Papers } from "./payload/collections/Papers";
 import { Lecturers } from "./payload/collections/Lecturers";
 import { Chapters } from "./payload/collections/Chapters";
+import { GalleryAlbums } from "./payload/collections/GalleryAlbums";
 import { SiteSettings } from "./payload/globals/SiteSettings";
 
 const filename = fileURLToPath(import.meta.url);
@@ -44,6 +45,7 @@ export default buildConfig({
     Papers,
     Lecturers,
     Chapters,
+    GalleryAlbums,
   ],
 
   // Globals

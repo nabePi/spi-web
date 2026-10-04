@@ -77,3 +77,8 @@ flowchart TD
    - **Scope**: Flagship academic programs, semester-based curriculum structures, intake enrollment statuses, and public program catalog.
 
 
+
+7. **[Module 7: Gallery (Galeri)](07-gallery.md)**
+   - **Type**: Collection (`GalleryAlbums`)
+   - **Database Impact**: Exactly +1 Table (`gallery_albums`)
+   - **Scope**: Photo albums sourced from public Google Photos shared-album links (no uploads), synced on save with a link-out fallback, public routes `/galeri` and `/galeri/[slug]` with lightbox.
