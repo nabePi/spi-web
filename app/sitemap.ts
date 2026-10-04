@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/siteConfig";
+import { getAllAlbumSlugs } from "@/lib/getGallery";
 
 /** All public routes, relative to the site origin. */
 const routes = [
@@ -15,13 +16,19 @@ const routes = [
   "/komik-intensif",
   "/tuesdays-special",
   "/blog-three-column",
+  "/events",
+  "/papers",
+  "/galeri",
+  "/pengajar",
+  "/cabang",
   "/blog-details-standard",
   "/contact",
 ];
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const lastModified = new Date();
-  return routes.map((route) => ({
+  const albumSlugs = await getAllAlbumSlugs();
+  return [...routes, ...albumSlugs.map((slug) => `/galeri/${slug}`)].map((route) => ({
     url: new URL(route, siteConfig.url).toString(),
     lastModified,
     changeFrequency: "monthly",

@@ -10,6 +10,11 @@ import { Categories } from "./payload/collections/Categories";
 import { Tags } from "./payload/collections/Tags";
 import { Authors } from "./payload/collections/Authors";
 import { Articles } from "./payload/collections/Articles";
+import { Events } from "./payload/collections/Events";
+import { Papers } from "./payload/collections/Papers";
+import { Lecturers } from "./payload/collections/Lecturers";
+import { Chapters } from "./payload/collections/Chapters";
+import { GalleryAlbums } from "./payload/collections/GalleryAlbums";
 import { SiteSettings } from "./payload/globals/SiteSettings";
 
 const filename = fileURLToPath(import.meta.url);
@@ -29,7 +34,19 @@ export default buildConfig({
   },
 
   // Collections
-  collections: [Users, Media, Categories, Tags, Authors, Articles],
+  collections: [
+    Users,
+    Media,
+    Categories,
+    Tags,
+    Authors,
+    Articles,
+    Events,
+    Papers,
+    Lecturers,
+    Chapters,
+    GalleryAlbums,
+  ],
 
   // Globals
   globals: [SiteSettings],

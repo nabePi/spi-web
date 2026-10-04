@@ -1,6 +1,7 @@
 import BreadcrumbSection from "@/components/pages/inner/about-v1/BreadcrumbSection";
 import PengajarSection from "@/components/pages/inner/about-v1/PengajarSection";
 import { aboutV1PengajarContent } from "@/content/inner/about-v1";
+import { getPublishedLecturers } from "@/lib/getLecturers";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
@@ -10,11 +11,15 @@ export const metadata = createMetadata({
   path: "/about-v1/pengajar",
 });
 
-const Page = () => {
+export const revalidate = 60;
+
+const Page = async () => {
+  const lecturers = await getPublishedLecturers();
+
   return (
     <>
       <BreadcrumbSection content={aboutV1PengajarContent.breadcrumb} />
-      <PengajarSection />
+      <PengajarSection lecturers={lecturers} />
     </>
   );
 };

@@ -38,7 +38,8 @@ const mainMenu: NavItem[] = [
     children: [
       { label: "Sejarah", href: "/about-v1/sejarah" },
       { label: "Visi, Misi, & Pemikiran", href: "/about-v1/visi-misi-pemikiran" },
-      { label: "Pengajar", href: "/about-v1/pengajar-alt" },
+      { label: "Pengajar", href: "/pengajar" },
+      { label: "Cabang", href: "/cabang" },
     ],
   },
   {
@@ -53,7 +54,12 @@ const mainMenu: NavItem[] = [
   {
     label: "Media",
     href: "/blog-three-column",
-    children: [{ label: "Blog", href: "/blog-three-column" }],
+    children: [
+      { label: "Blog", href: "/blog-three-column" },
+      { label: "Agenda & Kegiatan", href: "/events" },
+      { label: "Karya Tulis", href: "/papers" },
+      { label: "Galeri", href: "/galeri" },
+    ],
   },
   { label: "Contact", href: "/contact" },
 ];

@@ -17,6 +17,7 @@ services:
     volumes:
       - payload_data:/app/data
       - payload_media:/app/media
+      - payload_papers:/app/papers
     healthcheck:
       test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://127.0.0.1:3000/"]
       interval: 30s
@@ -27,3 +28,4 @@ services:
 volumes:
   payload_data:
   payload_media:
+  payload_papers:

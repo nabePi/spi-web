@@ -16,12 +16,22 @@ const securityHeaders = [
       "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com data:",
-      "img-src 'self' data: blob:",
+      "img-src 'self' data: blob: https://lh3.googleusercontent.com",
       "media-src 'self' https://videos.pexels.com",
       "connect-src 'self'",
       "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://www.google.com https://maps.google.com",
       "frame-ancestors 'none'",
     ].join("; "),
+  },
+];
+
+// The PDF preview route is framed by the paper page, so it must allow
+// same-origin framing (the global policy denies all framing).
+const previewHeaders = [
+  { key: "X-Frame-Options", value: "SAMEORIGIN" },
+  {
+    key: "Content-Security-Policy",
+    value: "default-src 'self'; frame-ancestors 'self'",
   },
 ];
 
@@ -51,6 +61,10 @@ const nextConfig: NextConfig = {
       {
         source: "/(.*)",
         headers: securityHeaders,
+      },
+      {
+        source: "/papers/:slug/preview",
+        headers: previewHeaders,
       },
     ];
   },
