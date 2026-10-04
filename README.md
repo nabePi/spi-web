@@ -80,6 +80,18 @@ media/                # Penyimpanan file upload CMS (lokal, di-gitignore)
 
 Konten teks dan gambar tiap halaman diatur di `content/{demos,inner}/<halaman>.ts` (bertipe sesuai `types/{demos,inner}/<halaman>.ts`), bukan langsung di dalam komponen — ubah file di `content/` untuk mengganti copywriting atau gambar suatu section.
 
+## Alur kerja multi-device (WAJIB)
+
+Proyek ini dikerjakan dari banyak perangkat. Alur rilis: **staging (node/server) → local (review & testing) → live (rilis)**.
+
+> **Selalu `git pull` sebelum mulai, dan selalu `git push` setelah selesai.**
+
+1. **Sebelum mulai** di perangkat mana pun: `git pull` (atau `git fetch` lalu pastikan branch tidak tertinggal dari `origin`).
+2. **Setelah selesai:** commit dan `git push`. Pekerjaan yang belum di-push tidak terlihat di perangkat lain.
+3. **Sebelum review di local:** `git pull` branch yang di-push dari staging.
+4. **Sebelum rilis ke live:** `git pull` branch yang sudah direview (atau `main`) di server live. Jangan edit langsung di live.
+5. **Jangan push dari checkout yang usang.** Jika push ditolak, `git pull` dan selesaikan konflik — jangan `--force`.
+
 ## Catatan lain
 
 - `/template/` dan `/document/` adalah folder lokal (di-gitignore) — masing-masing berisi salinan asli template ThemeForest sebagai referensi, dan dokumen perencanaan internal (PRD, sitemap, dll.). Keduanya tidak wajib ada di setiap clone.
