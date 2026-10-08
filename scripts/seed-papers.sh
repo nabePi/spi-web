@@ -3,7 +3,7 @@
 # categories/tags from scripts/seed-blog.sh.
 set -e
 
-PORT=${PORT:-3001}
+PORT=${PORT:-3000}
 BASE="http://localhost:${PORT}"
 ADMIN_EMAIL=${ADMIN_EMAIL:-admin@pemikiranislam.id}
 ADMIN_PASSWORD=${ADMIN_PASSWORD:-AdminSPI2026!}

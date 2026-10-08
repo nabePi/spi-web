@@ -1,6 +1,6 @@
 import sharp from "sharp";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
-import { sqliteAdapter } from "@payloadcms/db-sqlite";
+import { postgresAdapter } from "@payloadcms/db-postgres";
 import { buildConfig } from "payload";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -19,6 +19,16 @@ import { SiteSettings } from "./payload/globals/SiteSettings";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
+const databaseUri = process.env.DATABASE_URI;
+const payloadSecret = process.env.PAYLOAD_SECRET;
+
+if (!databaseUri) {
+  throw new Error("DATABASE_URI must be set to a PostgreSQL connection URI.");
+}
+
+if (!payloadSecret) {
+  throw new Error("PAYLOAD_SECRET must be set before Payload CMS can start.");
+}
 
 export default buildConfig({
   // Admin panel config
@@ -32,6 +42,17 @@ export default buildConfig({
       description: "Sekolah Pemikiran Islam — Content Management System",
     },
   },
+
+  bin: [
+    {
+      key: "db:setup",
+      scriptPath: path.resolve(dirname, "scripts/setup-db.ts"),
+    },
+    {
+      key: "cms:seed-admin",
+      scriptPath: path.resolve(dirname, "scripts/seed-admin.ts"),
+    },
+  ],
 
   // Collections
   collections: [
@@ -54,14 +75,16 @@ export default buildConfig({
   // Rich text editor
   editor: lexicalEditor(),
 
-  // Secret key for authentication (set in .env)
-  secret: process.env.PAYLOAD_SECRET || "",
+  // Secret key for authentication (set in .env.local or deployment environment)
+  secret: payloadSecret,
 
-  // SQLite database — stored at ./data/payload.db
-  db: sqliteAdapter({
-    client: {
-      url: process.env.DATABASE_URI || "file:./data/payload.db",
+  // PostgreSQL database. Development pushes the current Payload schema on startup;
+  // in production, setting DB_PUSH=true will push schema, or use database/init.sql.
+  db: postgresAdapter({
+    pool: {
+      connectionString: databaseUri,
     },
+    push: process.env.DB_PUSH === "true" || process.env.NODE_ENV !== "production",
   }),
 
   // Image resizing support

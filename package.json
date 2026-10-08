@@ -2,6 +2,7 @@
   "name": "spi-web",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "Website Sekolah Pemikiran Islam (SPI)",
   "author": "Sekolah Pemikiran Islam",
   "license": "UNLICENSED",
@@ -9,10 +10,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "db:setup": "node -e \"if (process.env.NODE_ENV === 'production') { console.error('db:setup is for local development only.'); process.exit(1); }\" && payload db:setup",
+    "cms:seed-admin": "node -e \"if (process.env.NODE_ENV === 'production') { console.error('cms:seed-admin is disabled in production.'); process.exit(1); }\" && payload cms:seed-admin"
   },
   "dependencies": {
-    "@payloadcms/db-sqlite": "^3.90.2",
+    "@payloadcms/db-postgres": "^3.90.2",
     "@payloadcms/next": "^3.90.2",
     "@payloadcms/richtext-lexical": "^3.90.2",
     "@types/jquery": "^4.0.1",

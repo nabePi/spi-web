@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-PORT=${PORT:-3001}
+PORT=${PORT:-3000}
 BASE="http://localhost:${PORT}"
 
 echo "Authenticating on ${BASE}..."

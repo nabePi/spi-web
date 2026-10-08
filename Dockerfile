@@ -14,6 +14,10 @@ RUN npm ci
 # ---- Build ----
 FROM base AS builder
 ENV NEXT_TELEMETRY_DISABLED=1
+# Payload configuration is evaluated during Next.js builds. Runtime values must
+# still be supplied by the deployment environment.
+ENV PAYLOAD_SECRET=build-only-placeholder-secret
+ENV DATABASE_URI=postgresql://postgres:postgres@localhost:5432/spi_cms
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 RUN npm run build
@@ -33,9 +37,9 @@ COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 
-# Directories for SQLite database and uploaded media
-RUN mkdir -p /app/data /app/media /app/papers \
-  && chown -R nextjs:nodejs /app/data /app/media /app/papers
+# Directories for uploaded media. PostgreSQL is supplied externally.
+RUN mkdir -p /app/media /app/papers \
+  && chown -R nextjs:nodejs /app/media /app/papers
 
 USER nextjs
 EXPOSE 3000

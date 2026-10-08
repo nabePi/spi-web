@@ -7,7 +7,7 @@ Basis kode ini awalnya berasal dari template ThemeForest berbayar ("InstituteFlo
 ## Tech stack
 
 - [Next.js](https://nextjs.org/) 16 (App Router) + React 19 + TypeScript
-- [Payload CMS](https://payloadcms.com/) 3 (Headless CMS) + SQLite (adapter `@payloadcms/db-sqlite`)
+- [Payload CMS](https://payloadcms.com/) 3 (Headless CMS) + PostgreSQL (adapter `@payloadcms/db-postgres`)
 - Sass (SCSS) untuk styling, Bootstrap 5 untuk sebagian komponen
 - GSAP (ScrollTrigger, ScrollSmoother, SplitText) untuk animasi scroll
 - Swiper, Odometer, counterup2, vanilla-tilt, magnific-popup — komponen interaktif bawaan template
@@ -16,15 +16,25 @@ Basis kode ini awalnya berasal dari template ThemeForest berbayar ("InstituteFlo
 
 - Node.js 20+ (disarankan mengikuti versi di `devDependencies` → `@types/node`)
 - npm
+- PostgreSQL 14+ yang berjalan secara lokal
 
 ## Menjalankan secara lokal
 
 ```bash
 npm install
+npm run db:setup
+npm run cms:seed-admin
 npm run dev
 ```
 
-Buka [http://localhost:3000](http://localhost:3000) di browser.
+Buat database lokal terlebih dahulu bila belum ada:
+
+```bash
+createdb spi_cms
+```
+
+Buka [http://localhost:3000](http://localhost:3000) di browser, lalu buka
+[http://localhost:3000/admin](http://localhost:3000/admin) untuk CMS.
 
 ## Script yang tersedia
 
@@ -34,6 +44,8 @@ Buka [http://localhost:3000](http://localhost:3000) di browser.
 | `npm run build` | Build untuk production               |
 | `npm run start` | Menjalankan hasil build production   |
 | `npm run lint`  | Menjalankan ESLint                   |
+| `npm run db:setup` | Menginisialisasi skema Payload di PostgreSQL lokal |
+| `npm run cms:seed-admin` | Membuat atau memperbarui akun admin lokal contoh |
 
 Belum ada test suite di proyek ini.
 
@@ -43,17 +55,21 @@ Belum ada test suite di proyek ini.
 | ---------------------- | ------ | ------------------------ | -------------------------------------------------------- |
 | `NEXT_PUBLIC_APP_URL`  | Tidak  | `http://localhost:3000` | Base URL situs, dipakai untuk metadata & canonical URL. |
 | `PAYLOAD_SECRET`       | Ya     | -                        | Kunci rahasia untuk otentikasi admin Payload CMS.       |
-| `DATABASE_URI`         | Tidak  | `file:./data/payload.db` | URI database SQLite (atau Postgres/MongoDB jika diubah).|
+| `DATABASE_URI`         | Ya     | `postgresql://postgres:postgres@localhost:5432/spi_cms` | URI koneksi PostgreSQL. |
+
+Salin `.env.example` menjadi `.env.local`, lalu ganti `PAYLOAD_SECRET` dengan
+nilai unik. `DATABASE_URI` wajib tersedia saat aplikasi berjalan.
 
 ## Payload CMS
 
 Website ini dilengkapi CMS headless bawaan menggunakan [Payload CMS](https://payloadcms.com/) v3:
 
-- **Admin Panel**: Akses di `http://localhost:3000/admin`. Pada kunjungan pertama, Anda akan diarahkan ke halaman pembuatan user admin pertama.
+- **Admin Panel**: Akses di `http://localhost:3000/admin`.
+- **Akun lokal contoh**: Jalankan `npm run cms:seed-admin`, lalu masuk dengan `admin@pemikiranislam.id` dan `AdminSPI2026!`. Akun ini hanya untuk development lokal dan perintah seed ditolak di production.
 - **REST API**: Tersedia di `/api/[collection]` (contoh: `/api/users`, `/api/media`).
 - **Konfigurasi CMS**: Berada di `payload.config.ts`.
 - **Koleksi**: Didefinisikan di `payload/collections/` (`Users.ts`, `Media.ts`).
-- **Database & Media**: SQLite database disimpan di folder `data/` dan file upload disimpan di `media/` (keduanya di-gitignore).
+- **Database & Media**: PostgreSQL menyimpan data CMS; file upload disimpan di folder `media/` (di-gitignore).
 
 ## Struktur proyek
 
@@ -74,11 +90,14 @@ lib/                  # Konfigurasi situs, metadata helper, bootstrap vendor JS
 context/              # Provider React (animasi GSAP, dll.)
 public/assets/        # Gambar, video, font statis
 plans/                # Dokumen perencanaan kerja (per tanggal)
-data/                 # Penyimpanan SQLite database (lokal, di-gitignore)
 media/                # Penyimpanan file upload CMS (lokal, di-gitignore)
 ```
 
 Konten teks dan gambar tiap halaman diatur di `content/{demos,inner}/<halaman>.ts` (bertipe sesuai `types/{demos,inner}/<halaman>.ts`), bukan langsung di dalam komponen — ubah file di `content/` untuk mengganti copywriting atau gambar suatu section.
+
+Untuk Docker/deployment, sediakan `PAYLOAD_SECRET` dan `DATABASE_URI` PostgreSQL
+yang dapat dijangkau oleh container. `docker-compose.yml` tidak membuat database
+atau menggunakan SQLite.
 
 ## Alur kerja multi-device (WAJIB)
 

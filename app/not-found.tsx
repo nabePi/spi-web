@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
-import innerbreadcumbbreadcumbBgPattern3 from "@/public/assets/imgs/inner/breadcumb/breadcumb-bg-pattern3.png";
 
 export const metadata: Metadata = {
   title: "404 — Page Not Found",
@@ -9,34 +7,54 @@ export const metadata: Metadata = {
   robots: { index: false, follow: true },
 };
 
-const NotFound = () => {
+export default function GlobalNotFound() {
   return (
-    <section className="error-page position-relative">
-      <div className="error-page__bg">
-        <Image
-          src={innerbreadcumbbreadcumbBgPattern3}
-          alt=""
-        />
-      </div>
-      <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <div className="error-page__content text-center">
-              <h1 className="error-page__title">
-                4<span>0</span>4
-              </h1>
-              <p className="error-page__desc">Oop! Page not found</p>
-              <Link className="btn-two v9" href="/">
-                <span className="btn-text">Back to home</span>
-                <span className="btn-icon">
-                  <span className="material-symbols-sharp">arrow_outward</span>
-                </span>
-              </Link>
-            </div>
-          </div>
+    <html lang="en">
+      <body
+        style={{
+          margin: 0,
+          minHeight: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          fontFamily:
+            "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+          background: "#f2f5f8",
+          color: "#0065b5",
+          padding: "24px",
+        }}
+      >
+        <div style={{ textAlign: "center", maxWidth: "480px" }}>
+          <h1
+            style={{
+              fontSize: "clamp(64px, 12vw, 120px)",
+              lineHeight: 1,
+              margin: "0 0 16px",
+              fontWeight: 700,
+            }}
+          >
+            404
+          </h1>
+          <p style={{ fontSize: "18px", margin: "0 0 28px", opacity: 0.8 }}>
+            Page not found.
+          </p>
+          <Link
+            href="/"
+            style={{
+              display: "inline-block",
+              textDecoration: "none",
+              borderRadius: "999px",
+              padding: "14px 32px",
+              fontSize: "16px",
+              fontWeight: 600,
+              color: "#f2f5f8",
+              background: "#0065b5",
+            }}
+          >
+            Back to home
+          </Link>
         </div>
-      </div>
-    </section>
+      </body>
+    </html>
   );
 }
-export default NotFound;

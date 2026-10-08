@@ -16,7 +16,7 @@ const securityHeaders = [
       "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com data:",
-      "img-src 'self' data: blob: https://lh3.googleusercontent.com",
+      "img-src 'self' data: blob: https://lh3.googleusercontent.com https://www.gravatar.com https://secure.gravatar.com",
       "media-src 'self' https://videos.pexels.com",
       "connect-src 'self'",
       "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://www.google.com https://maps.google.com",

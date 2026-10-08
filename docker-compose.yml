@@ -1,21 +1,37 @@
 services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: ${POSTGRES_DB:-spi_cms}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-spi_cms}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+
   web:
     build:
       context: .
       dockerfile: Dockerfile
     restart: unless-stopped
     ports:
-      - "3000"
+      - "${PORT:-3000}:3000"
+    depends_on:
+      db:
+        condition: service_healthy
     environment:
       NODE_ENV: production
-      # Base URL publik situs, dipakai untuk metadata & canonical URL.
-      # Set nilai sebenarnya lewat env var Dokploy, contoh: https://pemikiranislam.id
       NEXT_PUBLIC_APP_URL: ${NEXT_PUBLIC_APP_URL:-http://localhost:3000}
-      # Payload CMS
       PAYLOAD_SECRET: ${PAYLOAD_SECRET}
-      DATABASE_URI: ${DATABASE_URI:-file:/app/data/payload.db}
+      DATABASE_URI: ${DATABASE_URI:-postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@db:5432/${POSTGRES_DB:-spi_cms}}
     volumes:
-      - payload_data:/app/data
       - payload_media:/app/media
       - payload_papers:/app/papers
     healthcheck:
@@ -23,9 +39,9 @@ services:
       interval: 30s
       timeout: 5s
       retries: 3
-      start_period: 10s
+      start_period: 15s
 
 volumes:
-  payload_data:
+  postgres_data:
   payload_media:
   payload_papers:

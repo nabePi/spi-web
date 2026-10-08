@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# Seeds 22 Lecturers (Pengajar) and 6 Chapters (Cabang). Requires dev server running on port 3001.
+# Seeds 22 Lecturers (Pengajar) and 6 Chapters (Cabang). Requires dev server running on port 3000.
 set -e
 
-PORT=${PORT:-3001}
+PORT=${PORT:-3000}
 BASE="http://localhost:${PORT}"
 ADMIN_EMAIL=${ADMIN_EMAIL:-admin@pemikiranislam.id}
 ADMIN_PASSWORD=${ADMIN_PASSWORD:-AdminSPI2026!}
