@@ -16,6 +16,7 @@ import { Lecturers } from "./payload/collections/Lecturers";
 import { Chapters } from "./payload/collections/Chapters";
 import { GalleryAlbums } from "./payload/collections/GalleryAlbums";
 import { SiteSettings } from "./payload/globals/SiteSettings";
+import { migrations } from "./migrations";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -78,12 +79,14 @@ export default buildConfig({
   // Secret key for authentication (set in .env.local or deployment environment)
   secret: payloadSecret,
 
-  // PostgreSQL database. Development pushes the current Payload schema on startup;
-  // in production, setting DB_PUSH=true will push schema, or use database/init.sql.
+  // PostgreSQL database. Development pushes the current Payload schema on startup.
+  // In production, pending migrations (./migrations) run automatically when the
+  // server boots (see instrumentation.ts).
   db: postgresAdapter({
     pool: {
       connectionString: databaseUri,
     },
+    prodMigrations: migrations,
     push: process.env.DB_PUSH === "true" || process.env.NODE_ENV !== "production",
   }),
 

@@ -14,6 +14,9 @@ RUN npm ci
 # ---- Build ----
 FROM base AS builder
 ENV NEXT_TELEMETRY_DISABLED=1
+# Public URL is inlined into the bundle at build time (set it in Dokploy env).
+ARG NEXT_PUBLIC_APP_URL
+ENV NEXT_PUBLIC_APP_URL=${NEXT_PUBLIC_APP_URL}
 # Payload configuration is evaluated during Next.js builds. Runtime values must
 # still be supplied by the deployment environment.
 ENV PAYLOAD_SECRET=build-only-placeholder-secret
@@ -37,7 +40,8 @@ COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 
-# Directories for uploaded media. PostgreSQL is supplied externally.
+# Directories for uploaded media. PostgreSQL is supplied externally and DB
+# migrations are applied on boot by instrumentation.ts.
 RUN mkdir -p /app/media /app/papers \
   && chown -R nextjs:nodejs /app/media /app/papers
 
